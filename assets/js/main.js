@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
 
 //  Countdown timer function  
   
-  let countDownDate = new Date("Dec 29, 2022 15:37:25").getTime();
+  let countDownDate = new Date("2022/12/28 14:37").getTime();
 
   // Update the count down every 1 second
   let x = setInterval(function () {
@@ -41,8 +41,6 @@ window.addEventListener("load", function () {
   }, 1000);
 
 
-
-
   // review star rating function
 
   // let stars = document.querySelectorAll(".star-icon span");
@@ -56,7 +54,7 @@ window.addEventListener("load", function () {
   //       stars[i].classList.add("yellow");
   //     }
   //   });
-  // });]
+  // });
 
   // table sticky header function
 

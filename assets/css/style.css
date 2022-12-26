@@ -75,7 +75,7 @@
     font-weight: 600;
     font-family: "Montserrat";
     text-transform: uppercase;
-    min-width: 200px;
+    min-width: 220px;
 }
 
 .price-table tr.price-table-head {
@@ -113,7 +113,8 @@
     font-size: 12px;
     padding: 12px 48px;
     font-weight: 700;
-    animation: morph 8s infinite;
+    background-color: #fdffb6;
+    /* animation: morph 8s infinite; */
 }
 
 .price-table .price-blank {
@@ -121,8 +122,9 @@
     border: 0 none;
 }
 
-.price-table svg {
-    width: 90px;
+.price-table img , 
+.price-table svg  {
+    max-width: 80px;
     fill: #7f1987;
 }
 
@@ -184,7 +186,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
 }
 
 .ribbon-two {
@@ -196,7 +198,7 @@
     aspect-ratio: 1/1;
     border-radius: 50px;
     color: #ffffff;
-    right: -15px;
+    right: 10px;
     top: 15px;
 }
 
@@ -237,14 +239,14 @@
     background: #ffefd570;
 }
 
-/* .yellow{
-    color: #f4b400;
-} */
-
-.star-icon span {
-    cursor: pointer;
+.yellow {
     color: #f4b400;
 }
+
+/* .star-icon span {
+    cursor: pointer;
+    color: #f4b400;
+} */
 
 .fs-sm {
     font-size: 12px;
@@ -314,17 +316,16 @@
     width: 100%;
     margin-bottom: 375px;
     background: #ffffff;
-    box-shadow: 0px 6px 40px #00000020;
+    box-shadow: 0px 2px 10px #00000020;
 }
 
 .countdown {
     white-space: nowrap;
-    /* animation: morph 8s infinite; */
 }
 
 tbody svg {
-cursor: pointer;
-color:#7f1987;
+    cursor: pointer;
+    color: #7f1987;
 }
 
 .tooltip-inner {
@@ -342,4 +343,10 @@ color:#7f1987;
     top: -1px;
     border-width: .4rem .4rem 0;
     border-top-color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .w-sm-100 {
+        width: 100% !important;
+    }
 }
