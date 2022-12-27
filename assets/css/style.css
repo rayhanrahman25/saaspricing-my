@@ -8,7 +8,7 @@
 .price-table-main {
     -webkit-box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
-    /* font-family: "Open Sans"; */
+   
 }
 
 .price-table {
@@ -73,7 +73,6 @@
 .price-table tr.price-table-head td {
     font-size: 16px;
     font-weight: 600;
-    font-family: "Montserrat";
     text-transform: uppercase;
     min-width: 220px;
 }
@@ -84,12 +83,15 @@
 }
 
 .price-table td.price {
-    color: #f43f54;
+    /* color: #f43f54; */
     padding: 16px 24px;
     font-size: 20px;
     font-weight: 600;
-    font-family: "Montserrat";
     position: relative;
+}
+
+.saaspricing-pricing{
+    
 }
 
 /* .price-table td.price a {
@@ -99,14 +101,12 @@
     margin-top: 16px;
     font-size: 12px;
     font-weight: 600;
-    font-family: "Montserrat";
     text-transform: uppercase;
     display: inline-block;
     border-radius: 64px;
 } */
 
 .price-table td.price-table-popular {
-    font-family: "Montserrat";
     /* border-top: 3px solid transparent; */
     color: #202020;
     text-transform: uppercase;
@@ -122,10 +122,11 @@
     border: 0 none;
 }
 
-.price-table img , 
-.price-table svg  {
+.price-table img,
+.price-table svg {
     max-width: 80px;
     fill: #7f1987;
+    /* margin-bottom: 20px; */
 }
 
 
@@ -239,14 +240,15 @@
     background: #ffefd570;
 }
 
-.yellow {
-    color: #f4b400;
+
+.saaspricing-star-right {
+    transform: scalex(-1);
+    margin-left: -23px;
 }
 
-/* .star-icon span {
-    cursor: pointer;
+.sasspricing-yellow{
     color: #f4b400;
-} */
+}
 
 .fs-sm {
     font-size: 12px;
@@ -338,11 +340,58 @@ tbody svg {
     box-shadow: 0px 0px 10px #00000020;
 }
 
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, .bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: #ffffff;
+}
+
+
 .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before,
 .bs-tooltip-top .tooltip-arrow::before {
-    top: -1px;
-    border-width: .4rem .4rem 0;
+
     border-top-color: #ffffff;
+}
+
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before,
+.bs-tooltip-end .tooltip-arrow::before {
+    border-right-color: #ffffff;
+}
+
+
+img.mfp-img {
+    height: auto;
+    display: block;
+    line-height: 0;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px !important;
+    background-color: #ffffff ;
+}
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+    color: #000;
+    right: -30px;
+    top: -30px;
+    text-align: right;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px !important;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    cursor: pointer !important;
+}
+
+@media screen and (max-width: 350px) {
+.ribbon-two {
+       position: unset;
+       margin-bottom: 15px;;
+        
+    }
 }
 
 @media screen and (max-width: 768px) {
