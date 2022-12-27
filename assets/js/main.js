@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
 
     // Output the result in an element with id="demo"
 
-    let countdowns = document.querySelectorAll(".countdown");
+    let countdowns = document.querySelectorAll(".sasspricing-countdown");
   
 
     countdowns.forEach((countdown) => {
@@ -65,9 +65,9 @@ window.addEventListener("load", function () {
 
   function myFunction() {
     if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
+      header.classList.add("saaspricing-sticky");
     } else {
-      header.classList.remove("sticky");
+      header.classList.remove("saaspricing-sticky");
     }
   }
 
