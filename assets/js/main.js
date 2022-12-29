@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
 
 //  Countdown timer function  
   
-  let countDownDate = new Date("Dec 29, 2022 15:37:25").getTime();
+  let countDownDate = new Date("2022/12/28 14:37").getTime();
 
   // Update the count down every 1 second
   let x = setInterval(function () {
@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
 
     // Output the result in an element with id="demo"
 
-    let countdowns = document.querySelectorAll(".countdown");
+    let countdowns = document.querySelectorAll(".sasspricing-countdown");
   
 
     countdowns.forEach((countdown) => {
@@ -41,8 +41,6 @@ window.addEventListener("load", function () {
   }, 1000);
 
 
-
-
   // review star rating function
 
   // let stars = document.querySelectorAll(".star-icon span");
@@ -56,7 +54,7 @@ window.addEventListener("load", function () {
   //       stars[i].classList.add("yellow");
   //     }
   //   });
-  // });]
+  // });
 
   // table sticky header function
 
@@ -67,9 +65,9 @@ window.addEventListener("load", function () {
 
   function myFunction() {
     if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
+      header.classList.add("saaspricing-sticky");
     } else {
-      header.classList.remove("sticky");
+      header.classList.remove("saaspricing-sticky");
     }
   }
 
@@ -79,4 +77,42 @@ window.addEventListener("load", function () {
   let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
+});
+
+
+$(document).ready(function() {
+
+	$('.image-popup-vertical-fit').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		mainClass: 'mfp-img-mobile',
+		image: {
+			verticalFit: true
+		}
+		
+	});
+
+	$('.image-popup-fit-width').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		image: {
+			verticalFit: false
+		}
+	});
+
+	$('.image-popup-no-margins').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 // don't foget to change the duration also in CSS
+		}
+	});
+
 });
