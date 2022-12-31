@@ -330,6 +330,7 @@
     background: #ffffff;
     -webkit-box-shadow: 0px 2px 10px #00000020;
     box-shadow: 0px 2px 10px #00000020;
+    z-index:9999999;
 }
 
 .sasspricing-countdown {
