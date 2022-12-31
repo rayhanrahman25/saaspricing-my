@@ -2,10 +2,9 @@ window.addEventListener("load", function () {
 
   "use strict";
 
-
 //  Countdown timer function  
   
-  let countDownDate = new Date("2022/12/28 14:37").getTime();
+  let countDownDate = new Date("2022/12/31 23:04").getTime();
 
   // Update the count down every 1 second
   let x = setInterval(function () {
@@ -35,7 +34,8 @@ window.addEventListener("load", function () {
       // If the count down is over, write some text
       if (distance < 0) {
         clearInterval(x);
-        countdown.innerHTML = "EXPIRED";
+        countdown.innerHTML = " ";
+        countdown.style.display = "none";
       }
     });
   }, 1000);
@@ -60,7 +60,7 @@ window.addEventListener("load", function () {
 
   window.onscroll = function () { myFunction() };
 
-  let header = document.getElementById("myHeader");
+  let header = document.getElementById("tableHeader");
   let sticky = header.offsetTop;
 
   function myFunction() {
@@ -77,12 +77,9 @@ window.addEventListener("load", function () {
   let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
-});
 
 
-$(document).ready(function() {
-
-	$('.image-popup-vertical-fit').magnificPopup({
+  	$('.image-popup-vertical-fit').magnificPopup({
 		type: 'image',
 		closeOnContentClick: true,
 		mainClass: 'mfp-img-mobile',
@@ -91,28 +88,4 @@ $(document).ready(function() {
 		}
 		
 	});
-
-	$('.image-popup-fit-width').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		image: {
-			verticalFit: false
-		}
-	});
-
-	$('.image-popup-no-margins').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		closeBtnInside: false,
-		fixedContentPos: true,
-		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-		image: {
-			verticalFit: true
-		},
-		zoom: {
-			enabled: true,
-			duration: 300 // don't foget to change the duration also in CSS
-		}
-	});
-
 });
