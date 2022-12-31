@@ -1,0 +1,283 @@
+:root{
+    --color-white: #fff ;
+    --color-black: #202020 ;
+    --color-gray-100: #fafafa ;
+    --color-box-shadow: #00000015;
+ 
+}
+
+.saaspricing-main {
+    -webkit-box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+
+}
+
+.tableHeader {
+    background-color: var(--color-white);
+}
+
+.saaspricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0 none;
+}
+
+.saaspricing-table tr:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.saaspricing-table tr td {
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 8px 24px;
+    font-size: 14px;
+}
+
+.saaspricing-table tr td:first-child {
+    border-left: 0 none;
+}
+
+.saaspricing-table tr td:not(:first-child) {
+    text-align: center;
+}
+
+.saaspricing-table tr:nth-child(even) {
+    background-color: var(--color-white);
+}
+
+.saaspricing-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.saaspricing-table .fa-check {
+    color: #198754;
+}
+
+.saaspricing-table .fa-times {
+    color: #D8D6E3;
+}
+
+/* Highlighted column */
+
+
+.saaspricing-table tr td:nth-child(3) {
+    padding: 15px 48px;
+}
+
+
+.saaspricing-table tr.price-table-head td {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    min-width: 220px;
+}
+
+.saaspricing-table tr.price-table-head {
+    background-color: #7f1987;
+    color: var(--color-white);
+}
+
+.saaspricing-table td.price {
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+}
+
+.saaspricing-table td.saaspricing-table-popular {
+    color: #202020;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 12px 48px;
+    font-weight: 700;
+    background-color: #fdffb6;
+}
+
+.saaspricing-table .saaspricing-blank {
+    background-color: #fafafa;
+    border: 0 none;
+}
+
+.saaspricing-table img,
+.saaspricing-table svg {
+    max-width: 80px;
+    fill: #7f1987;
+}
+
+
+
+/* single pricing section  */
+
+.saaspricing-heading {
+    font-size: 50px;
+}
+
+.saaspricing-horizontal {
+    -webkit-box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+}
+
+.saaspricing-horizontal .saaspricing-new-section {
+    overflow: hidden;
+    color: gray;
+    text-align: left;
+    line-height: 1.6em;
+}
+
+/* ribbons  */
+
+.saaspricing-ribbon {
+    position: absolute;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    color: var(--color-white);
+    right: 10px;
+    top: 15px;
+}
+
+.saaspricing-align-super {
+    vertical-align: super;
+}
+
+/* button css  */
+
+.saaspricing-btn-1:hover {
+    background-color: #198754;
+    color: var(--color-white);
+}
+
+.saaspricing-bg-warm {
+    background: #ffefd570;
+}
+
+.saaspricing-star-right {
+    -webkit-transform: scalex(-1);
+    -ms-transform: scalex(-1);
+    transform: scalex(-1);
+    margin-left: -23px;
+}
+
+.saaspricing-yellow {
+    color: #f4b400;
+}
+
+.fs-sm {
+    font-size: 12px;
+}
+
+.border-o {
+    border-radius: 50px;
+}
+
+.saaspricing-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    margin-bottom: 375px;
+    background: var(--color-white);
+    -webkit-box-shadow: 0px 2px 10px #00000020;
+    box-shadow: 0px 2px 10px #00000020;
+}
+
+.sasspricing-countdown {
+    white-space: nowrap;
+}
+
+tbody svg {
+    cursor: pointer;
+    color: #7f1987;
+}
+
+.tooltip-inner {
+    max-width: 300px;
+    padding: 15px 20px;
+    color: #202020;
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: .25rem;
+    -webkit-box-shadow: 0px 0px 10px #00000020;
+    box-shadow: 0px 0px 10px #00000020;
+}
+
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before,
+.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: var(--color-white);
+}
+
+
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before,
+.bs-tooltip-top .tooltip-arrow::before {
+
+    border-top-color: var(--color-white);
+}
+
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before,
+.bs-tooltip-end .tooltip-arrow::before {
+    border-right-color: var(--color-white);
+}
+
+.tooltip.show {
+    opacity: 1;
+}
+
+.mfp-img {
+    height: auto;
+    display: block;
+    line-height: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0 auto;
+    width: 100% !important;
+    max-width: 600px !important;
+    background-color: var(--color-white);
+}
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+    color: #000;
+    right: -30px;
+    top: -30px;
+    text-align: right;
+    background: var(--color-white);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 10px !important;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    cursor: pointer !important;
+}
+
+@media screen and (max-width: 350px) {
+    .saaspricing-ribbon {
+        position: unset;
+        margin-bottom: 15px;
+        ;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .w-sm-100 {
+        width: 100% !important;
+    }
+}
