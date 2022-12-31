@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
 
     // Output the result in an element with id="demo"
 
-    let countdowns = document.querySelectorAll(".sasspricing-countdown");
+    let countdowns = document.querySelectorAll(".saaspricing-countdown");
   
 
     countdowns.forEach((countdown) => {

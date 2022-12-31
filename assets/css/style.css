@@ -1,3 +1,10 @@
+:root{
+    --color-white: #fff ;
+    --color-black: #202020 ;
+    --color-gray-100: #fafafa ;
+    --color-box-shadow: #00000015;
+ 
+}
 
 .saaspricing-main {
     -webkit-box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
@@ -6,7 +13,7 @@
 }
 
 .tableHeader {
-    background-color: #ffffff;
+    background-color: var(--color-white);
 }
 
 .saaspricing-table {
@@ -35,11 +42,11 @@
 }
 
 .saaspricing-table tr:nth-child(even) {
-    background-color: #FFFFFF;
+    background-color: var(--color-white);
 }
 
 .saaspricing-table tr:hover {
-    background-color: #EEEEEE;
+    background-color: #f9f9f9;
 }
 
 .saaspricing-table .fa-check {
@@ -63,7 +70,7 @@
 /* 
 .price-table tr td:nth-child(3) .fa-check,
 .price-table tr:nth-child(2n) td:nth-child(3) .fa-check {
-    color: #ffffff;
+    color: var(--color-white);
 } */
 
 /**/
@@ -77,7 +84,7 @@
 
 .saaspricing-table tr.price-table-head {
     background-color: #7f1987;
-    color: #FFFFFF;
+    color: var(--color-white);
 }
 
 .saaspricing-table td.price {
@@ -92,7 +99,7 @@
 
 /* .saaspricing-table td.price a {
     background-color: #198754;
-    color: #FFFFFF;
+    color: var(--color-white);
     padding: 12px 32px;
     margin-top: 16px;
     font-size: 12px;
@@ -171,7 +178,7 @@
     height: 40px;
     width: 40px;
     border-radius: 50px;
-    color: #ffffff;
+    color: var(--color-white);
     right: 10px;
     top: 15px;
 }
@@ -186,7 +193,7 @@
 
 .saaspricing-btn-1:hover {
     background-color: #198754;
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 .saaspricing-bg-warm {
@@ -213,121 +220,13 @@
     border-radius: 50px;
 }
 
-
-
-@-webkit-keyframes morph {
-    0% {
-        background-color: #ffadad;
-    }
-
-    10% {
-        background-color: #ffd6a5;
-    }
-
-    20% {
-        background-color: #fdffb6;
-    }
-
-    30% {
-        background-color: #caffbf;
-    }
-
-    40% {
-        background-color: #9bf6ff;
-    }
-
-    50% {
-        background-color: #a0c4ff;
-    }
-
-    60% {
-        background-color: #bdb2ff;
-        color: #ffffff;
-    }
-
-    70% {
-        background-color: #fffffc;
-        color: #202020;
-    }
-
-    80% {
-        background-color: #ffafcc;
-        color: #ffffff;
-    }
-
-    90% {
-        background-color: #f8edeb;
-        color: #202020;
-
-    }
-
-    100% {
-        background-color: #90e0ef;
-
-    }
-}
-
-
-
-@keyframes morph {
-    0% {
-        background-color: #ffadad;
-    }
-
-    10% {
-        background-color: #ffd6a5;
-    }
-
-    20% {
-        background-color: #fdffb6;
-    }
-
-    30% {
-        background-color: #caffbf;
-    }
-
-    40% {
-        background-color: #9bf6ff;
-    }
-
-    50% {
-        background-color: #a0c4ff;
-    }
-
-    60% {
-        background-color: #bdb2ff;
-        color: #ffffff;
-    }
-
-    70% {
-        background-color: #fffffc;
-        color: #202020;
-    }
-
-    80% {
-        background-color: #ffafcc;
-        color: #ffffff;
-    }
-
-    90% {
-        background-color: #f8edeb;
-        color: #202020;
-
-    }
-
-    100% {
-        background-color: #90e0ef;
-
-    }
-}
-
 .saaspricing-sticky {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     width: 100%;
     margin-bottom: 375px;
-    background: #ffffff;
+    background: var(--color-white);
     -webkit-box-shadow: 0px 2px 10px #00000020;
     box-shadow: 0px 2px 10px #00000020;
     z-index:9999999;
@@ -347,7 +246,7 @@ tbody svg {
     padding: 15px 20px;
     color: #202020;
     text-align: center;
-    background-color: #ffffff;
+    background-color: var(--color-white);
     border-radius: .25rem;
     -webkit-box-shadow: 0px 0px 10px #00000020;
     box-shadow: 0px 0px 10px #00000020;
@@ -355,19 +254,19 @@ tbody svg {
 
 .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before,
 .bs-tooltip-bottom .tooltip-arrow::before {
-    border-bottom-color: #ffffff;
+    border-bottom-color: var(--color-white);
 }
 
 
 .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before,
 .bs-tooltip-top .tooltip-arrow::before {
 
-    border-top-color: #ffffff;
+    border-top-color: var(--color-white);
 }
 
 .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before,
 .bs-tooltip-end .tooltip-arrow::before {
-    border-right-color: #ffffff;
+    border-right-color: var(--color-white);
 }
 
 .tooltip.show {
@@ -384,7 +283,7 @@ tbody svg {
     margin: 0 auto;
     width: 100% !important;
     max-width: 600px !important;
-    background-color: #ffffff;
+    background-color: var(--color-white);
 }
 
 .mfp-image-holder .mfp-close,
@@ -393,7 +292,7 @@ tbody svg {
     right: -30px;
     top: -30px;
     text-align: right;
-    background: #ffffff;
+    background: var(--color-white);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
