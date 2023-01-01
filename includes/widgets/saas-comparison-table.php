@@ -120,6 +120,69 @@ public function saasp_allowed_tags(){
 
 protected function register_controls() {
 
+    $this->start_controls_section(
+        'saasp_comparison_content_section',
+        [
+            'label' => esc_html__( 'Header', SAAS_PRICINNG_TXT_DOMAIN ),
+            'tab' => Controls_Manager::TAB_CONTENT,
+        ]
+    );
+    
+    $this->add_control(
+        'saasp_select_columns',
+        [
+            'label' => esc_html__( 'Select Column', 'textdomain' ),
+            'type' =>  Controls_Manager::SELECT,
+            'default' => '3',
+            'options' => [
+                '1' => esc_html__( '1', 'textdomain' ),
+                '2'  => esc_html__( '2', 'textdomain' ),
+                '3' => esc_html__( '3', 'textdomain' ),
+            ]
+        ]
+    );
+
+    $this->add_control(
+        'saasp_header_title_text_1',
+        [
+            'label' => esc_html__( 'Title One', 'textdomain' ),
+            'type' =>  Controls_Manager::TEXT,
+            'default' => esc_html__( 'Free', 'textdomain' ),
+            'placeholder' => esc_html__( 'Type your title here', 'textdomain' ),
+            'condition' => [
+                'saasp_select_columns' => ['1','2','3'],
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_header_title_text_2',
+        [
+            'label' => esc_html__( 'Title Two', 'textdomain' ),
+            'type' =>  Controls_Manager::TEXT,
+            'default' => esc_html__( 'Personal', 'textdomain' ),
+            'placeholder' => esc_html__( 'Type your title here', 'textdomain' ),
+            'condition' => [
+                'saasp_select_columns' => ['2','3'],
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_header_title_text_3',
+        [
+            'label' => esc_html__( 'Title Three', 'textdomain' ),
+            'type' =>  Controls_Manager::TEXT,
+            'default' => esc_html__( 'Pro', 'textdomain' ),
+            'placeholder' => esc_html__( 'Type your title here', 'textdomain' ),
+            'condition' => [
+                'saasp_select_columns' => '3',
+            ],
+        ]
+    );
+
+
+    $this->end_controls_section();
 	
 }
 
@@ -144,11 +207,16 @@ protected function render() {
                     </tr>
                     <!-- package title start -->
                     <tr class="price-table-head">
-                        <td></td>
+                        <?php
+                         if($settings['saasp_select_columns'] === 1){
+                        ?>
                         <td>
-                            <span>Free</span>
+                            <span><?php echo esc_html($settings['saasp_header_title_text_1']); ?></span>
                             <br><small class="fs-sm">Starter plan</small>
                         </td>
+                        <?php
+                         }elseif($settings['saasp_select_columns'] === 2){
+                        ?>
                         <td class="">
                             <span>Personal</span>
                             <br><small class="fs-sm">Longer data retention</small>
@@ -157,6 +225,12 @@ protected function render() {
                             <span>Pro</span>
                             <br><small class="fs-sm">Our complete solution</small>
                         </td>
+                        <?php
+                         }else{
+                        ?>
+                        <?php
+                         }
+                        ?>
                     </tr>
 
                     <!-- package header (icon, pricing, reviews, countdown timer) start -->
