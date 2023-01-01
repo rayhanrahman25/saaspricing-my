@@ -131,23 +131,32 @@ protected function register_controls() {
     $this->add_control(
         'saasp_select_columns',
         [
-            'label' => esc_html__( 'Select Column', 'textdomain' ),
+            'label' => esc_html__( 'Select Column', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::SELECT,
             'default' => '3',
             'options' => [
-                '1' => esc_html__( '1', 'textdomain' ),
-                '2'  => esc_html__( '2', 'textdomain' ),
-                '3' => esc_html__( '3', 'textdomain' ),
+                '1' => esc_html__( '1', SAAS_PRICINNG_TXT_DOMAIN ),
+                '2'  => esc_html__( '2', SAAS_PRICINNG_TXT_DOMAIN ),
+                '3' => esc_html__( '3', SAAS_PRICINNG_TXT_DOMAIN ),
             ]
+        ]
+    );
+
+    $this->add_control(
+        'saasp_header_content_tab_heading',
+        [
+            'label' => esc_html__( 'Heading', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::HEADING,
+            'separator' => 'after',
         ]
     );
 
     $this->add_control(
         'saasp_header_title_text_1',
         [
-            'label' => esc_html__( 'Title One', 'textdomain' ),
+            'label' => esc_html__( 'Title One', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::TEXT,
-            'default' => esc_html__( 'Free', 'textdomain' ),
+            'default' => esc_html__( 'Free', SAAS_PRICINNG_TXT_DOMAIN ),
             'condition' => [
                 'saasp_select_columns' => ['1','2','3'],
             ],
@@ -157,9 +166,9 @@ protected function register_controls() {
     $this->add_control(
         'saasp_header_title_text_2',
         [
-            'label' => esc_html__( 'Title Two', 'textdomain' ),
+            'label' => esc_html__( 'Title Two', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::TEXT,
-            'default' => esc_html__( 'Personal', 'textdomain' ),
+            'default' => esc_html__( 'Personal', SAAS_PRICINNG_TXT_DOMAIN ),
             'condition' => [
                 'saasp_select_columns' => ['2','3'],
             ],
@@ -169,9 +178,9 @@ protected function register_controls() {
     $this->add_control(
         'saasp_header_title_text_3',
         [
-            'label' => esc_html__( 'Title Three', 'textdomain' ),
+            'label' => esc_html__( 'Title Three', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::TEXT,
-            'default' => esc_html__( 'Pro', 'textdomain' ),
+            'default' => esc_html__( 'Pro', SAAS_PRICINNG_TXT_DOMAIN ),
             'condition' => [
                 'saasp_select_columns' => '3',
             ],
@@ -181,9 +190,9 @@ protected function register_controls() {
     $this->add_control(
         'saasp_header_title_des_1',
         [
-            'label' => esc_html__( 'Description One', 'textdomain' ),
+            'label' => esc_html__( 'Description One', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::TEXTAREA,
-            'default' => esc_html__( 'Starter Plan', 'textdomain' ),
+            'default' => esc_html__( 'Starter Plan', SAAS_PRICINNG_TXT_DOMAIN ),
             'rows' => 2,
             'condition' => [
                 'saasp_select_columns' => ['1','2','3'],
@@ -194,9 +203,9 @@ protected function register_controls() {
     $this->add_control(
         'saasp_header_title_des_2',
         [
-            'label' => esc_html__( 'Description Two', 'textdomain' ),
+            'label' => esc_html__( 'Description Two', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::TEXTAREA,
-            'default' => esc_html__( 'Longer Data Retention', 'textdomain' ),
+            'default' => esc_html__( 'Longer Data Retention', SAAS_PRICINNG_TXT_DOMAIN ),
             'rows' => 2,
             'condition' => [
                 'saasp_select_columns' => ['2','3'],
@@ -207,9 +216,9 @@ protected function register_controls() {
     $this->add_control(
         'saasp_header_title_des_3',
         [
-            'label' => esc_html__( 'Description Three', 'textdomain' ),
+            'label' => esc_html__( 'Description Three', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::TEXTAREA,
-            'default' => esc_html__( 'Our Complete Solution', 'textdomain' ),
+            'default' => esc_html__( 'Our Complete Solution', SAAS_PRICINNG_TXT_DOMAIN ),
             'rows' => 2,
             'condition' => [
                 'saasp_select_columns' => '3',
@@ -217,6 +226,130 @@ protected function register_controls() {
         ]
     );
 
+    $this->add_control(
+        'saasp_heding_combined_alignment',
+        [
+            'label' => esc_html__( 'Alignment', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::CHOOSE,
+            'options' => [
+                'left' => [
+                    'title' => esc_html__( 'Left', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-text-align-left',
+                ],
+                'center' => [
+                    'title' => esc_html__( 'Center', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-text-align-center',
+                ],
+                'right' => [
+                    'title' => esc_html__( 'Right', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-text-align-right',
+                ],
+            ],
+            'default' => 'center',
+            'toggle' => true,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-table tr.price-table-head td' => 'text-align: {{VALUE}};',
+            ],
+        ]
+    );
+
+    $this->end_controls_section();
+
+
+    $this->start_controls_section(
+        'saasp_comparison_style_section',
+        [
+            'label' => esc_html__( 'Header', SAAS_PRICINNG_TXT_DOMAIN ),
+            'tab' =>   Controls_Manager::TAB_STYLE,
+        ]
+    );
+
+    $this->add_control(
+        'saasp_header_style_tab_heading',
+        [
+            'label' => esc_html__( 'Heading', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::HEADING,
+        ]
+    );
+
+    $this->add_control(
+        'saasp_heading_background_color',
+        [
+            'label' => esc_html__( 'Background Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-table tr.price-table-head' => 'background-color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_heading_table_data_padding',
+        [
+            'label' => esc_html__( 'Padding', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em', 'custom' ],
+            'selectors' => [
+                '{{WRAPPER}} .price-table-head td' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_header_style_tab_heading_title',
+        [
+            'label' => esc_html__( 'Title', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::HEADING,
+        ]
+    );
+
+    $this->add_control(
+        'saasp_heading_title_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .price-table-head td span' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+    
+    $this->add_group_control(
+        Group_Control_Typography::get_type(),
+        [
+            'name' => 'saasp_heading_title_typography',
+            'selector' => '{{WRAPPER}} .price-table-head td span',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_header_style_tab_heading_des',
+        [
+            'label' => esc_html__( 'Description', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::HEADING,
+        ]
+    );
+
+    $this->add_control(
+        'saasp_heading_des_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .price-table-head td small' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+    
+    $this->add_group_control(
+        Group_Control_Typography::get_type(),
+        [
+            'name' => 'saasp_heading_des_typography',
+            'selector' => '{{WRAPPER}} .price-table-head td small',
+        ]
+    );
+
+    
 
     $this->end_controls_section();
 	
