@@ -208,28 +208,43 @@ protected function render() {
                     <!-- package title start -->
                     <tr class="price-table-head">
                         <?php
-                         if($settings['saasp_select_columns'] === 1){
+                        if($settings['saasp_select_columns'] == 1){
                         ?>
+                        <td></td>
                         <td>
                             <span><?php echo esc_html($settings['saasp_header_title_text_1']); ?></span>
                             <br><small class="fs-sm">Starter plan</small>
                         </td>
                         <?php
-                         }elseif($settings['saasp_select_columns'] === 2){
+                          }elseif($settings['saasp_select_columns'] == 2){
                         ?>
-                        <td class="">
-                            <span>Personal</span>
+                         <td></td>
+                        <td>
+                            <span><?php echo esc_html($settings['saasp_header_title_text_1']); ?></span>
                             <br><small class="fs-sm">Longer data retention</small>
                         </td>
-                        <td class="green-width">
-                            <span>Pro</span>
+                        <td>
+                            <span><?php echo esc_html($settings['saasp_header_title_text_2']); ?></span>
                             <br><small class="fs-sm">Our complete solution</small>
                         </td>
                         <?php
-                         }else{
+                          }elseif($settings['saasp_select_columns'] == 3){
                         ?>
+                         <td></td>
+                        <td>
+                            <span><?php echo esc_html($settings['saasp_header_title_text_1']); ?></span>
+                            <br><small class="fs-sm">Starter plan</small>
+                        </td>
+                         <td>
+                            <span><?php echo esc_html($settings['saasp_header_title_text_2']); ?></span>
+                            <br><small class="fs-sm">Longer data retention</small>
+                        </td>
+                        <td>
+                            <span><?php echo esc_html($settings['saasp_header_title_text_3']); ?></span>
+                            <br><small class="fs-sm">Our complete solution</small>
+                        </td>
                         <?php
-                         }
+                          }
                         ?>
                     </tr>
 
