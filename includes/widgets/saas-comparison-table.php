@@ -148,7 +148,6 @@ protected function register_controls() {
             'label' => esc_html__( 'Title One', 'textdomain' ),
             'type' =>  Controls_Manager::TEXT,
             'default' => esc_html__( 'Free', 'textdomain' ),
-            'placeholder' => esc_html__( 'Type your title here', 'textdomain' ),
             'condition' => [
                 'saasp_select_columns' => ['1','2','3'],
             ],
@@ -161,7 +160,6 @@ protected function register_controls() {
             'label' => esc_html__( 'Title Two', 'textdomain' ),
             'type' =>  Controls_Manager::TEXT,
             'default' => esc_html__( 'Personal', 'textdomain' ),
-            'placeholder' => esc_html__( 'Type your title here', 'textdomain' ),
             'condition' => [
                 'saasp_select_columns' => ['2','3'],
             ],
@@ -174,7 +172,45 @@ protected function register_controls() {
             'label' => esc_html__( 'Title Three', 'textdomain' ),
             'type' =>  Controls_Manager::TEXT,
             'default' => esc_html__( 'Pro', 'textdomain' ),
-            'placeholder' => esc_html__( 'Type your title here', 'textdomain' ),
+            'condition' => [
+                'saasp_select_columns' => '3',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_header_title_des_1',
+        [
+            'label' => esc_html__( 'Description One', 'textdomain' ),
+            'type' =>  Controls_Manager::TEXTAREA,
+            'default' => esc_html__( 'Starter Plan', 'textdomain' ),
+            'rows' => 2,
+            'condition' => [
+                'saasp_select_columns' => ['1','2','3'],
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_header_title_des_2',
+        [
+            'label' => esc_html__( 'Description Two', 'textdomain' ),
+            'type' =>  Controls_Manager::TEXTAREA,
+            'default' => esc_html__( 'Longer Data Retention', 'textdomain' ),
+            'rows' => 2,
+            'condition' => [
+                'saasp_select_columns' => ['2','3'],
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_header_title_des_3',
+        [
+            'label' => esc_html__( 'Description Three', 'textdomain' ),
+            'type' =>  Controls_Manager::TEXTAREA,
+            'default' => esc_html__( 'Our Complete Solution', 'textdomain' ),
+            'rows' => 2,
             'condition' => [
                 'saasp_select_columns' => '3',
             ],
@@ -205,46 +241,20 @@ protected function render() {
                         </td>
                         <td class="saaspricing-blank"></td>
                     </tr>
+
                     <!-- package title start -->
+
                     <tr class="price-table-head">
-                        <?php
-                        if($settings['saasp_select_columns'] == 1){
-                        ?>
                         <td></td>
-                        <td>
-                            <span><?php echo esc_html($settings['saasp_header_title_text_1']); ?></span>
-                            <br><small class="fs-sm">Starter plan</small>
-                        </td>
                         <?php
-                          }elseif($settings['saasp_select_columns'] == 2){
-                        ?>
-                         <td></td>
-                        <td>
-                            <span><?php echo esc_html($settings['saasp_header_title_text_1']); ?></span>
-                            <br><small class="fs-sm">Longer data retention</small>
-                        </td>
-                        <td>
-                            <span><?php echo esc_html($settings['saasp_header_title_text_2']); ?></span>
-                            <br><small class="fs-sm">Our complete solution</small>
-                        </td>
-                        <?php
-                          }elseif($settings['saasp_select_columns'] == 3){
-                        ?>
-                         <td></td>
-                        <td>
-                            <span><?php echo esc_html($settings['saasp_header_title_text_1']); ?></span>
-                            <br><small class="fs-sm">Starter plan</small>
-                        </td>
-                         <td>
-                            <span><?php echo esc_html($settings['saasp_header_title_text_2']); ?></span>
-                            <br><small class="fs-sm">Longer data retention</small>
-                        </td>
-                        <td>
-                            <span><?php echo esc_html($settings['saasp_header_title_text_3']); ?></span>
-                            <br><small class="fs-sm">Our complete solution</small>
-                        </td>
-                        <?php
-                          }
+                        for ( $i = 1; $i <= $settings['saasp_select_columns'] ; $i++ ) {
+                           ?>
+                            <td>
+                            <span><?php echo esc_html($settings['saasp_header_title_text_'.$i]); ?></span>
+                            <br><small class="fs-sm"><?php echo esc_html($settings['saasp_header_title_des_'.$i]); ?></small>
+                            </td>
+                           <?php
+                        }
                         ?>
                     </tr>
 
