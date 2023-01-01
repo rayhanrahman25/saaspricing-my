@@ -378,6 +378,7 @@ protected function render() {
                     <!-- package title start -->
 
                     <tr class="price-table-head">
+                        <td></td>
                         <?php
                         for ( $i = 1; $i <= $settings['saasp_select_columns'] ; $i++ ) {
                            ?>
