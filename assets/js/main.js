@@ -1,8 +1,9 @@
 jQuery(document).ready(function($){
 
   "use strict";
- 
-  
+
+  const dataValue = $('.saaspricing-countdown').data('my-expire-date-1');
+  console.log(dataValue);
   let countDownDate = new Date("2023/01/4 23:04").getTime();
 
   // Update the count down every 1 second

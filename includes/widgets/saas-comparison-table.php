@@ -145,19 +145,11 @@ protected function register_controls() {
     // --- Heading Content
 
     $this->add_control(
-        'saasp_header_content_tab_heading',
-        [
-            'label' => esc_html__( 'Heading', SAAS_PRICINNG_TXT_DOMAIN ),
-            'type' =>  Controls_Manager::HEADING,
-            'separator' => 'after',
-        ]
-    );
-
-    $this->add_control(
         'saasp_header_content_title_and_des_one',
         [
             'label' => esc_html__( 'Column One', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::HEADING,
+            'separator'=>'before',
             'condition' => [
                 'saasp_select_columns' => ['1','2','3'],
             ],
@@ -169,8 +161,8 @@ protected function register_controls() {
         [
             'label' => esc_html__( 'Title', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::TEXT,
-            'default' => esc_html__( 'Free', SAAS_PRICINNG_TXT_DOMAIN ),
-            'label_block' => true,
+            'default' => esc_html__( 'First Head', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label_block' => false,
             'condition' => [
                 'saasp_select_columns' => ['1','2','3'],
             ],
@@ -181,9 +173,9 @@ protected function register_controls() {
         'saasp_header_title_des_1',
         [
             'label' => esc_html__( 'Description', SAAS_PRICINNG_TXT_DOMAIN ),
-            'type' =>  Controls_Manager::TEXTAREA,
-            'default' => esc_html__( 'Starter Plan', SAAS_PRICINNG_TXT_DOMAIN ),
-            'rows' => 2,
+            'type' =>  Controls_Manager::TEXT,
+            'default' => esc_html__( 'Enter your description', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label_block' => false,
             'condition' => [
                 'saasp_select_columns' => ['1','2','3'],
             ],
@@ -191,127 +183,23 @@ protected function register_controls() {
     );
 
     $this->add_control(
-        'saasp_header_content_title_and_des_two',
+        'saasp_column_html_title_tag_1',
         [
-            'label' => esc_html__( 'Column Two', SAAS_PRICINNG_TXT_DOMAIN ),
-            'type' =>  Controls_Manager::HEADING,
-            'condition' => [
-                'saasp_select_columns' => ['2','3'],
-            ],
-        ]
-    );
-
-    $this->add_control(
-        'saasp_header_title_text_2',
-        [
-            'label' => esc_html__( 'Title', SAAS_PRICINNG_TXT_DOMAIN ),
-            'type' =>  Controls_Manager::TEXT,
-            'default' => esc_html__( 'Personal', SAAS_PRICINNG_TXT_DOMAIN ),
-            'label_block' => true,
-            'condition' => [
-                'saasp_select_columns' => ['2','3'],
-            ],
-        ]
-    );
-
-    $this->add_control(
-        'saasp_header_title_des_2',
-        [
-            'label' => esc_html__( 'Description', SAAS_PRICINNG_TXT_DOMAIN ),
-            'type' =>  Controls_Manager::TEXTAREA,
-            'default' => esc_html__( 'Longer Data Retention', SAAS_PRICINNG_TXT_DOMAIN ),
-            'rows' => 2,
-            'condition' => [
-                'saasp_select_columns' => ['2','3'],
-            ],
-        ]
-    );
-
-    $this->add_control(
-        'saasp_header_content_title_and_des_three',
-        [
-            'label' => esc_html__( 'Column Three', SAAS_PRICINNG_TXT_DOMAIN ),
-            'type' =>  Controls_Manager::HEADING,
-            'condition' => [
-                'saasp_select_columns' => '3',
-            ],
-        ]
-    );
-
-    $this->add_control(
-        'saasp_header_title_text_3',
-        [
-            'label' => esc_html__( 'Title', SAAS_PRICINNG_TXT_DOMAIN ),
-            'type' =>  Controls_Manager::TEXT,
-            'default' => esc_html__( 'Pro', SAAS_PRICINNG_TXT_DOMAIN ),
-            'label_block' => true,
-            'condition' => [
-                'saasp_select_columns' => '3',
-            ],
-        ]
-    );
-
-    $this->add_control(
-        'saasp_header_title_des_3',
-        [
-            'label' => esc_html__( 'Description', SAAS_PRICINNG_TXT_DOMAIN ),
-            'type' =>  Controls_Manager::TEXTAREA,
-            'default' => esc_html__( 'Our Complete Solution', SAAS_PRICINNG_TXT_DOMAIN ),
-            'rows' => 2,
-            'condition' => [
-                'saasp_select_columns' => '3',
-            ],
-        ]
-    );
-
-    $this->add_control(
-        'saasp_heding_combined_alignment',
-        [
-            'label' => esc_html__( 'Alignment', SAAS_PRICINNG_TXT_DOMAIN ),
-            'type' =>  Controls_Manager::CHOOSE,
+            'label' => esc_html__( 'Title HTML Tag', 'textdomain' ),
+            'type' =>  Controls_Manager::SELECT,
+            'default' => 'span',
             'options' => [
-                'left' => [
-                    'title' => esc_html__( 'Left', SAAS_PRICINNG_TXT_DOMAIN ),
-                    'icon' => 'eicon-text-align-left',
-                ],
-                'center' => [
-                    'title' => esc_html__( 'Center', SAAS_PRICINNG_TXT_DOMAIN ),
-                    'icon' => 'eicon-text-align-center',
-                ],
-                'right' => [
-                    'title' => esc_html__( 'Right', SAAS_PRICINNG_TXT_DOMAIN ),
-                    'icon' => 'eicon-text-align-right',
-                ],
-            ],
-            'default' => 'center',
-            'toggle' => true,
-            'selectors' => [
-                '{{WRAPPER}} .saaspricing-table tr.price-table-head td' => 'text-align: {{VALUE}};',
+                'h2' => esc_html__( 'H2', 'textdomain' ),
+                'h3' => esc_html__( 'H3', 'textdomain' ),
+                'h4'  => esc_html__( 'H4', 'textdomain' ),
+                'h5' => esc_html__( 'H5', 'textdomain' ),
+                'h6' => esc_html__( 'H6', 'textdomain' ),
+                'span' => esc_html__( 'Span', 'textdomain' ),
+                'p' => esc_html__( 'P', 'textdomain' ),
             ],
         ]
     );
-    
-    $this->add_control(
-        'saasp_comparison_ribbon_section',
-        [
-            'label' => esc_html__( 'Ribbon', SAAS_PRICINNG_TXT_DOMAIN ),
-            'type' =>  Controls_Manager::HEADING,
-            'separator'=>'after'
-        ]
-    );
-    
-    // ribbon one
 
-    $this->add_control(
-        'saasp_comparison_ribbon_1',
-        [
-            'label' => esc_html__( 'Column One', SAAS_PRICINNG_TXT_DOMAIN ),
-            'type' =>  Controls_Manager::HEADING,
-            'condition' => [
-                'saasp_select_columns' => ['1','2','3'],
-            ],
-        ]
-    );
 
     $this->add_control(
         'saasp_comparison_show_ribbon_1',
@@ -367,15 +255,86 @@ protected function register_controls() {
         ]
     );
 
-    // ribbon two
+    $this->add_control(
+        'sassp_column_one_combined_alignment',
+        [
+            'label' => esc_html__( 'Alignment', 'textdomain' ),
+            'type' =>  Controls_Manager::CHOOSE,
+            'options' => [
+                'left' => [
+                    'title' => esc_html__( 'Left', 'textdomain' ),
+                    'icon' => 'eicon-text-align-left',
+                ],
+                'center' => [
+                    'title' => esc_html__( 'Center', 'textdomain' ),
+                    'icon' => 'eicon-text-align-center',
+                ],
+                'right' => [
+                    'title' => esc_html__( 'Right', 'textdomain' ),
+                    'icon' => 'eicon-text-align-right',
+                ],
+            ],
+            'default' => 'center',
+            'toggle' => true,
+            'selectors' => [
+                '{{WRAPPER}} .your-class' => 'text-align: {{VALUE}};',
+            ],
+        ]
+    );
+    
 
     $this->add_control(
-        'saasp_comparison_ribbon_2',
+        'saasp_header_content_title_and_des_two',
         [
             'label' => esc_html__( 'Column Two', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::HEADING,
+            'separator'=>'before',
             'condition' => [
                 'saasp_select_columns' => ['2','3'],
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_header_title_text_2',
+        [
+            'label' => esc_html__( 'Title', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::TEXT,
+            'default' => esc_html__( 'Second Head', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label_block' => false,
+            'condition' => [
+                'saasp_select_columns' => ['2','3'],
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_header_title_des_2',
+        [
+            'label' => esc_html__( 'Description', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::TEXT,
+            'default' => esc_html__( 'Enter your description', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label_block' => false,
+            'condition' => [
+                'saasp_select_columns' => ['2','3'],
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_column_html_title_tag_2',
+        [
+            'label' => esc_html__( 'Title HTML Tag', 'textdomain' ),
+            'type' =>  Controls_Manager::SELECT,
+            'default' => 'span',
+            'options' => [
+                'h2' => esc_html__( 'H2', 'textdomain' ),
+                'h3' => esc_html__( 'H3', 'textdomain' ),
+                'h4'  => esc_html__( 'H4', 'textdomain' ),
+                'h5' => esc_html__( 'H5', 'textdomain' ),
+                'h6' => esc_html__( 'H6', 'textdomain' ),
+                'span' => esc_html__( 'Span', 'textdomain' ),
+                'p' => esc_html__( 'P', 'textdomain' ),
             ],
         ]
     );
@@ -434,19 +393,90 @@ protected function register_controls() {
         ]
     );
 
-    // ribbon three
+    $this->add_control(
+        'sassp_column_two_combined_alignment',
+        [
+            'label' => esc_html__( 'Alignment', 'textdomain' ),
+            'type' =>  Controls_Manager::CHOOSE,
+            'options' => [
+                'left' => [
+                    'title' => esc_html__( 'Left', 'textdomain' ),
+                    'icon' => 'eicon-text-align-left',
+                ],
+                'center' => [
+                    'title' => esc_html__( 'Center', 'textdomain' ),
+                    'icon' => 'eicon-text-align-center',
+                ],
+                'right' => [
+                    'title' => esc_html__( 'Right', 'textdomain' ),
+                    'icon' => 'eicon-text-align-right',
+                ],
+            ],
+            'default' => 'center',
+            'toggle' => true,
+            'selectors' => [
+                '{{WRAPPER}} .your-class' => 'text-align: {{VALUE}};',
+            ],
+        ]
+    );
+
 
     $this->add_control(
-        'saasp_comparison_ribbon_3',
+        'saasp_header_content_title_and_des_three',
         [
             'label' => esc_html__( 'Column Three', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::HEADING,
+            'separator'=> 'before',
             'condition' => [
                 'saasp_select_columns' => '3',
             ],
         ]
     );
-    
+
+    $this->add_control(
+        'saasp_header_title_text_3',
+        [
+            'label' => esc_html__( 'Title', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::TEXT,
+            'default' => esc_html__( 'Third Head', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label_block' => false,
+            'condition' => [
+                'saasp_select_columns' => '3',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_header_title_des_3',
+        [
+            'label' => esc_html__( 'Description', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::TEXT,
+            'default' => esc_html__( 'Enter your description', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label_block' => false,
+            'condition' => [
+                'saasp_select_columns' => '3',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_column_html_title_tag_3',
+        [
+            'label' => esc_html__( 'Title HTML Tag', 'textdomain' ),
+            'type' =>  Controls_Manager::SELECT,
+            'default' => 'span',
+            'options' => [
+                'h2' => esc_html__( 'H2', 'textdomain' ),
+                'h3' => esc_html__( 'H3', 'textdomain' ),
+                'h4'  => esc_html__( 'H4', 'textdomain' ),
+                'h5' => esc_html__( 'H5', 'textdomain' ),
+                'h6' => esc_html__( 'H6', 'textdomain' ),
+                'span' => esc_html__( 'Span', 'textdomain' ),
+                'p' => esc_html__( 'P', 'textdomain' ),
+            ],
+        ]
+    );
+
     $this->add_control(
         'saasp_comparison_show_ribbon_3',
         [
@@ -501,32 +531,34 @@ protected function register_controls() {
         ]
     );
 
+
     $this->add_control(
-        'sassp_ribbon_section_combined_alignment',
+        'saasp_heding_combined_alignment',
         [
-            'label' => esc_html__( 'Alignment', 'textdomain' ),
+            'label' => esc_html__( 'Alignment', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::CHOOSE,
             'options' => [
                 'left' => [
-                    'title' => esc_html__( 'Left', 'textdomain' ),
+                    'title' => esc_html__( 'Left', SAAS_PRICINNG_TXT_DOMAIN ),
                     'icon' => 'eicon-text-align-left',
                 ],
                 'center' => [
-                    'title' => esc_html__( 'Center', 'textdomain' ),
+                    'title' => esc_html__( 'Center', SAAS_PRICINNG_TXT_DOMAIN ),
                     'icon' => 'eicon-text-align-center',
                 ],
                 'right' => [
-                    'title' => esc_html__( 'Right', 'textdomain' ),
+                    'title' => esc_html__( 'Right', SAAS_PRICINNG_TXT_DOMAIN ),
                     'icon' => 'eicon-text-align-right',
                 ],
             ],
             'default' => 'center',
             'toggle' => true,
             'selectors' => [
-                '{{WRAPPER}} .your-class' => 'text-align: {{VALUE}};',
+                '{{WRAPPER}} .saaspricing-table tr.price-table-head td' => 'text-align: {{VALUE}};',
             ],
         ]
     );
+    
 
     $this->end_controls_section();
     
@@ -636,7 +668,7 @@ protected function render() {
  $settings = $this->get_settings_for_display();
 ?>
   <!-- pricing comparison table start  -->
-  <div class="saaspricing-main table-responsive-xl position-relative mt-5">
+  <div class="saaspricing-main table-responsive-xl position-relative">
             <table class="saaspricing-table" role="presentation">
                 <!-- table header start  -->
                 <thead class="tableHeader" id="tableHeader">
@@ -651,8 +683,8 @@ protected function render() {
                         if($settings['saasp_comparison_show_ribbon_1'] != "" || $settings['saasp_comparison_show_countdown_1'] != "" ){
                         ?>
                         <td class="saaspricing-table-popular">
-                            <div >First popular</div>
-                            <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded" > </div>
+                            <div><?php echo esc_html($settings['saasp_ribbon_title_1']); ?></div>
+                            <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded" data-expire-date-1="<?php echo "hello" //esc_attr($settings['saasp_comparison_expire_date_1']); ?>"> </div>
                         </td>
                         <?php
                         }

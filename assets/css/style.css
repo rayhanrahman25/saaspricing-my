@@ -6,12 +6,6 @@
  
 }
 
-.saaspricing-main {
-    -webkit-box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
-
-}
-
 .tableHeader {
     background-color: var(--color-white);
 }
