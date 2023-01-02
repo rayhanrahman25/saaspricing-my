@@ -321,7 +321,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'no',
+            'default' => 'yes',
             'condition' => [
                 'saasp_select_columns' => ['1','2','3'],
             ],
@@ -348,7 +348,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'no',
+            'default' => 'yes',
             'condition' => [
                 'saasp_select_columns' => ['1','2','3'],
             ],
@@ -415,7 +415,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'no',
+            'default' => 'yes',
             'condition' => [
                 'saasp_select_columns' => ['2','3'],
             ],
@@ -455,7 +455,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'no',
+            'default' => 'yes',
             'condition' => [
                 'saasp_select_columns' => '3',
             ],
@@ -482,7 +482,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'no',
+            'default' => 'yes',
             'condition' => [
                 'saasp_select_columns' => '3',
             ],
@@ -642,24 +642,53 @@ protected function render() {
                 <thead class="tableHeader" id="tableHeader">
 
                     <!-- highlights the most popular plan -->
+                    <?php
+                    if($settings['saasp_comparison_show_ribbon_1'] != "" || $settings['saasp_comparison_show_countdown_1'] != "" || $settings['saasp_comparison_show_ribbon_2'] != "" || $settings['saasp_comparison_show_countdown_2'] != "" || $settings['saasp_comparison_show_ribbon_3'] != "" || $settings['saasp_comparison_show_countdown_3'] != ""){
+                    ?>
                     <tr>
                         <td></td>
-                    
+                        <?php
+                        if($settings['saasp_comparison_show_ribbon_1'] != "" || $settings['saasp_comparison_show_countdown_1'] != "" ){
+                        ?>
                         <td class="saaspricing-table-popular">
-                            <div class="">Most popular</div>
-                            <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded"></div>
+                            <div >First popular</div>
+                            <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded" > </div>
                         </td>
+                        <?php
+                        }
+                        if($settings['saasp_comparison_show_ribbon_1'] == "" && $settings['saasp_comparison_show_countdown_1'] == "" && $settings['saasp_comparison_show_ribbon_2'] != "" && $settings['saasp_comparison_show_countdown_2'] != ""){
+                        echo '<td></td>';
+                        }
+                        ?>
+                        <?php
+                        if($settings['saasp_comparison_show_ribbon_2'] != "" || $settings['saasp_comparison_show_countdown_2'] != "" ){
+                        ?>
                         <td class="saaspricing-table-popular">
-                            <div class="">Most popular</div>
-                            <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded"></div>
+                            <div class="">Second popular</div>
+                            <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded" > </div>
                         </td>
+                       <?php
+                        }
+                        if($settings['saasp_comparison_show_ribbon_3'] == "" && $settings['saasp_comparison_show_countdown_3'] == "" && $settings['saasp_comparison_show_ribbon_2'] != "" && $settings['saasp_comparison_show_countdown_2'] != ""){
+                            echo '<td></td>';
+                        }
+                        if($settings['saasp_comparison_show_ribbon_1'] == "" && $settings['saasp_comparison_show_countdown_1'] == "" && $settings['saasp_comparison_show_ribbon_2'] == "" && $settings['saasp_comparison_show_countdown_2'] == ""){
+                            echo '<td></td>';
+                            echo '<td></td>';
+                        }
+                        if($settings['saasp_comparison_show_ribbon_3'] != "" || $settings['saasp_comparison_show_countdown_3'] != ""){
+                       ?>
                         <td class="saaspricing-table-popular">
-                            <div class="">Most popular</div>
-                            <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded"></div>
+                            <div class="">Third popular</div>
+                            <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded" > </div>
                         </td>
-                       
+                        <?php
+                        }
+                        ?>
                     </tr>
-
+                    <?php
+                    }
+                    ?>
                     <!-- package title start -->
 
                     <tr class="price-table-head">
