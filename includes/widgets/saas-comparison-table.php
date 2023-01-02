@@ -675,25 +675,30 @@ protected function render() {
 
                     <!-- highlights the most popular plan -->
                     <?php
-                    if($settings['saasp_comparison_show_ribbon_1'] != "yes" || $settings['saasp_comparison_show_countdown_1'] != "yes" || $settings['saasp_comparison_show_ribbon_2'] != "yes" || $settings['saasp_comparison_show_countdown_2'] != "yes" || $settings['saasp_comparison_show_ribbon_3'] != "yes" || $settings['saasp_comparison_show_countdown_3'] != "yes"){
+                    if($settings['saasp_comparison_show_ribbon_1'] == "yes" || $settings['saasp_comparison_show_countdown_1'] == "yes" || $settings['saasp_comparison_show_ribbon_2'] == "yes" || $settings['saasp_comparison_show_countdown_2'] == "yes" || $settings['saasp_comparison_show_ribbon_3'] == "yes" || $settings['saasp_comparison_show_countdown_3'] == "yes"){
                     ?>
                     <tr>
                         <td></td>
                         <?php
-                        if($settings['saasp_comparison_show_ribbon_1'] != "yes" || $settings['saasp_comparison_show_countdown_1'] != "yes" ){
+                        if($settings['saasp_comparison_show_ribbon_1'] == "yes" || $settings['saasp_comparison_show_countdown_1'] == "yes" ){
                         ?>
                         <td class="saaspricing-table-popular">
                             <div><?php echo esc_html($settings['saasp_ribbon_title_1']); ?></div>
                             <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded" data-expire-date-1="<?php echo "hello" ?>"> </div>
+                            <div>
+                                <?php
+                                 echo $settings['saasp_comparison_show_ribbon_1'];
+                                 echo $settings['saasp_comparison_show_ribbon_1'];
+                                 echo $settings['saasp_comparison_show_ribbon_1'];
+                                 echo $settings['saasp_comparison_show_countdown_1'];
+                                 echo $settings['saasp_comparison_show_countdown_2'];
+                                 echo $settings['saasp_comparison_show_countdown_3'];
+                                ?>
+                            </div>
                         </td>
                         <?php
                         }
-                        if($settings['saasp_comparison_show_ribbon_1'] == "no" && $settings['saasp_comparison_show_countdown_1'] == "no" && $settings['saasp_comparison_show_ribbon_2'] != "no" && $settings['saasp_comparison_show_countdown_2'] != "no"){
-                        echo '<td></td>';
-                        }
-                        ?>
-                        <?php
-                        if($settings['saasp_comparison_show_ribbon_2'] != "no" || $settings['saasp_comparison_show_countdown_2'] != "no" ){
+                        if($settings['saasp_comparison_show_ribbon_2'] == "yes" || $settings['saasp_comparison_show_countdown_2'] == "yes" ){
                         ?>
                         <td class="saaspricing-table-popular">
                             <div class="">Second popular</div>
@@ -701,22 +706,21 @@ protected function render() {
                         </td>
                        <?php
                         }
-                        if($settings['saasp_comparison_show_ribbon_3'] == "no" && $settings['saasp_comparison_show_countdown_3'] == "no" && $settings['saasp_comparison_show_ribbon_2'] != "no" && $settings['saasp_comparison_show_countdown_2'] != "no"){
-                            echo '<td></td>';
-                        }
-                        if($settings['saasp_comparison_show_ribbon_1'] == "no" && $settings['saasp_comparison_show_countdown_1'] == "no" && $settings['saasp_comparison_show_ribbon_2'] == "no" && $settings['saasp_comparison_show_countdown_2'] == "no"){
-                            echo '<td></td>';
-                            echo '<td></td>';
-                        }
-                        if($settings['saasp_comparison_show_ribbon_3'] != "no" || $settings['saasp_comparison_show_countdown_3'] != "no"){
+                        if($settings['saasp_comparison_show_ribbon_3'] == "yes" || $settings['saasp_comparison_show_countdown_3'] == "yes" ){
                        ?>
-                        <td class="saaspricing-table-popular">
+                         <?php
+                           if( $settings['saasp_comparison_show_ribbon_1'] || $settings['saasp_comparison_show_countdown_1'] && $settings['saasp_comparison_show_ribbon_2'] || $settings['saasp_comparison_show_countdown_2']){
+                            echo "<td></td>";
+                            echo "<td></td>";
+                           }
+                         ?>
+                         <td class="saaspricing-table-popular">
                             <div class="">Third popular</div>
                             <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded" > </div>
                         </td>
-                        <?php
+                       <?php
                         }
-                        ?>
+                       ?>
                     </tr>
                     <?php
                     }
