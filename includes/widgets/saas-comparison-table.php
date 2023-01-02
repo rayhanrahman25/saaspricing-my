@@ -209,7 +209,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'yes',
+            'default' => 'no',
             'condition' => [
                 'saasp_select_columns' => ['1','2','3'],
             ],
@@ -236,7 +236,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'yes',
+            'default' => 'no',
             'condition' => [
                 'saasp_select_columns' => ['1','2','3'],
             ],
@@ -374,7 +374,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'yes',
+            'default' => 'no',
             'condition' => [
                 'saasp_select_columns' => ['2','3'],
             ],
@@ -485,7 +485,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'yes',
+            'default' => 'no',
             'condition' => [
                 'saasp_select_columns' => '3',
             ],
@@ -512,7 +512,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'yes',
+            'default' => 'no',
             'condition' => [
                 'saasp_select_columns' => '3',
             ],
