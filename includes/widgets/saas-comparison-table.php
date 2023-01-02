@@ -209,7 +209,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'no',
+            'default' => 'yes',
             'condition' => [
                 'saasp_select_columns' => ['1','2','3'],
             ],
@@ -236,7 +236,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'no',
+            'default' => 'yes',
             'condition' => [
                 'saasp_select_columns' => ['1','2','3'],
             ],
@@ -347,7 +347,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'no',
+            'default' => 'yes',
             'condition' => [
                 'saasp_select_columns' => ['2','3'],
             ],
@@ -374,7 +374,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'no',
+            'default' => 'yes',
             'condition' => [
                 'saasp_select_columns' => ['2','3'],
             ],
@@ -485,7 +485,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'no',
+            'default' => 'yes',
             'condition' => [
                 'saasp_select_columns' => '3',
             ],
@@ -511,8 +511,8 @@ protected function register_controls() {
             'type' =>  Controls_Manager::SWITCHER,
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
-            'return_value' => 'yes',
-            'default' => 'no',
+            'return_value' => 'yes', 
+            'default' => 'yes',
             'condition' => [
                 'saasp_select_columns' => '3',
             ],
@@ -675,16 +675,16 @@ protected function render() {
 
                     <!-- highlights the most popular plan -->
                     <?php
-                    if($settings['saasp_comparison_show_ribbon_1'] != "no" || $settings['saasp_comparison_show_countdown_1'] != "no" || $settings['saasp_comparison_show_ribbon_2'] != "no" || $settings['saasp_comparison_show_countdown_2'] != "no" || $settings['saasp_comparison_show_ribbon_3'] != "no" || $settings['saasp_comparison_show_countdown_3'] != "no"){
+                    if($settings['saasp_comparison_show_ribbon_1'] != "yes" || $settings['saasp_comparison_show_countdown_1'] != "yes" || $settings['saasp_comparison_show_ribbon_2'] != "yes" || $settings['saasp_comparison_show_countdown_2'] != "yes" || $settings['saasp_comparison_show_ribbon_3'] != "yes" || $settings['saasp_comparison_show_countdown_3'] != "yes"){
                     ?>
                     <tr>
                         <td></td>
                         <?php
-                        if($settings['saasp_comparison_show_ribbon_1'] != "no" || $settings['saasp_comparison_show_countdown_1'] != "no" ){
+                        if($settings['saasp_comparison_show_ribbon_1'] != "yes" || $settings['saasp_comparison_show_countdown_1'] != "yes" ){
                         ?>
                         <td class="saaspricing-table-popular">
                             <div><?php echo esc_html($settings['saasp_ribbon_title_1']); ?></div>
-                            <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded" data-expire-date-1="<?php echo "hello" //esc_attr($settings['saasp_comparison_expire_date_1']); ?>"> </div>
+                            <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded" data-expire-date-1="<?php echo "hello" ?>"> </div>
                         </td>
                         <?php
                         }
