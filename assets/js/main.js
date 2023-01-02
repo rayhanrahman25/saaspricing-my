@@ -1,10 +1,9 @@
 jQuery(document).ready(function($){
 
   "use strict";
-
-//  Countdown timer function  
+ 
   
-  let countDownDate = new Date("2022/12/31 23:04").getTime();
+  let countDownDate = new Date("2023/01/4 23:04").getTime();
 
   // Update the count down every 1 second
   let x = setInterval(function () {
@@ -41,20 +40,6 @@ jQuery(document).ready(function($){
   }, 1000);
 
 
-  // review star rating function
-
-  // let stars = document.querySelectorAll(".star-icon span");
-
-  // stars.forEach((star, index) => {
-  //   star.addEventListener("click", () => {
-  //     stars.forEach((star) => {
-  //       star.classList.remove("yellow");
-  //     });
-  //     for (let i = 0; i <= index; i++) {
-  //       stars[i].classList.add("yellow");
-  //     }
-  //   });
-  // });
 
   // table sticky header function
 
