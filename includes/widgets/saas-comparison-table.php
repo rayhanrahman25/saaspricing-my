@@ -687,12 +687,12 @@ protected function render() {
                             <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded" data-expire-date-1="<?php echo "hello" ?>"> </div>
                             <div>
                                 <?php
-                                 echo $settings['saasp_comparison_show_ribbon_1'];
-                                 echo $settings['saasp_comparison_show_ribbon_1'];
-                                 echo $settings['saasp_comparison_show_ribbon_1'];
-                                 echo $settings['saasp_comparison_show_countdown_1'];
-                                 echo $settings['saasp_comparison_show_countdown_2'];
-                                 echo $settings['saasp_comparison_show_countdown_3'];
+                                //  echo $settings['saasp_comparison_show_ribbon_1'];
+                                //  echo $settings['saasp_comparison_show_ribbon_1'];
+                                //  echo $settings['saasp_comparison_show_ribbon_1'];
+                                //  echo $settings['saasp_comparison_show_countdown_1'];
+                                //  echo $settings['saasp_comparison_show_countdown_2'];
+                                //  echo $settings['saasp_comparison_show_countdown_3'];
                                 ?>
                             </div>
                         </td>
