@@ -701,19 +701,13 @@ protected function render() {
                         if($settings['saasp_comparison_show_ribbon_2'] == "yes" || $settings['saasp_comparison_show_countdown_2'] == "yes" ){
                         ?>
                         <td class="saaspricing-table-popular">
-                            <div class="">Second popular</div>
+                            <div class="">Middle Popular</div>
                             <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded" > </div>
                         </td>
                        <?php
                         }
                         if($settings['saasp_comparison_show_ribbon_3'] == "yes" || $settings['saasp_comparison_show_countdown_3'] == "yes" ){
                        ?>
-                         <?php
-                           if( $settings['saasp_comparison_show_ribbon_1'] || $settings['saasp_comparison_show_countdown_1'] && $settings['saasp_comparison_show_ribbon_2'] || $settings['saasp_comparison_show_countdown_2']){
-                            echo "<td></td>";
-                            echo "<td></td>";
-                           }
-                         ?>
                          <td class="saaspricing-table-popular">
                             <div class="">Third popular</div>
                             <div class="saaspricing-countdown py-1 px-2 fs-sm text-dark rounded" > </div>
