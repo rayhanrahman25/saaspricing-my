@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Saaspricing
- * Description: Something
+ * Description: Nothing
  * Version: 1.0.0
  * Requires at least: 5.2
  * Requires PHP: 7.3
