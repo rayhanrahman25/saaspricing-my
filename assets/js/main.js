@@ -31,7 +31,7 @@
                         + minutes + "m: " + seconds + "s ";
 
             if (distance < 0) {
-              clearInterval(x);
+              clearInterval(saaspExpire);
               countdown.innerHTML = "EXPIRED";
             }
           });

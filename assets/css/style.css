@@ -101,8 +101,6 @@ margin: 0;
     background-color: var(--saaspricing-secondary-color);
 }
 
-
-
 .saaspricing-table .saaspricing-blank {
     background-color: #fafafa;
     border: 0 none;
@@ -112,6 +110,10 @@ margin: 0;
 .saaspricing-table svg {
     max-width: 80px;
     fill: #7f1987;
+}
+
+.elementor-widget-saasComparison .elementor-widget-container{
+    overflow: hidden;
 }
 
 
@@ -132,6 +134,20 @@ margin: 0;
     color: gray;
     text-align: left;
     line-height: 1.6em;
+}
+
+.saasspricing-pricing-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:5px;
+    line-height: .8; 
+    
+   
+}
+.saaspricing-original-slashed-price, .saaspricing-price-symbol, .saaspricing-fraction-price{
+    line-height: .8;
 }
 
 /* ribbons  */
@@ -207,6 +223,7 @@ margin: 0;
 
 .saaspricing-fraction-price{
  vertical-align: super;
+ font-size: 16px;
 }
 
 tbody svg {
