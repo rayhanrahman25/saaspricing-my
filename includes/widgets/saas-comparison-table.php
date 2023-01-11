@@ -2041,7 +2041,15 @@ protected function render() {
                                     <?php
                                      }
                                     ?>
-                                    <small class="saaspricing-review-text"> (<?php echo esc_html($settings['saasp_rating_counter_'.$i]); ?>) </small>
+                                    <?php
+                                    if(''!==$settings['saasp_rating_counter_'.$i]){
+                                    ?>
+                                    <small class="saaspricing-review-text"> 
+                                    (<?php echo esc_html($settings['saasp_rating_counter_'.$i]); ?>) 
+                                    </small>
+                                    <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                             <?php
