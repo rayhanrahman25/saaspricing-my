@@ -462,6 +462,60 @@ protected function register_controls() {
     $this->end_popover('saasp_pricing_popover');
 
     $this->add_control(
+        'saasp_review_popover_1',
+        [
+            'label' => esc_html__( 'Review', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::POPOVER_TOGGLE,
+            'label_off' => esc_html__( 'Default', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label_on' => esc_html__( 'Custom', SAAS_PRICINNG_TXT_DOMAIN ),
+            'return_value' => 'yes',
+        ]
+    );
+
+    $this->start_popover('saasp_review_popover_1');
+
+     $this->add_control(
+        'saasp_show_rating_1',
+        [
+            'label' => esc_html__( 'Show Rating', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::SWITCHER,
+            'label_on' => esc_html__( 'Show', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label_off' => esc_html__( 'Hide', SAAS_PRICINNG_TXT_DOMAIN ),
+            'return_value' => 'yes',
+            'default' => 'yes',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_rating_num_1',
+        [
+            'label' => esc_html__( 'Rating', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::NUMBER,
+            'min' => 0,
+            'max' =>  5,
+            'step' => .5,
+            'default' => 5,
+            'condition' => [
+                'saasp_show_rating_1' => 'yes',
+            ],
+        ]
+    );
+    
+    $this->add_control(
+        'saasp_rating_counter_1',
+        [
+            'label' => esc_html__( 'Rating Counter', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::TEXT,
+            'default' => esc_html__( '3k', SAAS_PRICINNG_TXT_DOMAIN ),
+            'condition' => [
+                'saasp_show_rating_1' => 'yes',
+            ],
+        ]
+    );
+
+    $this->end_popover('saasp_review_popover_1');
+
+    $this->add_control(
         'saasp_header_content_title_and_des_two',
         [
             'label' => esc_html__( 'Column Two', SAAS_PRICINNG_TXT_DOMAIN ),
@@ -745,6 +799,63 @@ protected function register_controls() {
     );
 
     $this->end_popover('saasp_pricing_popover_2');
+
+    $this->add_control(
+        'saasp_review_popover_2',
+        [
+            'label' => esc_html__( 'Review', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::POPOVER_TOGGLE,
+            'label_off' => esc_html__( 'Default', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label_on' => esc_html__( 'Custom', SAAS_PRICINNG_TXT_DOMAIN ),
+            'return_value' => 'yes',
+            'condition' => [
+                'saasp_select_columns' => ['2','3'],
+            ],
+        ]
+    );
+
+    $this->start_popover('saasp_review_popover_2');
+
+     $this->add_control(
+        'saasp_show_rating_2',
+        [
+            'label' => esc_html__( 'Show Rating', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::SWITCHER,
+            'label_on' => esc_html__( 'Show', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label_off' => esc_html__( 'Hide', SAAS_PRICINNG_TXT_DOMAIN ),
+            'return_value' => 'yes',
+            'default' => 'yes',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_rating_num_2',
+        [
+            'label' => esc_html__( 'Rating', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::NUMBER,
+            'min' => 0,
+            'max' =>  5,
+            'step' => .5,
+            'default' => 5,
+            'condition' => [
+                'saasp_show_rating_2' => 'yes',
+            ],
+        ]
+    );
+    
+    $this->add_control(
+        'saasp_rating_counter_2',
+        [
+            'label' => esc_html__( 'Rating Counter', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::TEXT,
+            'default' => esc_html__( '3k', SAAS_PRICINNG_TXT_DOMAIN ),
+            'condition' => [
+                'saasp_show_rating_2' => 'yes',
+            ],
+        ]
+    );
+
+    $this->end_popover('saasp_review_popover_2');
 
     $this->add_control(
         'saasp_header_content_title_and_des_three',
@@ -1034,6 +1145,63 @@ protected function register_controls() {
     );
 
     $this->end_popover('saasp_pricing_popover_3');
+
+    $this->add_control(
+        'saasp_review_popover_3',
+        [
+            'label' => esc_html__( 'Review', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::POPOVER_TOGGLE,
+            'label_off' => esc_html__( 'Default', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label_on' => esc_html__( 'Custom', SAAS_PRICINNG_TXT_DOMAIN ),
+            'return_value' => 'yes',
+            'condition' => [
+                'saasp_select_columns' => '3',
+            ],
+        ]
+    );
+
+    $this->start_popover('saasp_review_popover_3');
+
+     $this->add_control(
+        'saasp_show_rating_3',
+        [
+            'label' => esc_html__( 'Show Rating', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::SWITCHER,
+            'label_on' => esc_html__( 'Show', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label_off' => esc_html__( 'Hide', SAAS_PRICINNG_TXT_DOMAIN ),
+            'return_value' => 'yes',
+            'default' => 'yes',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_rating_num_3',
+        [
+            'label' => esc_html__( 'Rating', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::NUMBER,
+            'min' => 0,
+            'max' =>  5,
+            'step' => .5,
+            'default' => 5,
+            'condition' => [
+                'saasp_show_rating_3' => 'yes',
+            ],
+        ]
+    );
+    
+    $this->add_control(
+        'saasp_rating_counter_3',
+        [
+            'label' => esc_html__( 'Rating Counter', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::TEXT,
+            'default' => esc_html__( '3k', SAAS_PRICINNG_TXT_DOMAIN ),
+            'condition' => [
+                'saasp_show_rating_3' => 'yes',
+            ],
+        ]
+    );
+
+    $this->end_popover('saasp_review_popover_3');
 
     $this->end_controls_section();
     
@@ -1558,6 +1726,87 @@ protected function register_controls() {
 		);
 
     $this->end_controls_section();
+
+    $this->start_controls_section(
+        'saasp_comparison_style_header_review_section',
+        [
+            'label' => esc_html__( 'Review', SAAS_PRICINNG_TXT_DOMAIN ),
+            'tab' =>Controls_Manager::TAB_STYLE,
+        ]
+    );
+
+    $this->add_control(
+        'saasp_comparison_style_header_review_satar_heading',
+        [
+            'label' => esc_html__( 'Stars', 'textdomain' ),
+            'type' =>  Controls_Manager::HEADING,
+            'separator' => 'before',
+        ]
+    );
+
+    $this->add_responsive_control(
+        'saasp_comparison_header_review_spacing',
+        [
+            'label' => esc_html__( 'Spacing', 'textdomain' ),
+            'type' =>  Controls_Manager::SLIDER,
+            'size_units' => [ 'px' ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 49,
+                    'step' => 1,
+                ],
+            ],
+            'default' => [
+                'unit' => 'px',
+                'size' => 0,
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .ratings span:not(:last-child)' => 'margin-right: {{SIZE}}{{UNIT}};',
+            ],
+        ]
+    );
+    
+    $this->add_control(
+        'saasp_comparison_header_review_star_color',
+        [
+            'label' => esc_html__( 'Color', 'textdomain' ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-yellow' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_comparison_style_header_review_text_heading',
+        [
+            'label' => esc_html__( 'Text', 'textdomain' ), 
+            'type' =>  Controls_Manager::HEADING,
+            'separator' => 'before',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_comparison_header_review_text_color',
+        [
+            'label' => esc_html__( 'Color', 'textdomain' ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-review-text' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_group_control(
+        Group_Control_Typography::get_type(),
+        [
+            'name' => 'content_typography',
+            'selector' => '{{WRAPPER}} .saaspricing-review-text',
+        ]
+    );
+
+    $this->end_controls_section();
 	
 }
 
@@ -1672,7 +1921,7 @@ protected function render() {
                             </a>
                     
                             <div class="saasspricing-pricing-block" > 
-                            <s class="saaspricing-original-slashed-price">
+                            <s class="saaspricing-original-slashed-price me-2">
                             <?php
                             if('none' !== $settings['saasp_currency_symbol_'.$i] && 'yes' === $settings['saasp_sale_'.$i]){
                             ?>
@@ -1748,7 +1997,7 @@ protected function render() {
                             <?php
                             if('' !== $settings['saasp_period_'.$i])
                             ?>
-                            <span class="saaspricing-period <?php if( 'below' === $settings['saasp_header_period_position']){echo esc_attr('w-100');} ?>">
+                            <span class="saaspricing-period <?php if( 'below' === $settings['saasp_header_period_position']){echo esc_attr('w-100 mt-1');} ?>">
                              <?php
                              echo esc_html($settings['saasp_period_'.$i]);
                              ?>
@@ -1756,33 +2005,48 @@ protected function render() {
                             <?php
                             ?>
                             </div>
-
+                            <?php
+                            if('yes' === $settings['saasp_show_rating_'.$i]){
+                            ?>
                             <div class="ratings">
-                                <div class="saaspricing-star-icon fs-6">
+                                <div class="saaspricing-star-icon fs-6"> 
+                                 <?php                                    
+                                    $saasp_rating = $settings['saasp_rating_num_'.$i];
+                                    $saasp_full_stars = floor( $saasp_rating);
+                                    $saasp_half_star = $saasp_rating - $saasp_full_stars;
+                                    for ($k = 0; $k <  $saasp_full_stars; $k++) {
+                                    ?>
                                     <span>
                                         <i class="fas fa-star-half saaspricing-star-left saaspricing-yellow"></i>
                                         <i class="fas fa-star-half saaspricing-star-right saaspricing-yellow"></i>
                                     </span>
-                                    <span>
-                                        <i class="fas fa-star-half saaspricing-star-left saaspricing-yellow"></i>
-                                        <i class="fas fa-star-half saaspricing-star-right saaspricing-yellow"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-star-half saaspricing-star-left saaspricing-yellow"></i>
-                                        <i class="fas fa-star-half saaspricing-star-right saaspricing-yellow"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-star-half saaspricing-star-left saaspricing-yellow"></i>
-                                        <i class="fas fa-star-half saaspricing-star-right saaspricing-yellow"></i>
-                                    </span>
+                                    <?php
+                                    }
+                                    if ($saasp_half_star >= 0.5) {
+                                     ?>
                                     <span>
                                         <i class="fas fa-star-half saaspricing-star-left saaspricing-yellow"></i>
                                         <i class="fas fa-star-half saaspricing-star-right"></i>
                                     </span>
-
-                                    <small class="text-success"> (3K+) </small>
+                                    <?php
+                                     }
+                                    ?>
+                                    <?php
+                                     for($j=0; $j < 5 - ceil($settings['saasp_rating_num_'.$i]); $j++){
+                                    ?>
+                                    <span>
+                                        <i class="fas fa-star-half saaspricing-star-left"></i>
+                                        <i class="fas fa-star-half saaspricing-star-right"></i>
+                                    </span>
+                                    <?php
+                                     }
+                                    ?>
+                                    <small class="saaspricing-review-text"> (<?php echo esc_html($settings['saasp_rating_counter_'.$i]); ?>) </small>
                                 </div>
                             </div>
+                            <?php
+                            }
+                            ?>
                         </td>
                         <?php
                         }

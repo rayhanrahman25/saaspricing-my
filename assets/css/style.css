@@ -143,8 +143,7 @@ margin: 0;
     flex-wrap: wrap;
     gap:5px;
     line-height: .8; 
-    
-   
+    padding:15px 0 8px 0;
 }
 .saaspricing-original-slashed-price, .saaspricing-price-symbol, .saaspricing-fraction-price{
     line-height: .8;
