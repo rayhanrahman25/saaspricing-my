@@ -281,6 +281,7 @@ protected function register_controls() {
             'label' => esc_html__( 'Expire Date', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::DATE_TIME,
             'label_block' => false,
+            'default'=> '2023-12-31 12:00',
             'condition' => [
                 'saasp_comparison_show_countdown_1' => 'yes',
                 'saasp_comparison_show_ribbon_1' => 'yes',
@@ -614,6 +615,7 @@ protected function register_controls() {
             'label' => esc_html__( 'Expire Date', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::DATE_TIME,
             'label_block' => false,
+            'default'=> '2023-12-31 12:00',
             'condition' => [
                 'saasp_comparison_show_countdown_2' => 'yes',
                 'saasp_comparison_show_ribbon_2' => 'yes',
@@ -956,6 +958,7 @@ protected function register_controls() {
             'label' => esc_html__( 'Expire Date', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::DATE_TIME,
             'label_block' => false,
+            'default'=> '2023-12-31 12:00',
             'condition' => [
                 'saasp_comparison_show_countdown_3' => 'yes',
                 'saasp_comparison_show_ribbon_2' => 'yes',
@@ -1738,7 +1741,7 @@ protected function register_controls() {
     $this->add_control(
         'saasp_comparison_style_header_review_satar_heading',
         [
-            'label' => esc_html__( 'Stars', 'textdomain' ),
+            'label' => esc_html__( 'Stars', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::HEADING,
             'separator' => 'before',
         ]
@@ -1747,13 +1750,13 @@ protected function register_controls() {
     $this->add_responsive_control(
         'saasp_comparison_header_review_spacing',
         [
-            'label' => esc_html__( 'Spacing', 'textdomain' ),
+            'label' => esc_html__( 'Spacing', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::SLIDER,
             'size_units' => [ 'px' ],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 49,
+                    'max' => 100,
                     'step' => 1,
                 ],
             ],
@@ -1770,7 +1773,7 @@ protected function register_controls() {
     $this->add_control(
         'saasp_comparison_header_review_star_color',
         [
-            'label' => esc_html__( 'Color', 'textdomain' ),
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-yellow' => 'color: {{VALUE}}',
@@ -1779,9 +1782,20 @@ protected function register_controls() {
     );
 
     $this->add_control(
+        'saasp_comparison_header_review_unmark_star_color',
+        [
+            'label' => esc_html__( 'Unmark Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-unmark' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_control(
         'saasp_comparison_style_header_review_text_heading',
         [
-            'label' => esc_html__( 'Text', 'textdomain' ), 
+            'label' => esc_html__( 'Text', SAAS_PRICINNG_TXT_DOMAIN ), 
             'type' =>  Controls_Manager::HEADING,
             'separator' => 'before',
         ]
@@ -1790,7 +1804,7 @@ protected function register_controls() {
     $this->add_control(
         'saasp_comparison_header_review_text_color',
         [
-            'label' => esc_html__( 'Color', 'textdomain' ),
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-review-text' => 'color: {{VALUE}}',
@@ -1920,7 +1934,10 @@ protected function render() {
                                 <img src="<?php echo esc_url($settings['saasp_comparison_choose_media_'.$i]['url']); ?>" class="<?php echo esc_attr('saaspricing-header-image-'.$i) ?>" >
                             </a>
                     
-                            <div class="saasspricing-pricing-block" > 
+                            <div class="saasspricing-pricing-block" >
+                            <?php
+                             if('yes' === $settings['saasp_sale_'.$i]){
+                            ?>
                             <s class="saaspricing-original-slashed-price me-2">
                             <?php
                             if('none' !== $settings['saasp_currency_symbol_'.$i] && 'yes' === $settings['saasp_sale_'.$i]){
@@ -1938,13 +1955,16 @@ protected function render() {
                             }
                             ?>
                             <?php
-                            if('yes' === $settings['saasp_sale_'.$i]){
+                            if('' !== $settings['saasp_original_price_'.$i]){
                             ?>
                             <span><?php echo esc_html($settings['saasp_original_price_'.$i]); ?></span>
                             <?php
                             }
                             ?>
                             </s>
+                            <?php
+                             }
+                            ?>
 
                             <?php
                             if('none' !== $settings['saasp_currency_symbol_'.$i] && 'before' === $settings['saasp_header_pricing_symbol_position']){
@@ -2026,7 +2046,7 @@ protected function render() {
                                      ?>
                                     <span>
                                         <i class="fas fa-star-half saaspricing-star-left saaspricing-yellow"></i>
-                                        <i class="fas fa-star-half saaspricing-star-right"></i>
+                                        <i class="fas fa-star-half saaspricing-star-right saaspricing-unmark"></i>
                                     </span>
                                     <?php
                                      }
@@ -2035,8 +2055,8 @@ protected function render() {
                                      for($j=0; $j < 5 - ceil($settings['saasp_rating_num_'.$i]); $j++){
                                     ?>
                                     <span>
-                                        <i class="fas fa-star-half saaspricing-star-left"></i>
-                                        <i class="fas fa-star-half saaspricing-star-right"></i>
+                                        <i class="fas fa-star-half saaspricing-star-left saaspricing-unmark"></i>
+                                        <i class="fas fa-star-half saaspricing-star-right saaspricing-unmark"></i>
                                     </span>
                                     <?php
                                      }
