@@ -4036,7 +4036,6 @@ protected function render() {
                     ?>
 
                     <!-- == Table Heading Rendaring == -->
-
                     <?php
                     if( '1' === $settings['saasp_comparison_select_columns'] ){
                     if( '' !== $settings['saasp_comparison_header_title_text_1'] || 
