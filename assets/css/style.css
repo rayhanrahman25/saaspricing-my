@@ -137,7 +137,7 @@ td.saaspricing-table-head {
     overflow: hidden;
 }
 
-/* single pricing section  */
+/* vertical pricing section  */
 
 .saaspricing-heading {
     font-size: 50px;
@@ -194,7 +194,14 @@ td.saaspricing-table-head {
     vertical-align: super;
 }
 
+/* Features */
+
+.vertical-pricing-card ol{
+   padding:0; 
+}
+
 /* button css */
+
 .saaspricing-primary-btn, .wp-block-post-content a:where(:not(.wp-element-button)){
     color:var(--saaspricing-color-white);
 }

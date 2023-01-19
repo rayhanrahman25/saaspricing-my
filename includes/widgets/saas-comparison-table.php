@@ -4015,7 +4015,7 @@ protected function render() {
                                 </div>
                                 <div class="saaspricing-countdown fs-sm" style="margin-bottom: 0;"> 
                                 <?php
-                                if($settings['saasp_comparison_show_countdown_'.$i] &&  "" !== $settings['saasp_comparison_show_countdown_'.$i]){
+                                if( 'yes' === $settings['saasp_comparison_show_countdown_'.$i] &&  "" !== $settings['saasp_comparison_show_countdown_'.$i]){
                                 ?>
                                 <div class="show-expire-date" data-countdown-index="<?php echo esc_attr($j); ?>" data-expire-date-<?php echo esc_attr($i); ?>="<?php echo esc_attr($settings['saasp_comparison_expire_date_'.$i]); ?>"></div>
                                 <?php
@@ -4399,8 +4399,6 @@ protected function render() {
                         for($i= 1; $i <= $settings['saasp_comparison_select_columns']; $i++){
                         if ( ! empty( $settings['saasp_comparison_primary_cta_url_'.$i]['url'] ) ) {
                             $this->add_link_attributes( 'saasp_comparison_primary_cta_url_'.$i, $settings['saasp_comparison_primary_cta_url_'.$i] );
-                        }elseif( ! empty( $settings['saasp_comparison_secondary_cta_url_'.$i]['url'] ) ){
-                            $this->add_link_attributes( 'saasp_comparison_secondary_cta_url_'.$i, $settings['saasp_comparison_secondary_cta_url_'.$i] );
                         }
                         ?>
                         <td class="footer-cta">
@@ -4448,6 +4446,9 @@ protected function render() {
                             <!-- Secondary Button -->
                             <?php
                              if( 'yes' === $settings['saasp_comparison_secondary_cta_switch_'.$i] && '' !== $settings['saasp_comparison_secondary_cta_text_'.$i]){
+                                if( ! empty( $settings['saasp_comparison_secondary_cta_url_'.$i]['url'] ) ){
+                                    $this->add_link_attributes( 'saasp_comparison_secondary_cta_url_'.$i, $settings['saasp_comparison_secondary_cta_url_'.$i] );
+                                }
                             ?>
                             <a class="btn btn-link mt-3 saaspricing-secondary-btn <?php
                              if('extra-small' === $settings['saasp_comparison_secondary_cta_size_'.$i]){
