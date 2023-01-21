@@ -1268,7 +1268,7 @@ protected function register_controls() {
     $saasp_comparison_feature_one->add_control(
         'saasp_comparison_features_tooltip_postion',
         [
-            'label' => esc_html__( 'Postion', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label' => esc_html__( 'Tooltip Postion', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::CHOOSE,
             'options' => [
                 'before' => [
@@ -3212,7 +3212,7 @@ protected function register_controls() {
     $this->add_control(
         'saasp_comparison_header_pricing_symbol_position',
         [
-            'label' => esc_html__( 'Tooltip Postion', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label' => esc_html__( 'Postion', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::CHOOSE,
             'options' => [
                 'before' => [
@@ -4223,6 +4223,7 @@ protected function render() {
                             </a>
                     
                             <div class="saasspricing-pricing-block" >
+                                
                             <?php
                              if('yes' === $settings['saasp_comparison_sale_'.$i]){
                             ?>
