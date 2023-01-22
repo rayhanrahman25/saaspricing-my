@@ -42,9 +42,12 @@ tr.saaspricing-price-table-head, tr.saaspricing-feature-list {
     border-right: 1px solid #fafafa;
 }
 
-td.footer-cta {
+td.saaspricing-footer-cta {
     border-bottom: 1px solid #fafafa;
     border-right: 1px solid #fafafa;
+}
+td.saaspricing-header-cta{
+border-bottom: none;
 }
 
 .saaspricing-table tr td {
@@ -153,10 +156,6 @@ td.saaspricing-table-head {
     justify-content: center;
     line-height: .8;
     gap:5px;
-}
-
-.saaspricing-period {
-    text-align: center;
 }
 
 .saaspricing-card-header {
