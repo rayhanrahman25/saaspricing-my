@@ -7,11 +7,16 @@
     --saaspricing-color-box-shadow: #00000015;
     --saaspricing-color-blue: #0d6efd;
 }
+
 p, h2 {
 padding: 0;
 margin: 0;
 }
 
+.entry-content h2 , .entry-content p{
+    margin-bottom: 0;
+    margin-bottom: 0;
+}
 .tableHeader {
     background-color: var( --saaspricing-color-white);
 }
@@ -81,6 +86,10 @@ td.footer-cta {
 
 /* Highlighted column */
 
+td.ribbon-wrapper.saaspricing-common-ribbon.saasp-hidden{
+    visibility: hidden;
+}
+
 .saaspricing-table tr.saaspricing-price-table-head td {
     font-size: 16px;
     font-weight: 600;
@@ -101,16 +110,13 @@ td.saaspricing-table-head {
     position: relative;
 }
 
-.saaspricing-table td div.saaspricing-common-ribbon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.saaspricing-table td.ribbon-wrapper.saaspricing-common-ribbon {
     color: var(--saaspricing-color-white);
     text-transform: capitalize;
     font-size: 12px;
     font-weight: 700;
     background-color: var(--saaspricing-secondary-color);
+    padding:20px 20px;
 }
 
 .saaspricing-table .saaspricing-blank {
@@ -126,19 +132,15 @@ td.saaspricing-table-head {
     font-size: 28px;
 }
 
-.saaspricing-ribbon-title {
-    padding: 0px 20px;
-}
-
-.show-expire-date {
-    padding: 0px 20px;
-}
-
 .elementor-widget-saasComparison .elementor-widget-container{
     overflow: hidden;
 }
 
 /* vertical pricing section  */
+
+.pricing-cards-all{
+    overflow: hidden;
+}
 
 .saaspricing-heading {
     font-size: 50px;
@@ -214,9 +216,15 @@ td.saaspricing-table-head {
 
 /* Pricing */
 
-.saaspricing-vertical-title, .saaspricing-vertical-description{
-    padding:15px 0;
-    margin:0;
+.saasprcing-vertical-pricing{
+    padding:20px 0;
+}
+
+.saaspricing-vertical-title{
+    padding:15px 0 20px 0;
+}
+.saaspricing-vertical-description{
+    padding:0 0 20px 0;
 }
 
 .saaspricing-vertical-price, .saaspricing-vertical-symbol{
@@ -239,7 +247,7 @@ td.saaspricing-table-head {
 /* Countdown */
 
 .saaspricing-vertical-countdown{
-    margin: 20px 0;
+    margin: 25px 0 20px 0;
 }
 
 .saaspricing-vertical-countdown span.saaspricing-countdown {
@@ -261,6 +269,16 @@ td.saaspricing-table-head {
 
 .vertical-pricing-card ol {
    padding:0; 
+}
+
+.saaspricing-features-title{
+    font-weight: bold;
+}
+
+.saaspricing-vertical-feature{
+    background-color: #ffefd570;
+    padding: 1.5rem 0.5rem;
+    margin: 1rem 0;
 }
 
 /* button css */
