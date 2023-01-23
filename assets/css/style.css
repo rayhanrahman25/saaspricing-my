@@ -42,6 +42,10 @@ tr.saaspricing-price-table-head, tr.saaspricing-feature-list {
     border-right: 1px solid #fafafa;
 }
 
+.saaspricing-table td.ribbon-wrapper.saaspricing-common-ribbon{
+    border-right: 1px solid #ffffff;
+}
+
 td.saaspricing-footer-cta {
     border-bottom: 1px solid #fafafa;
     border-right: 1px solid #fafafa;
