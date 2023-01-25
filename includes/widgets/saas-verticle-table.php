@@ -499,6 +499,17 @@ protected function register_controls() {
 			]
         );
 
+        $saasp_vertical_features->add_control(
+            'saasp_vertical_features_icon_color',
+            [
+                'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+                'type' =>  Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .saaspricing-vertical-title' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
 		$this->add_control(
 			'saasp_vertical_features',
 			[
@@ -817,6 +828,7 @@ protected function register_controls() {
             ]
         ]
     );
+
     
     $this->add_responsive_control(
         'saasp_vertical_secondary_cta_icon_spacing',
@@ -2078,7 +2090,7 @@ protected function register_controls() {
     );
 
     $this->add_control(
-        'saasp_vertical_cata_background_color',
+        'saasp_vertical_cta_background_color',
         [
             'label' => esc_html__( 'Background Color', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::COLOR,
@@ -2135,8 +2147,7 @@ $settings = $this->get_settings_for_display();
 
 ?>
   <!-- basic pricing card start   -->
-  <div class="pricing-cards-all">
-
+<div class="pricing-cards-all">
 <div class="row">
     <div class="col-md-12 col-lg-12 col-xl-12 mt-auto">
         <div class="saaspricing-card vertical-pricing-card">
@@ -2156,9 +2167,9 @@ $settings = $this->get_settings_for_display();
             <div class="card-body position-relative">
 
                 <?php
-                if( '' !== $settings['saasp_vertical_icon']['value']['url']){
+                if('' !== $settings['saasp_vertical_icon']['value']){
                 ?>
-                <div class="saaspricing-vertical-icon pt-5 pb-5">
+                <div class="saaspricing-vertical-icon pt-1 pb-1">
                 <?php Icons_Manager::render_icon( $settings['saasp_vertical_icon'], [ 'aria-hidden' => 'true' ] ); ?>
                 </div>
                 <?php
@@ -2174,10 +2185,10 @@ $settings = $this->get_settings_for_display();
                  <?php echo esc_html($settings['saasp_vertical_header_description']); ?>
                 </p>
                 </div>
+
                 <!-- pricing  -->
 
                 <div class="saasprcing-vertical-pricing">
-                   
                     <?php
                     if('none' !== $settings['saasp_vertical_currency_symbol'] && 'yes' === $settings['saasp_vertical_sale']){
                     ?>
@@ -2276,6 +2287,7 @@ $settings = $this->get_settings_for_display();
                 <?php
                 }
                 ?>
+
                 <!-- ratings and reviews -->
 
                 <?php
@@ -2328,6 +2340,7 @@ $settings = $this->get_settings_for_display();
                 <?php
                 }
                 ?>
+
                 <?php
                 if( 'top' === $settings['saasp_vertical_primary_cta_position'] || 'top' === $settings['saasp_vertical_secondary_cta_position'] ){
                 ?>
@@ -2413,6 +2426,7 @@ $settings = $this->get_settings_for_display();
                 }
                 ?>
             </div>
+            
             <?php
             }
             ?>
@@ -2441,6 +2455,7 @@ $settings = $this->get_settings_for_display();
                         ?>
                     </ol>
                 </div>
+                
             </div>
             <!-- card body end -->
 
@@ -2536,8 +2551,6 @@ $settings = $this->get_settings_for_display();
             <!-- cta end  -->
         </div>
     </div>
-</div>
-
 </div>
 </div>
 <!-- basic pricing card start -->
