@@ -2470,7 +2470,8 @@ $settings = $this->get_settings_for_display();
 
             <!-- cta start  -->   
             <?php
-            if( 'bottom' === $settings['saasp_vertical_primary_cta_position'] || 'bottom' === $settings['saasp_vertical_secondary_cta_position'] ){
+             if('yes' === $settings['saasp_vertical_primary_cta_switch'] || 'yes' === $settings['saasp_vertical_secondary_cta_switch']){
+             if('top' !== $settings['saasp_vertical_primary_cta_position'] || 'top' !== $settings['saasp_vertical_secondary_cta_position']){
             ?>
             <div class="card-footer">
                 <?php
@@ -2555,7 +2556,8 @@ $settings = $this->get_settings_for_display();
                 ?>
             </div>
             <?php
-             }
+            }
+            }
             ?>
             <!-- cta end  -->
         </div>
