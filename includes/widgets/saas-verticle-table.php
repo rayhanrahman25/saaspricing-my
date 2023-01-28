@@ -921,8 +921,7 @@ protected function register_controls() {
             'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .saaspricing-vertical-icon svg' => 'fill: {{VALUE}}',
-                '{{WRAPPER}} .saaspricing-vertical-icon i' => 'color: {{VALUE}}',
+                '{{WRAPPER}} .saaspricing-vertical-icon svg' => 'fill: {{VALUE}}; color: {{VALUE}}; border-color: {{VALUE}};',
             ],
         ]
     );
@@ -946,7 +945,7 @@ protected function register_controls() {
             ],
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-vertical-icon svg' => 'width: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .saaspricing-vertical-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .saaspricing-vertical-icon svg' => 'font-size: {{SIZE}}{{UNIT}};',
             ],
         ]
     );
@@ -970,7 +969,7 @@ protected function register_controls() {
             ],
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-vertical-icon svg' => 'margin-bottom: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .saaspricing-vertical-icon i' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .saaspricing-vertical-icon svg' => 'margin-bottom: {{SIZE}}{{UNIT}};',
             ],
         ]
     );
