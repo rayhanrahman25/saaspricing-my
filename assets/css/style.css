@@ -17,15 +17,16 @@ p.saaspricing-vertical-description, .card-title.saaspricing-vertical-title{
     margin-bottom:0;
 }
 
-.tableHeader {
+/* .tableHeader {
     background-color: var( --saaspricing-color-white);
-}
+} */
 
 .saaspricing-table {
     table-layout: fixed;
     min-width: 830px;
     border-collapse: collapse;
     border: 0 none;
+    margin-bottom: 0;
 }
 
 .saaspricing-table p {
@@ -60,7 +61,7 @@ border-bottom: none;
 }
 
 .saaspricing-table tr td {
-    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    /* border-left: 1px solid rgba(0, 0, 0, 0.05); */
     padding: 15px 20px;
     font-size: 14px;
 }
@@ -84,9 +85,9 @@ border-bottom: none;
     text-align: center;
 }
 
-.saaspricing-table tr:nth-child(even) {
+/* .saaspricing-table tr:nth-child(even) {
     background-color: var( --saaspricing-color-white);
-}
+} */
 
 .saaspricing-table tr:hover {
     background-color: #f9f9f9;
@@ -132,7 +133,7 @@ td.saaspricing-table-head {
 }
 
 .saaspricing-table .saaspricing-blank {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border:none;
 }
 
@@ -225,7 +226,7 @@ li.saaspricing-vertical-margin:last-child{
 
 /* ribbons  */
 
-.saaspricing-ribbon {
+.saaspricing-ribbon, .saaspricing-horizontal-ribbon {
     position: absolute;
     padding: 10px;
     display: -webkit-box;
@@ -243,6 +244,29 @@ li.saaspricing-vertical-margin:last-child{
     color: var(--saaspricing-color-white);
     right: 10px;
     top: 15px;
+}
+
+.saaspricing-horizontal-ribbon{
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #198754;
+}
+
+.saaspricing-horizontal-left-position{
+    left: 10px;
+}
+
+.saaspricing-horizontal-left-position{
+    right: 10px;
+}
+
+#saaspricing-row-reverse{
+    flex-direction: row-reverse;
+}
+
+.saaspricing-border-bottom{
+    border-bottom: 1px solid #dee2e6;
 }
 
 /* Pricing */
@@ -271,11 +295,12 @@ li.saaspricing-vertical-margin:last-child{
 
 /* Countdown */
 
-.saaspricing-vertical-countdown{
+.saaspricing-vertical-countdown, .saaspricing-horizontal-countdown {
     padding: 15px 0;
 }
 
-.saaspricing-vertical-countdown span.saaspricing-countdown {
+.saaspricing-vertical-countdown span.saaspricing-countdown,
+.saaspricing-horizontal-countdown span.saaspricing-countdown {
     white-space:nowrap;
     border-radius: 0.3rem;
     color: #dc3545;
@@ -298,9 +323,24 @@ li.saaspricing-vertical-margin:last-child{
 
 /* Features */
 
+.saaspricing-horizontal-feature-title{
+    color: #6c757d;
+    white-space: nowrap;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.saaspricing-horizontal-des{
+    padding-bottom: 1.5rem;
+}
+
+.saaspricing-horizontal-feature-list{
+    padding-top: 20px;
+}
+
 .vertical-pricing-card ol {
-   padding:0;
-   margin:0;
+    padding:0;
+    margin:0;
 }
 
 p.saaspricing-features-title{

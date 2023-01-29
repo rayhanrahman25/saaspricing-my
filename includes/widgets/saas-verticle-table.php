@@ -158,7 +158,7 @@ protected function register_controls() {
         [
             'label' => esc_html__( 'Title', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::TEXT,
-            'default' => esc_html__( 'Saaspricing', SAAS_PRICINNG_TXT_DOMAIN ),
+            'default' => esc_html__( 'Enter Your Title', SAAS_PRICINNG_TXT_DOMAIN ),
         ]
     );
 
@@ -2560,8 +2560,6 @@ $settings = $this->get_settings_for_display();
             </div>
             <?php
             }
-            // }
-            // }
             ?>
             <!-- cta end  -->
         </div>
