@@ -1052,7 +1052,7 @@ protected function register_controls() {
             'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .saaspricing-border-bottom' => 'border-color: {{VALUE}}',
+                '{{WRAPPER}} .saaspricing-horizontal-ribbon' => 'color: {{VALUE}}',
             ],
         ]
     );
@@ -1061,7 +1061,7 @@ protected function register_controls() {
         Group_Control_Typography::get_type(),
         [
             'name' => 'saasp_horizontal_ribbon_typography',
-            'selector' => '{{WRAPPER}} .saaspricing-horizontal-des',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-ribbon',
         ]
     );
 
@@ -1071,7 +1071,7 @@ protected function register_controls() {
             'label' => esc_html__( 'Background Color', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .saaspricing-border-bottom' => 'border-color: {{VALUE}}',
+                '{{WRAPPER}} .saaspricing-horizontal-ribbon' => 'border-color: {{VALUE}}',
             ],
         ]
     );
@@ -1083,7 +1083,7 @@ protected function register_controls() {
             'type' =>  Controls_Manager::DIMENSIONS,
             'size_units' => [ 'px', '%', 'em'],
             'selectors' => [
-                '{{WRAPPER}} .saaspricing-horizontal-header' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .saaspricing-horizontal-ribbon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
         ]
     );
@@ -1092,10 +1092,75 @@ protected function register_controls() {
         Group_Control_Border::get_type(),
         [
             'name' => 'saasp_horizontal_ribbon_border',
-            'selector' => '{{WRAPPER}} .your-class',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-ribbon',
         ]
     );
 
+    $this->add_responsive_control(
+        'saasp_horizontal_ribbon_border_radius',
+        [
+            'label' => esc_html__( 'Border Radius', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' => Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-ribbon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_group_control(
+        Group_Control_Box_Shadow::get_type(),
+        [
+            'name' => 'saasp_horizontal_ribbon_box_shadow',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-ribbon',
+        ]
+    );
+
+    $this->add_responsive_control(
+        'saasp_horizontal_ribbon_height',
+        [
+            'label' => esc_html__( 'Height', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::SLIDER,
+            'size_units' => ['px'],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 1000,
+                    'step' => 1,
+                ]
+            ],
+            'default' => [
+                'unit' => 'px',
+                'size' => 40,
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-ribbon' => 'height: {{SIZE}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_responsive_control(
+        'saasp_horizontal_ribbon_width',
+        [
+            'label' => esc_html__( 'Width', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::SLIDER,
+            'size_units' => ['px'],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 1000,
+                    'step' => 1,
+                ]
+            ],
+            'default' => [
+                'unit' => 'px',
+                'size' => 60,
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-ribbon' => 'width: {{SIZE}}{{UNIT}};',
+            ],
+        ]
+    );
 
     $this->end_controls_section();
 }

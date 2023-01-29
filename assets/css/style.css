@@ -24,8 +24,8 @@ p.saaspricing-vertical-description, .card-title.saaspricing-vertical-title{
 .saaspricing-table {
     table-layout: fixed;
     min-width: 830px;
-    border-collapse: collapse;
-    border: 0 none;
+    border-collapse: unset;
+    border: unset;
     margin-bottom: 0;
 }
 
@@ -47,10 +47,10 @@ tr.saaspricing-price-table-head, tr.saaspricing-feature-list {
     border-right: 1px solid #ffffff;
 }
 
-td.saaspricing-footer-cta {
+/* td.saaspricing-footer-cta {
     border-bottom: 1px solid #fafafa;
     border-right: 1px solid #fafafa;
-}
+} */
 
 td.saaspricing-feature-main{
     gap:5px;
@@ -89,9 +89,9 @@ border-bottom: none;
     background-color: var( --saaspricing-color-white);
 } */
 
-.saaspricing-table tr:hover {
+/* .saaspricing-table tr:hover {
     background-color: #f9f9f9;
-}
+} */
 
 .saaspricing-table .fa-times {
     color: #D8D6E3;
@@ -193,6 +193,7 @@ td.saaspricing-table-head {
 .saaspricing-horizontal {
     -webkit-box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
 
 .saaspricing-horizontal .saaspricing-new-section {
@@ -244,6 +245,7 @@ li.saaspricing-vertical-margin:last-child{
     color: var(--saaspricing-color-white);
     right: 10px;
     top: 15px;
+    overflow: hidden;
 }
 
 .saaspricing-horizontal-ribbon{
@@ -431,7 +433,6 @@ a.saaspricing-vertical-primary {
     top: 0;
     width: 100%;
     margin-bottom: 375px;
-    background: #ffffff;
     -webkit-box-shadow: 0px 2px 10px #00000020;
     box-shadow: 0px 2px 10px #00000020;
 }
