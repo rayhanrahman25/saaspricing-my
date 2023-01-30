@@ -2291,7 +2291,7 @@ protected function render() {
                             <?php
                             if( 'before' === $settings['saasp_horizontal_pricing_symbol_position'] ){
                             ?>
-                            <span class="saaspricing-horizontal-symbol">
+                            <span class="saaspricing-horizontal-symbol saaspricing-horizontal-price-text">
                                 <?php
                                 if( 'custom' !== $settings['saasp_horizontal_currency_symbol'] ){
                                     echo esc_html($this->get_currency_symbol($settings['saasp_horizontal_currency_symbol']));
@@ -2328,7 +2328,7 @@ protected function render() {
                             <?php
                             if( 'after' === $settings['saasp_horizontal_pricing_symbol_position'] ){
                             ?>
-                            <span class="saaspricing-horizontal-symbol">
+                            <span class="saaspricing-horizontal-symbol saaspricing-horizontal-price-text">
                                 <?php
                                 if( 'custom' !== $settings['saasp_horizontal_currency_symbol'] ){
                                     echo esc_html($this->get_currency_symbol($settings['saasp_horizontal_currency_symbol']));

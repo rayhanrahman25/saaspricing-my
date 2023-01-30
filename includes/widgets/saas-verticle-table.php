@@ -890,8 +890,8 @@ protected function register_controls() {
             'toggle' => true,
             'separator' => 'before',
             'selectors' => [
-                '{{WRAPPER}} .card-footer' => 'text-align: {{VALUE}};',
-                '{{WRAPPER}} .saaspricing-cta-card' => 'text-align: {{VALUE}};',
+                '{{WRAPPER}} .saaspricing-vertical-cta-alignment' => 'text-align: {{VALUE}};',
+                // '{{WRAPPER}} .saaspricing-cta-card' => 'text-align: {{VALUE}};',
             ],
         ]
     );
@@ -967,7 +967,6 @@ protected function register_controls() {
             ],
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-vertical-icon svg' => 'margin-bottom: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .saaspricing-vertical-icon svg' => 'margin-bottom: {{SIZE}}{{UNIT}};',
             ],
         ]
     );
@@ -980,7 +979,7 @@ protected function register_controls() {
             'separator'=>'before',
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-vertical-header' => 'background-color: {{VALUE}}',
-                '{{WRAPPER}} .saaspricing-vertical-icon' => 'background-color: {{VALUE}}',
+                // '{{WRAPPER}} .saaspricing-vertical-icon' => 'background-color: {{VALUE}}',
             ],
         ]
     );
@@ -1188,9 +1187,9 @@ protected function register_controls() {
             'label' => esc_html__( 'Color', 'saaspricing' ),
             'type' => Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .saaspricing-vertical-price' => 'color: {{VALUE}}',
-                '{{WRAPPER}} .saaspricing-vertical-symbol' => 'color: {{VALUE}}',
-                '{{WRAPPER}} .saaspricing-fraction-price' => 'color: {{VALUE}}',
+                '{{WRAPPER}} .saaspricing-vertical-price-text' => 'color: {{VALUE}}',
+                // '{{WRAPPER}} .saaspricing-vertical-symbol' => 'color: {{VALUE}}',
+                // '{{WRAPPER}} .saaspricing-fraction-price' => 'color: {{VALUE}}',
             ],
         ]
     );
@@ -2223,7 +2222,7 @@ $settings = $this->get_settings_for_display();
                     <?php
                     if( 'before' === $settings['saasp_vertical_pricing_symbol_position'] ){
                     ?>
-                    <span class="saaspricing-vertical-symbol">
+                    <span class="saaspricing-vertical-symbol saaspricing-vertical-price-text">
                         <?php
                         if( 'custom' !== $settings['saasp_vertical_currency_symbol'] ){
                             echo esc_html($this->get_currency_symbol($settings['saasp_vertical_currency_symbol']));
@@ -2238,20 +2237,20 @@ $settings = $this->get_settings_for_display();
                     <?php
                     if( '' === $settings['saasp_vertical_currency_format'] ){ 
                     ?>
-                    <span class="saaspricing-vertical-price saaspricing-vertical-typography">
+                    <span class="saaspricing-vertical-price saaspricing-vertical-typography saaspricing-vertical-price-text">
                         <?php echo esc_html(explode(".", $settings['sassp_vertical_price'])[0]); ?>
                     </span>
                     <?php
                     if( '' !== explode(".", $settings['sassp_vertical_price'])[1] ){
                     ?>
-                    <span class="saaspricing-fraction-price">
+                    <span class="saaspricing-fraction-price saaspricing-vertical-price-text">
                         <?php echo esc_html(explode(".", $settings['sassp_vertical_price'])[1]); ?>
                     </span>
                     <?php
                     }
                     }else{
                     ?>
-                    <span class="saaspricing-vertical-price saaspricing-vertical-typography">
+                    <span class="saaspricing-vertical-price saaspricing-vertical-typography saaspricing-vertical-price-text">
                         <?php echo esc_html($settings['sassp_vertical_price']); ?>
                     </span>
                     <?php
@@ -2260,7 +2259,7 @@ $settings = $this->get_settings_for_display();
                     <?php
                     if( 'after' === $settings['saasp_vertical_pricing_symbol_position'] ){
                     ?>
-                    <span class="saaspricing-vertical-symbol">
+                    <span class="saaspricing-vertical-symbol saaspricing-vertical-price-text">
                     <?php
                     if( 'custom' !== $settings['saasp_vertical_currency_symbol'] ){
                         echo esc_html($this->get_currency_symbol($settings['saasp_vertical_currency_symbol']));
@@ -2350,7 +2349,7 @@ $settings = $this->get_settings_for_display();
                 <?php
                 if( 'top' === $settings['saasp_vertical_primary_cta_position'] || 'top' === $settings['saasp_vertical_secondary_cta_position'] ){
                 ?>
-                <div class="saaspricing-cta-card">
+                <div class="saaspricing-cta-card saaspricing-vertical-cta-alignment">
                 <?php
                 if( 'yes' === $settings['saasp_vertical_primary_cta_switch'] && '' !== $settings['saasp_vertical_primary_cta_text'] 
                 && 'top' === $settings['saasp_vertical_primary_cta_position'] ){
@@ -2470,7 +2469,7 @@ $settings = $this->get_settings_for_display();
              if( 'top' !== $settings['saasp_vertical_primary_cta_position'] && 'bottom' === $settings['saasp_vertical_primary_cta_position']
               || 'top' !== $settings['saasp_vertical_secondary_cta_position'] && 'bottom' === $settings['saasp_vertical_secondary_cta_position'] ){
             ?>
-            <div class="card-footer">
+            <div class="card-footer saaspricing-vertical-cta-alignment">
                 <?php
                 if( '' !== $settings['saasp_vertical_primary_cta_text'] 
                 && 'bottom' === $settings['saasp_vertical_primary_cta_position'] || empty($settings['saasp_vertical_primary_cta_position']) ){
