@@ -404,7 +404,7 @@ protected function register_controls() {
     $this->add_control(
         'saasp_horizontal_cta_row_reverse',
         [
-            'label' => esc_html__( 'Row Reverse', 'saaspricing' ),
+            'label' => esc_html__( 'Reverse Column', 'saaspricing' ),
             'type' =>  Controls_Manager::SWITCHER,
             'label_on' => esc_html__( 'Show', 'saaspricing' ),
             'label_off' => esc_html__( 'Hide', 'saaspricing' ),
@@ -593,6 +593,15 @@ protected function register_controls() {
         );
 
         $this->add_control(
+            'saasp_horizontal_cta_section_heading',
+            [
+                'label' => esc_html__( 'CTA Buttons', 'saaspricing' ),
+                'type' =>  Controls_Manager::HEADING,
+                'separator' => 'before'
+            ]
+        );
+
+        $this->add_control(
             'saasp_horizontal_primary_cta_switch',
             [
                 'label' => esc_html__( 'Primary', 'saaspricing' ),
@@ -601,7 +610,6 @@ protected function register_controls() {
                 'label_off' => esc_html__( 'Hide', 'saaspricing' ),
                 'return_value' => 'yes',
                 'default' => 'yes',
-                'separator' => 'before',
             ]
         );
     
@@ -2182,7 +2190,7 @@ protected function render() {
 ?>
 
 
-   <div class="saaspricing-horizontal my-5">
+   <div class="saaspricing-horizontal">
             <div class="row" <?php if( 'yes' === $settings['saasp_horizontal_cta_row_reverse'] ){ echo esc_attr( 'id="saaspricing-row-reverse"' ); } ?>>
                 <div class="col-lg-8">
                     <div class="p-4 p-sm-5 d-flex flex-column justify-content-center position-relative h-100">
