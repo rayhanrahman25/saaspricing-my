@@ -1480,7 +1480,7 @@ protected function register_controls() {
     );
 
     $this->add_control(
-        'saasp_vertical_ribbon_margin',
+        'saasp_vertical_countdown_margin',
         [
             'label' => esc_html__( 'Margin', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::DIMENSIONS,

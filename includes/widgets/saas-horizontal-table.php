@@ -364,6 +364,34 @@ protected function register_controls() {
 			]
 		);
 
+        $this->add_control(
+            'sassp_horizontal_features_alignment',
+            [
+                'label' => esc_html__( 'Alignment', SAAS_PRICINNG_TXT_DOMAIN ),
+                'type' =>  Controls_Manager::CHOOSE,
+                'separator' => 'before',
+                'options' => [
+                    'left' => [
+                        'title' => esc_html__( 'Left', SAAS_PRICINNG_TXT_DOMAIN ),
+                        'icon' => 'eicon-text-align-left',
+                    ],
+                    'center' => [
+                        'title' => esc_html__( 'Center', SAAS_PRICINNG_TXT_DOMAIN ),
+                        'icon' => 'eicon-text-align-center',
+                    ],
+                    'right' => [
+                        'title' => esc_html__( 'Right', SAAS_PRICINNG_TXT_DOMAIN ),
+                        'icon' => 'eicon-text-align-right',
+                    ],
+                ],
+                'default' => 'left', 
+                'toggle' => true,
+                'selectors' => [
+                    '{{WRAPPER}} .saaspricing-horizontal-feature-list' => 'text-align: {{VALUE}};',
+                ],
+            ]
+        );
+
     $this->end_controls_section();
 
     $this->start_controls_section(
@@ -375,14 +403,14 @@ protected function register_controls() {
     );
 
     $this->add_control(
-        'saasp_horizontal_cta_column_reverse',
+        'saasp_horizontal_cta_row_reverse',
         [
-            'label' => esc_html__( 'Column Reverse', 'textdomain' ),
+            'label' => esc_html__( 'Row Reverse', 'textdomain' ),
             'type' =>  Controls_Manager::SWITCHER,
             'label_on' => esc_html__( 'Show', 'textdomain' ),
             'label_off' => esc_html__( 'Hide', 'textdomain' ),
             'return_value' => 'yes',
-            'default' => 'yes',
+            'default' => 'no',
         ]
     );
 
@@ -826,7 +854,7 @@ protected function register_controls() {
                 'label' => esc_html__( 'CTA Alignment', SAAS_PRICINNG_TXT_DOMAIN ),
                 'type' =>  Controls_Manager::CHOOSE,
                 'options' => [
-                    'left' => [
+                    'start' => [
                         'title' => esc_html__( 'Left', SAAS_PRICINNG_TXT_DOMAIN ),
                         'icon' => 'eicon-text-align-left',
                     ],
@@ -834,7 +862,7 @@ protected function register_controls() {
                         'title' => esc_html__( 'Center', SAAS_PRICINNG_TXT_DOMAIN ),
                         'icon' => 'eicon-text-align-center',
                     ],
-                    'right' => [
+                    'end' => [
                         'title' => esc_html__( 'Right', SAAS_PRICINNG_TXT_DOMAIN ),
                         'icon' => 'eicon-text-align-right',
                     ],
@@ -843,8 +871,7 @@ protected function register_controls() {
                 'toggle' => true,
                 'separator' => 'before',
                 'selectors' => [
-                    '{{WRAPPER}} .card-footer' => 'text-align: {{VALUE}};',
-                    '{{WRAPPER}} .saaspricing-cta-card' => 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .saaspricing-horizontal-sidebar' => 'align-items: {{VALUE}};',
                 ],
             ]
         );
@@ -1071,7 +1098,7 @@ protected function register_controls() {
             'label' => esc_html__( 'Background Color', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .saaspricing-horizontal-ribbon' => 'border-color: {{VALUE}}',
+                '{{WRAPPER}} .saaspricing-horizontal-ribbon' => 'background-color: {{VALUE}}',
             ],
         ]
     );
@@ -1116,48 +1143,1013 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_responsive_control(
-        'saasp_horizontal_ribbon_height',
+
+    $this->end_controls_section();
+
+    $this->start_controls_section(
+        'saasp_horizontal_features_tab_style',
         [
-            'label' => esc_html__( 'Height', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label' => esc_html__( 'Features', SAAS_PRICINNG_TXT_DOMAIN ),
+            'tab' =>  Controls_Manager::TAB_STYLE,
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_features_title_heading',
+        [
+            'label' => esc_html__( 'Title', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::HEADING,
+            'separator'=>'before'
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_features_title_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-feature-title' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+    
+    $this->add_group_control(
+        Group_Control_Typography::get_type(),
+        [
+            'name' => 'saasp_horizontal_features_title_typography',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-feature-title',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_features_title_padding',
+        [
+            'label' => esc_html__( 'Padding', 'textdomain' ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-feature-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_features_icon_heading',
+        [
+            'label' => esc_html__( 'Icon', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::HEADING,
+            'separator'=>'before'
+        ]
+    );
+
+    $this->add_responsive_control(
+        'saasp_horizontal_features_icon_size',
+        [
+            'label' => esc_html__( 'Size', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::SLIDER,
             'size_units' => ['px'],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 1000,
+                    'max' => 100,
                     'step' => 1,
                 ]
             ],
             'default' => [
                 'unit' => 'px',
-                'size' => 40,
+                'size' => 16,
             ],
             'selectors' => [
-                '{{WRAPPER}} .saaspricing-horizontal-ribbon' => 'height: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .saasp-horizontal-icon-wrapper svg' => 'font-size: {{SIZE}}{{UNIT}};',
             ],
         ]
     );
 
     $this->add_responsive_control(
-        'saasp_horizontal_ribbon_width',
+        'saasp_horizontal_features_icon_spacing',
         [
-            'label' => esc_html__( 'Width', SAAS_PRICINNG_TXT_DOMAIN ),
+            'label' => esc_html__( 'Icon Spacing', SAAS_PRICINNG_TXT_DOMAIN ),
             'type' =>  Controls_Manager::SLIDER,
             'size_units' => ['px'],
             'range' => [
                 'px' => [
                     'min' => 0,
-                    'max' => 1000,
+                    'max' => 50,
                     'step' => 1,
                 ]
             ],
             'default' => [
                 'unit' => 'px',
-                'size' => 60,
+                'size' => 15,
             ],
             'selectors' => [
-                '{{WRAPPER}} .saaspricing-horizontal-ribbon' => 'width: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .saasp-horizontal-icon-wrapper svg' => 'margin-right: {{SIZE}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_features_text_heading',
+        [
+            'label' => esc_html__( 'Text', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::HEADING,
+            'separator'=>'before'
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_features_text_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-feature-text' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+    
+    $this->add_group_control(
+        Group_Control_Typography::get_type(),
+        [
+            'name' => 'saasp_horizontal_features_text_typography',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-feature-text',
+        ]
+    );
+
+    $this->end_controls_section();
+
+    $this->start_controls_section(
+        'saasp_horizontal_pricing_style_tab',
+        [
+            'label' => esc_html__( 'Pricing', SAAS_PRICINNG_TXT_DOMAIN ),
+            'tab' => Controls_Manager::TAB_STYLE,
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_pricing_background_color',
+        [
+            'label' => esc_html__( 'Background Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saasprcing-horizontal-pricing' => 'background-color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_responsive_control(
+        'saasp_horizontal_pricing_padding',
+        [
+            'label' => esc_html__( 'Paddding', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saasprcing-horizontal-pricing' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_group_control(
+         Group_Control_Box_Shadow::get_type(),
+        [
+            'name' => 'saasp_horizontal_pricing_section_box_shadow',
+            'selector' => '{{WRAPPER}} .saasprcing-horizontal-pricing',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_price_text_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' => Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-price' => 'color: {{VALUE}}',
+                '{{WRAPPER}} .saaspricing-horizontal-symbol' => 'color: {{VALUE}}',
+                '{{WRAPPER}} .saaspricing-fraction-price' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_group_control(
+       Group_Control_Typography::get_type(),
+        [
+            'name' => 'saasp_horizontal_pricing_text_typography',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-typography',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_pricing_currency_symbol',
+        [
+            'label' => esc_html__( 'Currency Symbol', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' => Controls_Manager::HEADING,
+            'separator'=>'before'
+        ]
+    );
+
+    $this->add_responsive_control(
+        'saasp_horizontal_pricing_symbol_size',
+        [
+            'label' => esc_html__( 'Size', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::SLIDER,
+            'size_units' => ['px'],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+            ],
+            'default' => [
+                'unit' => 'px',
+                'size' => 16,
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-symbol' => 'font-size: {{SIZE}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_pricing_symbol_position',
+        [
+            'label' => esc_html__( 'Postion', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::CHOOSE,
+            'options' => [
+                'before' => [
+                    'title' => esc_html__( 'Before', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-h-align-left',
+                ],
+                'after' => [
+                    'title' => esc_html__( 'After', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-h-align-right',
+                ],
+            ],
+            'default' => 'before',
+            'toggle' => true,
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_header_pricing_symbol_vertical_position',
+        [
+            'label' => esc_html__( 'Verticle Position', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::CHOOSE,
+            'options' => [
+                'self-start' => [
+                    'title' => esc_html__( 'Top', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-v-align-top',
+                ],
+                'center' => [
+                    'title' => esc_html__( 'Middle', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-v-align-middle',
+                ],
+                'self-end' => [
+                    'title' => esc_html__( 'Bottom', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-v-align-bottom',
+                ],
+            ],
+            'default' => 'top',
+            'toggle' => true,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-symbol' => 'align-self: {{VALUE}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_header_pricing_fractional_part',
+        [
+            'label' => esc_html__( 'Fractional Part', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' => Controls_Manager::HEADING,
+            'separator'=>'before'
+        ]
+    );
+
+    $this->add_responsive_control(
+        'saasp_horizontal_header_fractional_part_size',
+        [
+            'label' => esc_html__( 'Size', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::SLIDER,
+            'size_units' => ['px'],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+            ],
+            'default' => [
+                'unit' => 'px',
+                'size' => 16,
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-fraction-price' => 'font-size: {{SIZE}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_header_fractional_part_vertical_position',
+        [
+            'label' => esc_html__( 'Verticle Position', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::CHOOSE,
+            'options' => [
+                'self-start' => [
+                    'title' => esc_html__( 'Top', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-v-align-top',
+                ],
+                'center' => [
+                    'title' => esc_html__( 'Middle', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-v-align-middle',
+                ],
+                'self-end' => [
+                    'title' => esc_html__( 'Bottom', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-v-align-bottom',
+                ],
+            ],
+            'default' => 'top',
+            'toggle' => true,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-fraction-price' => 'align-self: {{VALUE}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_original_price_style',
+        [
+            'label' => esc_html__( 'Original Price', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' => Controls_Manager::HEADING,
+            'separator' => 'before',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_original_price_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' => Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-original' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_group_control(
+        Group_Control_Typography::get_type(),
+        [
+            'name' => 'saasp_horizontal_original_price_typography',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-original',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_original_price_vertical_position',
+        [
+            'label' => esc_html__( 'Vertical Position', SAAS_PRICINNG_TXT_DOMAIN),
+            'type' => Controls_Manager::CHOOSE,
+            'options' => [
+                'self-start' => [
+                    'title' => esc_html__( 'Top', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-v-align-top',
+                ],
+                'center' => [
+                    'title' => esc_html__( 'Middle', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-v-align-middle',
+                ],
+                'self-end' => [
+                    'title' => esc_html__( 'Bottom', SAAS_PRICINNG_TXT_DOMAIN ),
+                    'icon' => 'eicon-v-align-bottom',
+                ],
+            ],
+            'default' => 'bottom',
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-original' => 'align-self: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_header_pricing_period_style',
+        [
+            'label' => esc_html__( 'Period', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' => Controls_Manager::HEADING,
+            'separator' => 'before',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_header_period_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' => Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-period' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_group_control(
+        Group_Control_Typography::get_type(),
+        [
+            'name' => 'saasp_horizontal_header_period_typography',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-period',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_period_position',
+        [
+            'label' => esc_html__( 'Position', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' => Controls_Manager::SELECT,
+            'label_block' => false,
+            'options' => [
+                'below' => esc_html__( 'Below', SAAS_PRICINNG_TXT_DOMAIN ),
+                'beside' => esc_html__( 'Beside', SAAS_PRICINNG_TXT_DOMAIN ),
+            ],
+            'default' => 'beside',
+        ]
+    );
+
+    $this->end_controls_section();
+
+    $this->start_controls_section(
+        'saasp_horizontal_review_section',
+        [
+            'label' => esc_html__( 'Review', SAAS_PRICINNG_TXT_DOMAIN ),
+            'tab' =>Controls_Manager::TAB_STYLE,
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_review_satar_heading',
+        [
+            'label' => esc_html__( 'Stars', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::HEADING,
+            'separator' => 'before',
+        ]
+    );
+
+    $this->add_responsive_control(
+        'saasp_horizontal_review_spacing',
+        [
+            'label' => esc_html__( 'Spacing', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::SLIDER,
+            'size_units' => [ 'px' ],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ],
+            ],
+            'default' => [
+                'unit' => 'px',
+                'size' => 0,
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .ratings span:not(:last-child)' => 'margin-right: {{SIZE}}{{UNIT}};',
+            ],
+        ]
+    );
+    
+    $this->add_control(
+        'saasp_horizontal_review_star_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-yellow' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_review_unmark_star_color',
+        [
+            'label' => esc_html__( 'Unmark Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-unmark' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_review_text_heading',
+        [
+            'label' => esc_html__( 'Text', SAAS_PRICINNG_TXT_DOMAIN ), 
+            'type' =>  Controls_Manager::HEADING,
+            'separator' => 'before',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_review_text_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-review-text' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_group_control(
+        Group_Control_Typography::get_type(),
+        [
+            'name' => 'saasp_horizontal_review_text_typography',
+            'selector' => '{{WRAPPER}} .saaspricing-review-text',
+        ]
+    );
+
+    $this->end_controls_section();
+
+
+    $this->start_controls_section(
+        'saasp_horizontal_countdown_style_tab',
+        [
+            'label' => esc_html__( 'Countdown', SAAS_PRICINNG_TXT_DOMAIN ),
+            'tab' => Controls_Manager::TAB_STYLE,
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_countdown_text_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' => Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-countdown' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_group_control(
+        Group_Control_Typography::get_type(),
+        [
+            'name' => 'saasp_horizontal_countdown_text_typography',
+            'selector' => '{{WRAPPER}} .saaspricing-countdown',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_countdown_padding',
+        [
+            'label' => esc_html__( 'Padding', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-countdown' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_ribbon_margin',
+        [
+            'label' => esc_html__( 'Margin', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-countdown' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_countdown_background_color',
+        [
+            'label' => esc_html__( 'Background Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' => Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-countdown' => 'background-color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_group_control(
+        Group_Control_Border::get_type(),
+        [
+            'name' => 'saasp_horizontal_countdown_border',
+            'selector' => '{{WRAPPER}} .saaspricing-countdown',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_countdown_border_radius',
+        [
+            'label' => esc_html__( 'Border Radius', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-countdown' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_group_control(
+        Group_Control_Box_Shadow::get_type(),
+        [
+            'name' => 'saasp_horizontal_countdown_box_shadow',
+            'selector' => '{{WRAPPER}} .saaspricing-countdown',
+        ]
+    );
+
+    $this->end_controls_section();
+
+    $this->start_controls_section(
+        'saasp_horizontal_cta_tab_style',
+        [
+            'label' => esc_html__( 'CTA', SAAS_PRICINNG_TXT_DOMAIN ),
+            'tab' =>  Controls_Manager::TAB_STYLE,
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_cta_background',
+        [
+            'label' => esc_html__( 'Background Color', 'textdomain' ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-sidebar' => 'background-color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_cta_padding',
+        [
+            'label' => esc_html__( 'Padding', 'textdomain' ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-sidebar' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_cta_margin',
+        [
+            'label' => esc_html__( 'Margin', 'textdomain' ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-sidebar' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_slogan_title_heading',
+        [
+            'label' => esc_html__( 'Slogan', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::HEADING,
+            'separator' => 'before',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_slogan_title_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-slogan-title' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+    
+    $this->add_group_control(
+        Group_Control_Typography::get_type(),
+        [
+            'name' => 'saasp_horizontal_slogan_title_typography',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-slogan-title',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_primary_cta_section',
+        [
+            'label' => esc_html__( 'Primary CTA', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::HEADING,
+            'separator' => 'before',
+        ]
+    );
+
+    $this->start_controls_tabs(
+        'saasp_horizontal_primary_cta_hover_normal_text_color'
+    );
+
+    $this->start_controls_tab(
+        'saasp_horizontal_primary_cta_normal_text',
+        [
+            'label' => esc_html__( 'Normal', SAAS_PRICINNG_TXT_DOMAIN ),
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_primary_cta_normal_text_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-primary' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->end_controls_tab();
+
+    $this->start_controls_tab(
+        'saasp_horizontal_primary_cta_hover_text',
+        [
+            'label' => esc_html__( 'Hover', SAAS_PRICINNG_TXT_DOMAIN ),
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_primary_cta_hover_text_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-primary:hover' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->end_controls_tab();
+
+    $this->end_controls_tabs();
+
+    $this->add_group_control(
+         Group_Control_Typography::get_type(),
+        [
+            'name' => 'saasp_horizontal_primary_cta_typography',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-primary',
+        ]
+    );
+
+    $this->start_controls_tabs(
+        'saasp_horizontal_primary_cta_hover_normal_background_color'
+    );
+
+    $this->start_controls_tab(
+        'saasp_horizontal_primary_cta_normal_background',
+        [
+            'label' => esc_html__( 'Normal', SAAS_PRICINNG_TXT_DOMAIN ),
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_primary_cta_normal_background_color',
+        [
+            'label' => esc_html__( 'Background Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-primary' => 'background-color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->end_controls_tab();
+
+    $this->start_controls_tab(
+        'saasp_horizontal_primary_cta_hover_background',
+        [
+            'label' => esc_html__( 'Hover', SAAS_PRICINNG_TXT_DOMAIN ),
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_primary_cta_hover_background_color',
+        [
+            'label' => esc_html__( 'Background Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-primary:hover' => 'background-color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->end_controls_tab();
+
+    $this->end_controls_tabs();
+
+    $this->add_group_control(
+        Group_Control_Border::get_type(),
+        [
+            'name' => 'saasp_horizontal_primary_cta_border',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-primary',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_primary_cta_border_radius',
+        [
+            'label' => esc_html__( 'Border Radius', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-primary' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_group_control(
+         Group_Control_Box_Shadow::get_type(),
+        [
+            'name' => 'saasp_horizontal_primary_cta_box_shadow',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-primary',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_primary_cta_padding',
+        [
+            'label' => esc_html__( 'Padding', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-primary' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_primary_cta_margin',
+        [
+            'label' => esc_html__( 'Margin', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-primary' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_secondary_cta_section',
+        [
+            'label' => esc_html__( 'Secondary CTA', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::HEADING,
+            'separator' => 'before',
+        ]
+    );
+
+    $this->start_controls_tabs(
+        'saasp_horizontal_secondary_cta_hover_normal_text_color'
+    );
+
+    $this->start_controls_tab(
+        'saasp_horizontal_secondary_cta_normal_text',
+        [
+            'label' => esc_html__( 'Normal', SAAS_PRICINNG_TXT_DOMAIN ),
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_secondary_cta_normal_text_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-secondary' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->end_controls_tab();
+
+    $this->start_controls_tab(
+        'saasp_horizontal_secondary_cta_hover_text',
+        [
+            'label' => esc_html__( 'Hover', SAAS_PRICINNG_TXT_DOMAIN ),
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_secondary_cta_hover_text_color',
+        [
+            'label' => esc_html__( 'Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-secondary:hover' => 'color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->end_controls_tab();
+
+    $this->end_controls_tabs();
+
+    $this->add_group_control(
+         Group_Control_Typography::get_type(),
+        [
+            'name' => 'saasp_horizontal_secondary_cta_typography',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-secondary',
+        ]
+    );
+
+    $this->start_controls_tabs(
+        'saasp_horizontal_secondary_cta_hover_normal_background_color'
+    );
+
+    $this->start_controls_tab(
+        'saasp_horizontal_secondary_cta_normal_background',
+        [
+            'label' => esc_html__( 'Normal', SAAS_PRICINNG_TXT_DOMAIN ),
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_secondary_cta_normal_background_color',
+        [
+            'label' => esc_html__( 'Background Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-secondary' => 'background-color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->end_controls_tab();
+
+    $this->start_controls_tab(
+        'saasp_horizontal_secondary_cta_hover_background',
+        [
+            'label' => esc_html__( 'Hover', SAAS_PRICINNG_TXT_DOMAIN ),
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_secondary_cta_hover_background_color',
+        [
+            'label' => esc_html__( 'Background Color', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-secondary:hover' => 'background-color: {{VALUE}}',
+            ],
+        ]
+    );
+
+    $this->end_controls_tab();
+
+    $this->end_controls_tabs();
+
+    $this->add_group_control(
+        Group_Control_Border::get_type(),
+        [
+            'name' => 'saasp_horizontal_secondary_cta_border',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-secondary',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_secondary_cta_border_radius',
+        [
+            'label' => esc_html__( 'Border Radius', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-secondary' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_group_control(
+         Group_Control_Box_Shadow::get_type(),
+        [
+            'name' => 'saasp_horizontal_secondary_cta_box_shadow',
+            'selector' => '{{WRAPPER}} .saaspricing-horizontal-secondary',
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_secondary_cta_padding',
+        [
+            'label' => esc_html__( 'Padding', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'separator' => 'before',
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-secondary' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_control(
+        'saasp_horizontal_secondary_cta_margin',
+        [
+            'label' => esc_html__( 'Margin', SAAS_PRICINNG_TXT_DOMAIN ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricng-horizontal-secondary-main' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
         ]
     );
@@ -1194,7 +2186,7 @@ protected function render() {
 
    <!-- single pricing section start -->
    <div class="saaspricing-horizontal my-5">
-            <div class="row">
+            <div class="row" <?php if( 'yes' === $settings['saasp_horizontal_cta_row_reverse'] ){ echo 'id="saaspricing-row-reverse"';} ?>>
                 <!-- heading and feature start  -->
                 <div class=" col-lg-8 ">
                     <div class="p-4 p-sm-5 d-flex flex-column justify-content-center position-relative h-100">
@@ -1239,9 +2231,9 @@ protected function render() {
                                     foreach($settings['saasp_horizontal_features'] as $saasp_horizontal_features){
                                 ?>
                                 <div class="col-md-<?php echo esc_attr($settings['saasp_horizontal_features_column']); ?>">
-                                    <div class="mb-3 elementor-repeater-item-<?php echo esc_attr($saasp_horizontal_features['_id']); ?>">
+                                    <div class="saasp-horizontal-icon-wrapper elementor-repeater-item-<?php echo esc_attr($saasp_horizontal_features['_id']); ?>">
                                         <?php Icons_Manager::render_icon( $saasp_horizontal_features['saasp_horizontal_features_icon'], [ 'aria-hidden' => 'true' ] ); ?> 
-                                        <small><?php echo esc_html($saasp_horizontal_features['saasp_horizontal_features_text']); ?></small>
+                                        <small class="saaspricing-horizontal-feature-text"><?php echo esc_html($saasp_horizontal_features['saasp_horizontal_features_text']); ?></small>
                                     </div>
                                 </div>
                                 <?php
@@ -1256,9 +2248,8 @@ protected function render() {
 
 
                 <!-- sidebar start (pricing,countdown , cta)  start-->
-                <div class=" col-lg-4 text-center">
-                    <div
-                        class="p-4 p-sm-5 h-100 saaspricing-bg-warm d-flex align-items-center justify-content-center flex-column position-relative">
+                <div class="col-lg-4 text-center">
+                    <div class="saaspricing-horizontal-sidebar">
                         <?php
                         if('yes' === $settings['saasp_horizontal_show_ribbon'] && '' !== $settings['saasp_horizontal_ribbon_title']){
                             if( 'left' === $settings['saasp_horizontal_ribbon_position']){
@@ -1275,15 +2266,15 @@ protected function render() {
                         ?>
                         <!-- slogan -->
 
-                        <p class="h5 w-75" role="heading"><?php echo esc_html($settings['saasp_horizontal_cta_slogan_text']); ?></p>
+                        <p class="saaspricing-horizontal-slogan-title"><?php echo esc_html($settings['saasp_horizontal_cta_slogan_text']); ?></p>
 
                         <!-- pricing  -->
 
-                        <div class="saasprcing-vertical-pricing">
+                        <div class="saasprcing-horizontal-pricing">
                             <?php
                             if('none' !== $settings['saasp_horizontal_currency_symbol'] && 'yes' === $settings['saasp_horizontal_sale']){
                             ?>
-                            <del class="saaspricing-vertical-original"> 
+                            <del class="saaspricing-horizontal-original"> 
                             <span>
                             <?php
                             if('custom' !== $settings['saasp_horizontal_currency_symbol']){
@@ -1306,9 +2297,9 @@ protected function render() {
                             ?>
 
                             <?php
-                            //if('before'=== $settings['saasp_horizontal_pricing_symbol_position']){
+                            if('before'=== $settings['saasp_horizontal_pricing_symbol_position']){
                             ?>
-                            <span class="saaspricing-vertical-symbol">
+                            <span class="saaspricing-horizontal-symbol">
                             <?php
                             if('custom' !== $settings['saasp_horizontal_currency_symbol']){
                                 echo esc_html($this->get_currency_symbol($settings['saasp_horizontal_currency_symbol']));
@@ -1318,12 +2309,12 @@ protected function render() {
                             ?>
                             </span>
                             <?php
-                            //}
+                            }
                             ?>
                             <?php
                             if('' === $settings['saasp_horizontal_currency_format'] ){ 
                             ?>
-                            <span class="saaspricing-vertical-price saaspricing-vertical-typography">
+                            <span class="saaspricing-horizontal-price saaspricing-horizontal-typography">
                             <?php echo esc_html(explode(".", $settings['sassp_horizontal_price'])[0]); ?>
                             </span>
                             <?php
@@ -1334,14 +2325,14 @@ protected function render() {
                             }
                             }else{
                             ?>
-                            <span class="saaspricing-vertical-price saaspricing-vertical-typography"><?php echo esc_html($settings['sassp_horizontal_price']); ?></span>
+                            <span class="saaspricing-horizontal-price saaspricing-horizontal-typography"><?php echo esc_html($settings['sassp_horizontal_price']); ?></span>
                             <?php
                             }
                             ?>
                             <?php
-                            //if('after' === $settings['saasp_horizontal_pricing_symbol_position']){
+                            if('after' === $settings['saasp_horizontal_pricing_symbol_position']){
                             ?>
-                            <span class="saaspricing-vertical-symbol">
+                            <span class="saaspricing-horizontal-symbol">
                             <?php
                             if('custom' !== $settings['saasp_horizontal_currency_symbol']){
                                 echo esc_html($this->get_currency_symbol($settings['saasp_horizontal_currency_symbol']));
@@ -1351,16 +2342,16 @@ protected function render() {
                             ?>
                             </span>
                             <?php
-                            //}
+                            }
                             ?>
                             <?php
-                            //if('' !== $settings['saasp_vertical_period']){
+                            if('' !== $settings['saasp_horizontal_period']){
                             ?>
-                            <span class="saaspricing-vertical-period <?php // if( 'below' === $settings['saasp_vertical_period_position']){echo esc_attr('w-100 mt-1');} ?>">
+                            <span class="saaspricing-horizontal-period <?php  if( 'below' === $settings['saasp_horizontal_period_position']){echo esc_attr('w-100 mt-1');} ?>">
                             <?php echo esc_html($settings['saasp_horizontal_period']);?>
                             </span>
                             <?php
-                            //}
+                            }
                             ?>
                         </div>
 
@@ -1438,7 +2429,7 @@ protected function render() {
                             $this->add_link_attributes( 'saasp_horizontal_primary_cta_url', $settings['saasp_horizontal_primary_cta_url'] );
                         }
                         ?>
-                            <a class="btn saaspricing-vertical-primary btn-dark <?php
+                            <a class="btn saaspricing-horizontal-primary btn-dark <?php
                             if('extra-small' === $settings['saasp_horizontal_primary_cta_size']){
                             echo esc_attr('saaspricing-xsm-btn');
                             }elseif('small' === $settings['saasp_horizontal_primary_cta_size']){
@@ -1477,8 +2468,8 @@ protected function render() {
                             $this->add_link_attributes( 'saasp_horizontal_secondary_cta_url', $settings['saasp_horizontal_secondary_cta_url'] );
                         }
                         ?>
-                        <div class="saaspricng-secondary-main">
-                        <a class="saaspricing-vertical-secondary <?php
+                        <div class="saaspricng-horizontal-secondary-main">
+                        <a class="saaspricing-horizontal-secondary <?php
                         if('extra-small' === $settings['saasp_horizontal_secondary_cta_size']){
                         echo esc_attr('saaspricing-xsm-btn');
                         }elseif('small' === $settings['saasp_horizontal_secondary_cta_size']){
