@@ -235,10 +235,6 @@ protected function register_controls() {
             'toggle' => true,
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-vertical-header-alignment' => 'text-align: {{VALUE}};',
-                // '{{WRAPPER}} .saaspricing-vertical-title' => 'text-align: {{VALUE}};',
-                // '{{WRAPPER}} .saaspricing-vertical-description' => 'text-align: {{VALUE}};',
-                // '{{WRAPPER}} .saaspricing-vertical-header' => 'text-align: {{VALUE}};',
-                // '{{WRAPPER}} .saaspricing-vertical-icon' => 'text-align: {{VALUE}};',
             ],
         ]
     );
@@ -446,9 +442,6 @@ protected function register_controls() {
             'toggle' => true,
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-vertical-body-alignment' => 'text-align: {{VALUE}}; justify-content: {{VALUE}};',
-                // '{{WRAPPER}} .saaspricing-vertical-ratings' => 'text-align: {{VALUE}};',
-                // '{{WRAPPER}}  span.saaspricing-vertical-period.w-100.mt-1' => 'text-align: {{VALUE}};',
-                // '{{WRAPPER}} .saasprcing-vertical-pricing' => 'justify-content: {{VALUE}};',
             ],
         ]
     );
@@ -891,7 +884,6 @@ protected function register_controls() {
             'separator' => 'before',
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-vertical-cta-alignment' => 'text-align: {{VALUE}};',
-                // '{{WRAPPER}} .saaspricing-cta-card' => 'text-align: {{VALUE}};',
             ],
         ]
     );
@@ -979,7 +971,6 @@ protected function register_controls() {
             'separator'=>'before',
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-vertical-header' => 'background-color: {{VALUE}}',
-                // '{{WRAPPER}} .saaspricing-vertical-icon' => 'background-color: {{VALUE}}',
             ],
         ]
     );
@@ -1188,8 +1179,6 @@ protected function register_controls() {
             'type' => Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-vertical-price-text' => 'color: {{VALUE}}',
-                // '{{WRAPPER}} .saaspricing-vertical-symbol' => 'color: {{VALUE}}',
-                // '{{WRAPPER}} .saaspricing-fraction-price' => 'color: {{VALUE}}',
             ],
         ]
     );
@@ -1708,7 +1697,6 @@ protected function register_controls() {
                 'size' => 14,
             ],
             'selectors' => [
-                '{{WRAPPER}} .vertical-pricing-card ol i ' => 'font-size: {{SIZE}}{{UNIT}};',
                 '{{WRAPPER}} .vertical-pricing-card ol svg ' => 'font-size: {{SIZE}}{{UNIT}};',
             ],
         ]
@@ -1733,7 +1721,6 @@ protected function register_controls() {
             ],
             'selectors' => [
                 '{{WRAPPER}} .vertical-pricing-card ol svg ' => 'margin-right: {{SIZE}}{{UNIT}};',
-                '{{WRAPPER}} .vertical-pricing-card ol i ' => 'margin-right: {{SIZE}}{{UNIT}};',
             ],
         ]
     );
@@ -2288,8 +2275,7 @@ $settings = $this->get_settings_for_display();
                 <div class="saaspricing-vertical-countdown saaspricing-vertical-body-alignment">
                     <span class="saaspricing-countdown"
                      data-countdown-index="0"
-                     data-expire-date="<?php echo esc_attr($settings['saasp_vertical_expire_date']); ?>"
-                     id="countdown">
+                     data-expire-date="<?php echo esc_attr($settings['saasp_vertical_expire_date']); ?>">
                     </span>
                 </div>
                 <?php
@@ -2462,9 +2448,6 @@ $settings = $this->get_settings_for_display();
                     </ol>
                 </div>
             </div>
-            <!-- card body end -->
-
-            <!-- cta start  -->   
             <?php
              if( 'top' !== $settings['saasp_vertical_primary_cta_position'] && 'bottom' === $settings['saasp_vertical_primary_cta_position']
               || 'top' !== $settings['saasp_vertical_secondary_cta_position'] && 'bottom' === $settings['saasp_vertical_secondary_cta_position'] ){

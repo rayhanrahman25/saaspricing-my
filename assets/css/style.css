@@ -274,7 +274,7 @@ li.saaspricing-vertical-margin:last-child{
     right: 10px;
 }
 
-#saaspricing-row-reverse {
+.saaspricing-row-reverse {
     flex-direction: row-reverse;
 }
 

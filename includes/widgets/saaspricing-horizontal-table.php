@@ -2191,7 +2191,7 @@ protected function render() {
 
 
    <div class="saaspricing-horizontal">
-            <div class="row" <?php if( 'yes' === $settings['saasp_horizontal_cta_row_reverse'] ){ echo esc_attr( 'id="saaspricing-row-reverse"' ); } ?>>
+            <div class="row <?php if( 'yes' === $settings['saasp_horizontal_cta_row_reverse'] ){ echo esc_attr( 'saaspricing-row-reverse' ); } ?>">
                 <div class="col-lg-8">
                     <div class="p-4 p-sm-5 d-flex flex-column justify-content-center position-relative h-100">
                         <div class="saaspricing-horizontal-header">
@@ -2357,8 +2357,7 @@ protected function render() {
                         <div class="saaspricing-horizontal-countdown">
                             <span class="saaspricing-countdown"
                             data-countdown-index="0"
-                            data-expire-date="<?php echo esc_attr($settings['saasp_horizontal_expire_date']); ?>"
-                            id="countdown">
+                            data-expire-date="<?php echo esc_attr($settings['saasp_horizontal_expire_date']); ?>">
                             </span>
                         </div>
                         <?php
