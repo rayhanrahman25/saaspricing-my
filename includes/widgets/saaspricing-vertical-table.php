@@ -1,7 +1,7 @@
 <?php
 /**
- * Class: SaasVerticleTable
- * Name: Saas Verticle Table
+ * Class: SaasVerticalTable
+ * Name: Saas Vertical Table
  * Slug: saas-pricing
  */
 
@@ -18,17 +18,17 @@
 }
 
 /**
- * Class SaasVerticleTable
+ * Class SaasVerticalTable
  */
 
-class SaasVerticleTable extends \Elementor\Widget_Base {
+class SaasVerticalTable extends \Elementor\Widget_Base {
 
 public function get_name() {
-    return 'saasVerticle';
+    return 'saasVertical';
 }
 
 public function get_title() {
-    return esc_html__( 'Verticle Pricing Table', 'saaspricing' );
+    return esc_html__( 'Vertical Pricing Table', 'saaspricing' );
 }
 
 public function get_icon() {
@@ -133,27 +133,11 @@ protected function register_controls() {
         [
             'label' => esc_html__( 'Icon', 'saaspricing' ),
             'type' =>  Controls_Manager::ICONS,
-            'default' => [
-                'value' => 'fas fa-circle',
-                'library' => 'fa-solid',
-            ],
-            'recommended' => [
-                'fa-solid' => [
-                    'circle',
-                    'dot-circle',
-                    'square-full',
-                ],
-                'fa-regular' => [
-                    'circle',
-                    'dot-circle',
-                    'square-full',
-                ],
-            ],
         ]
     );
 
     $this->add_control(
-        'saasp_vetical_header_title',
+        'saasp_vertical_header_title',
         [
             'label' => esc_html__( 'Title', 'saaspricing' ),
             'type' =>  Controls_Manager::TEXT,
@@ -171,7 +155,7 @@ protected function register_controls() {
     );
 
     $this->add_control(
-        'saasp_vetical_header_title_tag',
+        'saasp_vertical_header_title_tag',
         [
             'label' => esc_html__( 'Title HTML Tag', 'saaspricing' ),
             'type' =>  Controls_Manager::SELECT,
@@ -250,7 +234,7 @@ protected function register_controls() {
     );
 
     $this->add_control(
-    'saasp_vetical_body_pricing_heading',
+    'saasp_vertical_body_pricing_heading',
         [
             'label' => esc_html__( 'Pricing', 'saaspricing' ),
             'type' =>  Controls_Manager::HEADING,
@@ -457,7 +441,7 @@ protected function register_controls() {
     );
 
     $this->add_control(
-        'saasp_vetical_features_title',
+        'saasp_vertical_features_title',
         [
             'label' => esc_html__( 'Feature Title', 'saaspricing' ),
             'type' =>  Controls_Manager::TEXT,
@@ -803,18 +787,6 @@ protected function register_controls() {
         [
             'label' => esc_html__( 'Icon', 'saaspricing' ),
             'type' =>  Controls_Manager::ICONS,
-            'recommended' => [
-                'fa-solid' => [
-                    'circle',
-                    'dot-circle',
-                    'square-full',
-                ],
-                'fa-regular' => [
-                    'circle',
-                    'dot-circle',
-                    'square-full',
-                ],
-            ],
             'condition' =>[
                 'saasp_vertical_secondary_cta_switch' => 'yes',
             ]
@@ -988,7 +960,7 @@ protected function register_controls() {
     );
 
     $this->add_control(
-        'saasp_vertical_header_title',
+        'saasp_vertical_header_title_style_heading',
         [
             'label' => esc_html__( 'Title', 'saaspricing' ),
             'type' =>  Controls_Manager::HEADING,
@@ -1246,7 +1218,7 @@ protected function register_controls() {
     $this->add_control(
         'saasp_vertical_header_pricing_symbol_vertical_position',
         [
-            'label' => esc_html__( 'Verticle Position', 'saaspricing' ),
+            'label' => esc_html__( 'Vertical Position', 'saaspricing' ),
             'type' =>  Controls_Manager::CHOOSE,
             'options' => [
                 'self-start' => [
@@ -1305,7 +1277,7 @@ protected function register_controls() {
     $this->add_control(
         'saasp_vertical_header_fractional_part_vertical_position',
         [
-            'label' => esc_html__( 'Verticle Position', 'saaspricing' ),
+            'label' => esc_html__( 'Vertical Position', 'saaspricing' ),
             'type' =>  Controls_Manager::CHOOSE,
             'options' => [
                 'self-start' => [
@@ -2169,8 +2141,8 @@ $settings = $this->get_settings_for_display();
                     }
                     ?>
                     <?php
-                    if( '' !== $settings['saasp_vetical_header_title'] ){
-                    printf('<%1$s class="card-title saaspricing-vertical-title saaspricing-vertical-header-alignment">%2$s</%1$s>', esc_html($settings['saasp_vetical_header_title_tag']) ,esc_html($settings['saasp_vetical_header_title']));
+                    if( '' !== $settings['saasp_vertical_header_title'] ){
+                    printf('<%1$s class="card-title saaspricing-vertical-title saaspricing-vertical-header-alignment">%2$s</%1$s>', esc_html($settings['saasp_vertical_header_title_tag']) ,esc_html($settings['saasp_vertical_header_title']));
                     }
                     ?>
                     <p class="saaspricing-vertical-description saaspricing-vertical-header-alignment">
@@ -2422,10 +2394,10 @@ $settings = $this->get_settings_for_display();
             ?>
                 <div class="saaspricing-vertical-feature">
                     <?php
-                    if( '' !== $settings['saasp_vetical_features_title'] ){
+                    if( '' !== $settings['saasp_vertical_features_title'] ){
                     ?>
                     <p class="saaspricing-features-title">
-                        <?php echo esc_html($settings['saasp_vetical_features_title']); ?>
+                        <?php echo esc_html($settings['saasp_vertical_features_title']); ?>
                     </p>
                     <?php
                     }
@@ -2433,12 +2405,12 @@ $settings = $this->get_settings_for_display();
                     <ol class="list-unstyled mb-0">
                         <?php
                         if($settings['saasp_vertical_features']){
-                        foreach($settings['saasp_vertical_features'] as $saasp_vetical_features){
+                        foreach($settings['saasp_vertical_features'] as $saasp_vertical_features){
                         ?>
-                        <li class="saaspricing-vertical-margin elementor-repeater-item-<?php echo esc_attr($saasp_vetical_features['_id']); ?>">
-                            <?php Icons_Manager::render_icon( $saasp_vetical_features['saasp_vertical_features_icon'], [ 'aria-hidden' => 'true' ] ); ?>
+                        <li class="saaspricing-vertical-margin elementor-repeater-item-<?php echo esc_attr($saasp_vertical_features['_id']); ?>">
+                            <?php Icons_Manager::render_icon( $saasp_vertical_features['saasp_vertical_features_icon'], [ 'aria-hidden' => 'true' ] ); ?>
                             <small class="">
-                            <?php echo esc_html($saasp_vetical_features['saasp_vertical_features_text']); ?>
+                            <?php echo esc_html($saasp_vertical_features['saasp_vertical_features_text']); ?>
                             </small>
                         </li>
                         <?php

@@ -245,12 +245,12 @@ final class SaasPricing {
 	function saasp_register_widgets( $widgets_manager ) {
 
 		require_once(  __DIR__ . '/widgets/saaspricing-comparison-table.php' );
-		require_once(  __DIR__ . '/widgets/saaspricing-verticle-table.php' );
+		require_once(  __DIR__ . '/widgets/saaspricing-vertical-table.php' );
 		require_once(  __DIR__ . '/widgets/saaspricing-horizontal-table.php' );
 
 		$widgets_manager->register( new \SaasComparisonTable() );
 		$widgets_manager->register( new \SaasHorizontalTable() );
-		$widgets_manager->register( new \SaasVerticleTable() );
+		$widgets_manager->register( new \SaasVerticalTable() );
 
 	}
 

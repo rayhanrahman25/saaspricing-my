@@ -669,22 +669,12 @@ protected function register_controls() {
             [
                 'label' => esc_html__( 'Icon', 'saaspricing' ),
                 'type' =>  Controls_Manager::ICONS,
+                'skin' => 'inline',
                 'default' => [
                     'value' => 'fas fa-arrow-right',
                     'library' => 'fa-solid',
                 ],
-                'recommended' => [
-                    'fa-solid' => [
-                        'circle',
-                        'dot-circle',
-                        'square-full',
-                    ],
-                    'fa-regular' => [
-                        'circle',
-                        'dot-circle',
-                        'square-full',
-                    ],
-                ],
+                'exclude_inline_options' => [ 'svg' ],
                 'condition' =>[
                     'saasp_horizontal_primary_cta_switch' => 'yes',
                 ]
@@ -798,18 +788,8 @@ protected function register_controls() {
             [
                 'label' => esc_html__( 'Icon', 'saaspricing' ),
                 'type' =>  Controls_Manager::ICONS,
-                'recommended' => [
-                    'fa-solid' => [
-                        'circle',
-                        'dot-circle',
-                        'square-full',
-                    ],
-                    'fa-regular' => [
-                        'circle',
-                        'dot-circle',
-                        'square-full',
-                    ],
-                ],
+                'skin' => 'inline',
+                'exclude_inline_options' => [ 'svg' ],
                 'condition' =>[
                     'saasp_horizontal_secondary_cta_switch' => 'yes',
                 ]

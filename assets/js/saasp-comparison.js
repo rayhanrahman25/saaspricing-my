@@ -5,7 +5,7 @@
   
           let saaspExpire = setInterval(function() {
   
-            let saaspMainClass = $(scope).find(".ribbon-wrapper");
+            let saaspMainClass = $(scope).find(".saaspricing-ribbon-wrapper");
             let saaspDateOne = saaspMainClass.data('exp-date-one');
             let saaspDateTwo = saaspMainClass.data('exp-date-two');
             let saaspDateThree = saaspMainClass.data('exp-date-three');
