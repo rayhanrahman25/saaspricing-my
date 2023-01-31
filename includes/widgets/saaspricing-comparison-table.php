@@ -3570,7 +3570,7 @@ protected function register_controls() {
             'type' =>  Controls_Manager::DIMENSIONS,
             'size_units' => [ 'px', '%', 'em'],
             'selectors' => [
-                '{{WRAPPER}} .show-expire-date' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .saaspricing-show-expire-date' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
         ]
     );
@@ -4457,7 +4457,7 @@ protected function render() {
 ?>
   <div class="saaspricing-main table-responsive-lg position-relative">
             <table class="saaspricing-table" role="presentation">
-                <thead class="tableHeader">
+                <thead>
                     <?php
                     if( 'yes' === $settings['saasp_comparison_show_ribbon_1']  ||  'yes' === $settings['saasp_comparison_show_countdown_1']  ||
                         'yes' === $settings['saasp_comparison_show_ribbon_2'] || 'yes' === $settings['saasp_comparison_show_countdown_2'] ||  
@@ -4490,7 +4490,7 @@ protected function render() {
                                 <?php
                                 if( 'yes' === $settings['saasp_comparison_show_countdown_'.$i] &&  '' !== $settings['saasp_comparison_show_countdown_'.$i] ){
                                 ?>
-                                <div class="show-expire-date" data-countdown-index="<?php echo esc_attr($j); ?>" 
+                                <div class="saaspricing-show-expire-date" data-countdown-index="<?php echo esc_attr($j); ?>" 
                                 data-expire-date-<?php echo esc_attr($i); ?>="<?php echo esc_attr($settings['saasp_comparison_expire_date_'.$i]); ?>">
                                 </div>
                             </div>
