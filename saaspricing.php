@@ -16,7 +16,6 @@
     exit; // Exit if accessed directly.
 }
 
-define( 'SAAS_PRICINNG_TXT_DOMAIN', 'saaspricing'); 
 define( 'SAAS_PRICING__FILE__', __FILE__ ); 
 define( 'SAAS_PRICING__DIR__', __DIR__ );
 define( 'SAAS_PRICING_URL', plugins_url( '/', SAAS_PRICING__FILE__ ) );

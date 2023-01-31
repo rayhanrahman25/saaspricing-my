@@ -2064,7 +2064,7 @@ protected function register_controls() {
             'type' =>  Controls_Manager::COLOR,
             'separator'=>'before',
             'selectors' => [
-                '{{WRAPPER}} .card-footer' => 'background-color: {{VALUE}}',
+                '{{WRAPPER}} .saaspricing-card-footer' => 'background-color: {{VALUE}}',
             ],
         ]
     );
@@ -2076,7 +2076,7 @@ protected function register_controls() {
             'type' =>  Controls_Manager::DIMENSIONS,
             'size_units' => [ 'px', '%', 'em'],
             'selectors' => [
-                '{{WRAPPER}} .card-footer' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .saaspricing-card-footer' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
         ]
     );
@@ -2424,7 +2424,7 @@ $settings = $this->get_settings_for_display();
              if( 'top' !== $settings['saasp_vertical_primary_cta_position'] && 'bottom' === $settings['saasp_vertical_primary_cta_position']
               || 'top' !== $settings['saasp_vertical_secondary_cta_position'] && 'bottom' === $settings['saasp_vertical_secondary_cta_position'] ){
             ?>
-            <div class="card-footer saaspricing-vertical-cta-alignment">
+            <div class="saaspricing-card-footer saaspricing-vertical-cta-alignment">
                 <?php
                 if( '' !== $settings['saasp_vertical_primary_cta_text'] 
                 && 'bottom' === $settings['saasp_vertical_primary_cta_position'] || empty($settings['saasp_vertical_primary_cta_position']) ){

@@ -4486,7 +4486,7 @@ protected function render() {
                                 }
                                 ?>
                             </div>
-                            <div class="saaspricing-countdown fs-sm" style="margin-bottom: 0;"> 
+                            <div class="saaspricing-countdown saaspricing-fs-sm"> 
                                 <?php
                                 if( 'yes' === $settings['saasp_comparison_show_countdown_'.$i] &&  '' !== $settings['saasp_comparison_show_countdown_'.$i] ){
                                 ?>
@@ -4514,7 +4514,7 @@ protected function render() {
                         <td class="saaspricing-blank"></td>
                         <td class="saaspricing-table-head saaspricing-comparison-header-alignment">
                             <?php printf('<%1$s class="saaspricing-heading-title">%2$s</%1$s>', esc_html($settings['saasp_comparison_column_html_title_tag']), esc_html($settings['saasp_comparison_header_title_text_1']));?>
-                            <small class="fs-sm">
+                            <small class="saaspricing-fs-sm">
                                 <?php echo esc_html($settings['saasp_comparison_header_title_des_'.$i]); ?>
                             </small>
                         </td>
@@ -4529,13 +4529,13 @@ protected function render() {
                         <td class="saaspricing-blank"></td>
                         <td class="saaspricing-table-head saaspricing-comparison-header-alignment">
                             <?php printf('<%1$s class="saaspricing-heading-title">%2$s</%1$s>', esc_html($settings['saasp_comparison_column_html_title_tag']), esc_html($settings['saasp_comparison_header_title_text_1']));?>
-                            <small class="fs-sm">
+                            <small class="saaspricing-fs-sm">
                                 <?php echo esc_html($settings['saasp_comparison_header_title_des_1']); ?>
                             </small>
                         </td>
                         <td class="saaspricing-table-head saaspricing-comparison-header-alignment">
                             <?php printf('<%1$s class="saaspricing-heading-title">%2$s</%1$s>', esc_html($settings['saasp_comparison_column_html_title_tag']), esc_html($settings['saasp_comparison_header_title_text_2']));?>
-                            <small class="fs-sm">
+                            <small class="saaspricing-fs-sm">
                                 <?php echo esc_html($settings['saasp_comparison_header_title_des_2']); ?>
                             </small>
                         </td>
@@ -4554,19 +4554,19 @@ protected function render() {
                         <td class="saaspricing-blank"></td>
                         <td class="saaspricing-table-head saaspricing-comparison-header-alignment">
                             <?php printf('<%1$s class="saaspricing-heading-title">%2$s</%1$s>', esc_html($settings['saasp_comparison_column_html_title_tag']), esc_html($settings['saasp_comparison_header_title_text_1']));?>
-                            <small class="fs-sm">
+                            <small class="saaspricing-fs-sm">
                                 <?php echo esc_html($settings['saasp_comparison_header_title_des_1']); ?>
                             </small>
                         </td>
                         <td class="saaspricing-table-head saaspricing-comparison-header-alignment">
                             <?php printf('<%1$s class="saaspricing-heading-title">%2$s</%1$s>', esc_html($settings['saasp_comparison_column_html_title_tag']), esc_html($settings['saasp_comparison_header_title_text_2']));?>
-                            <small class="fs-sm">
+                            <small class="saaspricing-fs-sm">
                                 <?php echo esc_html($settings['saasp_comparison_header_title_des_2']); ?>
                             </small>
                         </td>
                         <td class="saaspricing-table-head saaspricing-comparison-header-alignment">
                             <?php printf('<%1$s class="saaspricing-heading-title">%2$s</%1$s>', esc_html($settings['saasp_comparison_column_html_title_tag']), esc_html($settings['saasp_comparison_header_title_text_3']));?>
-                            <small class="fs-sm">
+                            <small class="saaspricing-fs-sm">
                                 <?php echo esc_html($settings['saasp_comparison_header_title_des_3']); ?>
                             </small>
                         </td>
@@ -4579,13 +4579,13 @@ protected function render() {
                         <td class="saaspricing-table-title-des"> 
                         <?php
                         if( '' !== $settings['saasp_comparison_header_table_title'] ){
-                            printf('<%1$s class="d-block mb-3 saaspricing-table-title" role="heading"> %2$s </%1$s>', esc_html($settings['saasp_comparison_header_table_title_tag']), esc_html($settings['saasp_comparison_header_table_title']));
+                            printf('<%1$s class="d-block saaspricing-table-title" role="heading"> %2$s </%1$s>', esc_html($settings['saasp_comparison_header_table_title_tag']), esc_html($settings['saasp_comparison_header_table_title']));
                         }
                         ?>
                         <?php
                         if('' !== $settings['saasp_comparison_header_table_description'] ){
                         ?>
-                        <span class="d-block fs-sm w-sm-100 saaspricing-table-description">
+                        <span class="d-block saaspricing-fs-sm w-sm-100 saaspricing-table-description">
                             <?php echo esc_html($settings['saasp_comparison_header_table_description']); ?>
                         </span>
                         <?php
@@ -4860,7 +4860,7 @@ protected function render() {
                         ?>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="saaspricing-table-body">
                     <?php
                     if( '1' === $settings['saasp_comparison_select_columns'] && $settings['saasp_comparison_table_feature_list_1'] ){
                     foreach( $settings['saasp_comparison_table_feature_list_1'] as $saasp_features_one ){

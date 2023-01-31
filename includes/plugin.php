@@ -129,9 +129,9 @@ final class SaasPricing {
 
 		$message = sprintf(
 
-			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', SAAS_PRICINNG_TXT_DOMAIN ),
-			'<strong>' . esc_html__( 'Saaspricing', SAAS_PRICINNG_TXT_DOMAIN ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', SAAS_PRICINNG_TXT_DOMAIN ) . '</strong>'
+			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'saaspricing' ),
+			'<strong>' . esc_html__( 'Saaspricing', 'saaspricing' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'saaspricing' ) . '</strong>'
 
 		);
 
@@ -154,9 +154,9 @@ final class SaasPricing {
 
 		$message = sprintf(
 
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', SAAS_PRICINNG_TXT_DOMAIN ),
-			'<strong>' . esc_html__( 'Saaspricing', SAAS_PRICINNG_TXT_DOMAIN ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', SAAS_PRICINNG_TXT_DOMAIN ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'saaspricing' ),
+			'<strong>' . esc_html__( 'Saaspricing', 'saaspricing' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'saaspricing' ) . '</strong>',
 			 self::MINIMUM_ELEMENTOR_VERSION
 
 		);
@@ -180,9 +180,9 @@ final class SaasPricing {
 
 		$message = sprintf(
 			
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', SAAS_PRICINNG_TXT_DOMAIN ),
-			'<strong>' . esc_html__( 'Saaspricing', SAAS_PRICINNG_TXT_DOMAIN ) . '</strong>',
-			'<strong>' . esc_html__( 'PHP', SAAS_PRICINNG_TXT_DOMAIN ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'saaspricing' ),
+			'<strong>' . esc_html__( 'Saaspricing', 'saaspricing' ) . '</strong>',
+			'<strong>' . esc_html__( 'PHP', 'saaspricing' ) . '</strong>',
 			 self::MINIMUM_PHP_VERSION
 			 
 		);
@@ -259,7 +259,7 @@ final class SaasPricing {
 		$elements_manager->add_category(
 			'saas_pricing_category',
 			[
-				'title' => esc_html__( 'SaasPricing', SAAS_PRICINNG_TXT_DOMAIN ),
+				'title' => esc_html__( 'SaasPricing', 'saaspricing' ),
 				'icon' => 'fa fa-plug',
 			]
 		);
