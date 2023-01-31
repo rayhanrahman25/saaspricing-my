@@ -4901,7 +4901,7 @@ protected function render() {
                          ?>
                          <span class="saaspricing-feature-title"><?php echo esc_html($saasp_features_one['saasp_comparison_feature_title']); ?></span> 
                          <?php
-                         if( 'yes' === $saasp_features_two['saasp_comparison_show_features_tooltip'] && 'after' === $saasp_features_one['saasp_comparison_features_tooltip_position']){
+                         if( 'yes' === $saasp_features_one['saasp_comparison_show_features_tooltip'] && 'after' === $saasp_features_one['saasp_comparison_features_tooltip_position']){
                          ?>
                          <span data-bs-toggle="tooltip" data-bs-placement="top"
                          title="<?php echo esc_attr($saasp_features_three['saasp_comparison_features_tooltip_description']); ?>"

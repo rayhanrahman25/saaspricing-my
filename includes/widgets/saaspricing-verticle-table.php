@@ -2140,7 +2140,7 @@ protected function render() {
 $settings = $this->get_settings_for_display();
 
 ?>
-<div class="pricing-cards-all">
+<div class="saaspricing-cards-all">
 <div class="row">   
     <div class="col-md-12 col-lg-12 col-xl-12 mt-auto">
         <div class="saaspricing-card vertical-pricing-card">

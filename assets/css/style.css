@@ -9,17 +9,13 @@
 }
 
 p, h1, h2, h3, h4, h5, h6 {
-padding: 0;
-margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
-p.saaspricing-vertical-description, .card-title.saaspricing-vertical-title{
+.saaspricing-vertical-description, .card-title.saaspricing-vertical-title {
     margin-bottom:0;
 }
-
-/* .tableHeader {
-    background-color: var( --saaspricing-color-white);
-} */
 
 .saaspricing-table {
     table-layout: fixed;
@@ -33,18 +29,17 @@ p.saaspricing-vertical-description, .card-title.saaspricing-vertical-title{
     padding:0;
 }
 
-tr.saaspricing-price-table-head, tr.saaspricing-feature-list {
+.saaspricing-price-table-head, .saaspricing-feature-list {
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.saaspricing-table-title-des-main , tr.saaspricing-feature-list {
-    /* border-left: 1px solid #fafafa; */
+.saaspricing-table-title-des-main, .saaspricing-feature-list {
     border-right: 1px solid #fafafa;
 }
 
-.saaspricing-table td.ribbon-wrapper.saaspricing-common-ribbon{
+/* .saaspricing-table .saaspricing-ribbon-table-row .saaspricing-common-ribbon{
     border-right: 1px solid #ffffff;
-}
+} */
 
 .saaspricing-table tr td:last-child {
     border-right: 1px solid transparent;
@@ -54,43 +49,31 @@ tr.saaspricing-price-table-head, tr.saaspricing-feature-list {
     border-left: 1px solid transparent;
 }
 
-/* td.saaspricing-footer-cta {
-    border-bottom: 1px solid #fafafa;
-    border-right: 1px solid #fafafa;
-} */
-
-td.saaspricing-feature-main{
+.saaspricing-feature-main{
     gap:5px;
 }
 
-td.saaspricing-header-cta {
-border-bottom: none;
-}
-
 .saaspricing-table tr td {
-    /* border-left: 1px solid rgba(0, 0, 0, 0.05); */
     padding: 15px 20px;
     font-size: 14px;
 }
 
-.saaspricing-table tr td.ribbon-wrapper{
+.saaspricing-table .saaspricing-ribbon-table-row .ribbon-wrapper{
     border: none;
-}
-.saaspricing-table tr.saaspricing-ribbon-table-row:hover {
-  background:none;
+    padding:0;
 }
 
-.saaspricing-table tr td.ribbon-wrapper {
-    padding:0;
+.saaspricing-table .saaspricing-ribbon-table-row:hover {
+  background:none;
 }
 
 /* .saaspricing-table tr td:first-child {
     border-left: 0 none;
 } */
 
-.saaspricing-table tr td.price.saaspricing-pricing {
+/* .saaspricing-table tr td.price.saaspricing-pricing {
     text-align: center;
-}
+} */
 
 /* .saaspricing-table tr:nth-child(even) {
     background-color: var( --saaspricing-color-white);
@@ -106,11 +89,11 @@ border-bottom: none;
 
 /* Highlighted column */
 
-td.ribbon-wrapper.saaspricing-common-ribbon.saasp-hidden{
+.saaspricing-table .saaspricing-ribbon-table-row .saasp-hidden{
     visibility: hidden;
 }
 
-.saaspricing-table tr.saaspricing-price-table-head td {
+.saaspricing-table .saaspricing-price-table-head td {
     font-size: 16px;
     font-weight: 600;
     text-transform: capitalize;
@@ -118,12 +101,12 @@ td.ribbon-wrapper.saaspricing-common-ribbon.saasp-hidden{
     padding:20px;
 }
 
-td.saaspricing-table-head {
+.saaspricing-table .saaspricing-table-head {
     background-color: var(--saaspricing-primary-color);
     color: var(--saaspricing-color-white);
 }
 
-.saaspricing-table td.price {
+.saaspricing-table .price {
     padding: 20px;
     font-size: 20px;
     font-weight: 600;
@@ -172,12 +155,17 @@ td.saaspricing-table-head {
     border: none;
 }
 
-.saaspricing-cta-card{
+.saaspricing-cta-card {
     padding: 0.5rem 0rem;
 }
 
-.pricing-cards-all{
+.saaspricing-cards-all{
     overflow: hidden;
+    height: 100%;
+}
+
+.saaspricing-cards-all .row{
+ height: 100%;
 }
 
 .saaspricing-heading {
@@ -215,7 +203,7 @@ td.saaspricing-table-head {
 
 .saasspricing-pricing-block {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     flex-wrap: wrap;
     gap:5px;
