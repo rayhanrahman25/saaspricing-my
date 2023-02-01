@@ -248,9 +248,9 @@ final class SaasPricing {
 		require_once(  __DIR__ . '/widgets/saaspricing-vertical-table.php' );
 		require_once(  __DIR__ . '/widgets/saaspricing-horizontal-table.php' );
 
-		$widgets_manager->register( new \SaasComparisonTable() );
-		$widgets_manager->register( new \SaasHorizontalTable() );
-		$widgets_manager->register( new \SaasVerticalTable() );
+		$widgets_manager->register( new \SaaspComparisonTable() );
+		$widgets_manager->register( new \SaaspHorizontalTable() );
+		$widgets_manager->register( new \SaaspVerticalTable() );
 
 	}
 

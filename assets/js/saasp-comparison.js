@@ -1,7 +1,7 @@
 ;(function($) {
     "use strict";
     $(window).on("elementor/frontend/init", function () {
-        elementorFrontend.hooks.addAction("frontend/element_ready/saasComparison.default", function (scope, $) {
+        elementorFrontend.hooks.addAction("frontend/element_ready/saaspComparison.default", function (scope, $) {
   
           let saaspExpire = setInterval(function() {
   
