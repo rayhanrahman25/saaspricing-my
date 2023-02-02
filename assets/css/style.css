@@ -444,10 +444,6 @@ p.saaspricing-features-title {
     font-size: 12px;
 }
 
-.border-o {
-    border-radius: 50px;
-}
-
 .saaspricing-countdown {
     white-space: nowrap;
 }
@@ -541,7 +537,7 @@ p.saaspricing-features-title {
 }
 
 @media screen and (max-width: 768px) {
-    .w-sm-100 {
-        width: 100% !important;
+    .saaspricing-w-sm-100 {
+        width: 100%;
     }
 }
