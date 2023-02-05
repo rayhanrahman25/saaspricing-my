@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Saaspricing
+ * Plugin Name: SaasPricing
  * Description: Ultimate pricing & comparison widget for Elementor. Three table options, customizable, scrollable, switchable, timer, ribbon, reviews, tooltip, mirror & more! Get the ultimate pricing experience with Saaspricing
  * Version: 1.0.0
  * Requires at least: 5.2

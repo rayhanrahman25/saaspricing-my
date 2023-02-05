@@ -130,7 +130,7 @@ protected function register_controls() {
         [
             'label' => esc_html__( 'Table Title', 'saaspricing' ),
             'type' =>  Controls_Manager::TEXT,
-            'default' => esc_html__( 'Saaspricing', 'saaspricing' ),
+            'default' => esc_html__( 'Enter Table Title', 'saaspricing' ),
         ]
     );
 
@@ -281,7 +281,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'saaspricing' ),
             'label_off' => esc_html__( 'Hide', 'saaspricing' ),
             'return_value' => 'yes',
-            'default' => 'yes',
+            'default' => 'no',
         ]
     );
 
@@ -685,7 +685,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'saaspricing' ),
             'label_off' => esc_html__( 'Hide', 'saaspricing' ),
             'return_value' => 'yes',
-            'default' => 'yes',
+            'default' => 'no',
             'condition' => [
                 'saasp_comparison_show_ribbon_2' => 'yes',
             ],
@@ -1060,7 +1060,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'saaspricing' ),
             'label_off' => esc_html__( 'Hide', 'saaspricing' ),
             'return_value' => 'yes',
-            'default' => 'yes',
+            'default' => 'no',
         ]
     );
 
@@ -1396,8 +1396,6 @@ protected function register_controls() {
         ]
     );
 
-    // ---- Feature One ----
-
     $saasp_comparison_feature_one = new Repeater();
 
     $saasp_comparison_feature_one->add_control(
@@ -1470,7 +1468,7 @@ protected function register_controls() {
     $saasp_comparison_feature_one->add_control(
         'saasp_comparison_feature_text',
         [
-            'label' => esc_html__( 'Text', 'saaspricing' ),
+            'label' => esc_html__( ' Column One Text', 'saaspricing' ),
             'type' =>  Controls_Manager::TEXT,
             'default' => esc_html__( '1', 'saaspricing' ),
         ]
@@ -1487,7 +1485,6 @@ protected function register_controls() {
                 'value' => 'fas fa-check',
                 'library' => 'fa-solid',
             ],
-            // 'exclude_inline_options' => [ 'svg' ],
         ]
     );
 
@@ -1604,7 +1601,7 @@ protected function register_controls() {
     $saasp_comparison_feature_two->add_control(
         'saasp_comparison_feature_text_1',
         [
-            'label' => esc_html__( 'Text', 'saaspricing' ),
+            'label' => esc_html__( 'Column One Text', 'saaspricing' ),
             'type' =>  Controls_Manager::TEXT,
             'default' => esc_html__( '1', 'saaspricing' ),
         ]
@@ -1644,7 +1641,7 @@ protected function register_controls() {
     $saasp_comparison_feature_two->add_control(
         'saasp_comparison_feature_text_2',
         [
-            'label' => esc_html__( 'Text', 'saaspricing' ),
+            'label' => esc_html__( 'Column Two Text', 'saaspricing' ),
             'type' =>  Controls_Manager::TEXT,
             'default' => esc_html__( '1', 'saaspricing' ),
         ]
@@ -1781,7 +1778,7 @@ protected function register_controls() {
     $saasp_comparison_feature_three->add_control(
         'saasp_comparison_feature_text_1',
         [
-            'label' => esc_html__( 'Text', 'saaspricing' ),
+            'label' => esc_html__( 'Column One Text', 'saaspricing' ),
             'type' =>  Controls_Manager::TEXT,
             'default' => esc_html__( '1', 'saaspricing' ),
         ]
@@ -1820,7 +1817,7 @@ protected function register_controls() {
     $saasp_comparison_feature_three->add_control(
         'saasp_comparison_feature_text_2',
         [
-            'label' => esc_html__( 'Text', 'saaspricing' ),
+            'label' => esc_html__( 'Column Two Text', 'saaspricing' ),
             'type' =>  Controls_Manager::TEXT,
             'default' => esc_html__( '2', 'saaspricing' ),
         ]
@@ -1859,7 +1856,7 @@ protected function register_controls() {
     $saasp_comparison_feature_three->add_control(
         'saasp_comparison_feature_text_3',
         [
-            'label' => esc_html__( 'Text', 'saaspricing' ),
+            'label' => esc_html__( 'Column Three Text', 'saaspricing' ),
             'type' =>  Controls_Manager::TEXT,
             'default' => esc_html__( '3', 'saaspricing' ),
         ]
@@ -4004,7 +4001,7 @@ protected function register_controls() {
     $this->add_control(
         'saasp_comparison_feature_cell',
         [
-            'label' => esc_html__( 'Column', 'saaspricing' ), 
+            'label' => esc_html__( 'Column Text', 'saaspricing' ), 
             'type' =>  Controls_Manager::HEADING,
             'separator'=>'before'
         ]
@@ -4078,7 +4075,7 @@ protected function register_controls() {
             'label' => esc_html__( 'Background Color', 'saaspricing' ),
             'type' => Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .saaspricing-main .saaspricing-table .saaspricing-feature-list:hover' => 'background-color: {{VALUE}}',
+                '{{WRAPPER}} .saaspricing-main .saaspricing-table .saaspricing-feature-list:hover td' => 'background-color: {{VALUE}}',
             ],
         ]
     );
@@ -4691,7 +4688,7 @@ protected function render() {
                                 if( '' !== $settings['saasp_comparison_primary_cta_text_'.$i] && 'top' === $settings['saasp_comparison_primary_cta_position_'.$i] ){
                                     if( 'yes' === $settings['saasp_comparison_primary_cta_switch_'.$i] ){
                                 ?>
-                                        <a class="btn btn-info saaspricing-primary-btn saaspricing-primary-<?php echo esc_attr($i); ?> <?php
+                                        <a class="btn btn-dark saaspricing-primary-btn saaspricing-primary-<?php echo esc_attr($i); ?> <?php
                                         if( 'extra-small' === $settings['saasp_comparison_primary_cta_size_'.$i] ){
                                             echo esc_attr('saaspricing-xsm-btn');
                                         }elseif( 'small' === $settings['saasp_comparison_primary_cta_size_'.$i] ){
@@ -4956,7 +4953,7 @@ protected function render() {
                                     empty($settings['saasp_comparison_primary_cta_position_'.$i ]) ){
                                         if( 'yes' === $settings['saasp_comparison_primary_cta_switch_'.$i] ){
                                     ?>
-                                            <a class="btn btn-info saaspricing-primary-btn mb-3 saaspricing-primary-<?php echo esc_attr($i); ?> <?php
+                                            <a class="btn btn-dark saaspricing-primary-btn mb-3 saaspricing-primary-<?php echo esc_attr($i); ?> <?php
                                             if( 'extra-small' === $settings['saasp_comparison_primary_cta_size_'.$i] ){
                                                 echo esc_attr('saaspricing-xsm-btn');
                                             }elseif( 'small' === $settings['saasp_comparison_primary_cta_size_'.$i] ){

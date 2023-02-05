@@ -490,13 +490,13 @@ protected function register_controls() {
 				'fields' => $saasp_vertical_features->get_controls(),
 				'default' => [
 					[
-						'saasp_vertical_features_text' => esc_html__( 'Feature One', 'saaspricing' ),
+						'saasp_vertical_features_text' => esc_html__( '1', 'saaspricing' ),
 					],
 					[
-						'saasp_vertical_features_text' => esc_html__( 'Feature Two', 'saaspricing' ),
+						'saasp_vertical_features_text' => esc_html__( '2', 'saaspricing' ),
 					],
 					[
-						'saasp_vertical_features_text' => esc_html__( 'Feature Three', 'saaspricing' ),
+						'saasp_vertical_features_text' => esc_html__( '3', 'saaspricing' ),
 					],
 				],
 				'title_field' => '{{{ saasp_vertical_features_text }}}',
