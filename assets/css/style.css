@@ -1,9 +1,9 @@
 :root {
-    --saaspricing-color-primary:#54595F;
+    --saaspricing-color-primary:#555555;
     --saaspricing-background-color:#F7F7F7;
-    --saaspricing-color-white: #fff ;
-    --saaspricing-color-black: #212529 ;
-    --saaspricing-color-gray-100: #fafafa ;
+    --saaspricing-color-secondary: #000000 ;
+    --saaspricing-color-button: #818a91 ;
+    --saaspricing-color-white: #ffffff ;
     --saaspricing-color-box-shadow: #00000015;
     --saaspricing-color-steel-blue: #6c757d;
     --saaspricing-color-yellow: #f4b400;
@@ -13,18 +13,6 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
 }
-.saaspricing-horizontal .saaspricing-horizontal-sidebar a,
-.saaspricing-cards-all .saaspricing-card a,
-.saaspricing-table .saaspricing-table-title-des-main a,
-.saaspricing-table .saaspricing-cta-main a{
-    text-decoration: none;
-}
-
-.saaspricing-vertical-description, 
-.vertical-pricing-card .saaspricing-vertical-title, 
-.saaspricing-horizontal .saaspricing-horizontal-title {
-    margin-bottom:0;
-}
 
 .saaspricing-table {
     table-layout: fixed;
@@ -32,6 +20,24 @@ p, h1, h2, h3, h4, h5, h6 {
     border: unset;
     margin-bottom: 0;
     overflow: hidden;
+}
+
+.saaspricing-horizontal .saaspricing-horizontal-sidebar a,
+.saaspricing-cards-all .saaspricing-card a,
+.saaspricing-table .saaspricing-table-title-des-main a,
+.saaspricing-table .saaspricing-cta-main a{
+    text-decoration: none;
+}
+ 
+.vertical-pricing-card .saaspricing-vertical-title, 
+.saaspricing-horizontal .saaspricing-horizontal-title {
+    margin-bottom:0;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.saaspricing-table-description{
+    font-size: 16px;
 }
 
 .saaspricing-table p {
@@ -92,7 +98,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .saaspricing-table .saaspricing-table-head {
-    background-color: var(--saaspricing-color-black);
+    background-color: var(--saaspricing-color-primary);
     color: var(--saaspricing-color-white);
 }
 
@@ -108,7 +114,7 @@ p, h1, h2, h3, h4, h5, h6 {
     text-transform: capitalize;
     font-size: 12px;
     font-weight: 700;
-    background-color: var( --saaspricing-color-primary );
+    background-color: var( --saaspricing-color-secondary );
     padding:20px 20px;
 }
 
@@ -138,7 +144,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .saaspricing-card-footer {
     padding: .5rem 1rem;
-    background-color: rgba(0,0,0,.03);
+    background-color: var(--saaspricing-color-primary);
 }
 
 .saaspricing-cta-card {
@@ -166,6 +172,9 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: .8;
     gap:5px;
 }
+.saaspricing-vertical-body-alignment{
+    color: var(--saaspricing-color-primary);
+}
 
 .saaspricing-card-header {
     padding: .5rem 1rem;
@@ -174,13 +183,8 @@ p, h1, h2, h3, h4, h5, h6 {
     background-color: var(--saaspricing-color-primary);
 }
 
-.saaspricing-cards-all .card-body{
-    background-color: var(--saaspricing-background-color);
-}
-
 .saaspricing-horizontal {
     overflow: hidden;
-    background-color: var(--saaspricing-background-color);
 }
 
 .saaspricing-horizontal .saaspricing-new-section {
@@ -198,6 +202,7 @@ p, h1, h2, h3, h4, h5, h6 {
     gap:5px;
     line-height: .7; 
     padding:20px 0 10px 0;
+    color:var(--saaspricing-color-primary);
 }
 
 .saaspricing-original-slashed-price, .saaspricing-price-symbol, .saaspricing-fraction-price {
@@ -205,7 +210,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .saaspricing-vertical-margin {
-    margin-bottom: 1rem;
+    margin-bottom: 1.8rem;
 }
 
 .saaspricing-vertical-margin:last-child {
@@ -239,7 +244,7 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 50px;
     font-weight: bold;
     font-size: 12px;
-    background-color: var(--saaspricing-background-color);
+    background-color: var(--saaspricing-color-secondary);
     color:var(--saaspricing-color-black);
     padding: 30px;
 }
@@ -266,11 +271,25 @@ p, h1, h2, h3, h4, h5, h6 {
     word-wrap: break-word;
 }
 
+.saaspricing-ribbon-title, .saaspricing-horizontal-ribbon{
+    font-size: 14px;
+    font-weight: bold;
+}
+
 /* Pricing */
 
 .saasprcing-vertical-pricing, .saasprcing-horizontal-pricing {
     padding:10px 0;
     margin:10px 0;
+}
+
+.saaspricing-price-text{
+    font-size: 50px;
+    font-weight: bold;
+}
+.saaspricing-original-slashed-price, .saaspricing-period {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .saaspricing-vertical-price, 
@@ -285,7 +304,6 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    color: var(--saaspricing-color-steel-blue);
 }
 
 .saaspricing-horizontal-period{
@@ -347,7 +365,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .saasp-horizontal-icon-wrapper {
-    padding-bottom: 20px;
+    padding-bottom: 1.8rem;
 }
 
 .saaspricing-horizontal-des {
@@ -405,26 +423,36 @@ p.saaspricing-features-title {
 .saaspricing-xsm-btn {
     font-size: 14px;
     padding: 10px 20px;
+    color: var(--saaspricing-color-white);
+    background-color: var(--saaspricing-color-button);
 }
 
 .saaspricing-sm-btn {
     font-size: 15px;
     padding: 12px 24px;
+    color: var(--saaspricing-color-white);
+    background-color: var(--saaspricing-color-button);
 }
 
 .saaspricing-m-btn {
     font-size: 16px;
     padding: 15px 30px;
+    color: var(--saaspricing-color-white);
+    background-color: var(--saaspricing-color-button);
 }
 
 .saaspricing-l-btn {
     font-size: 18px;
     padding: 20px 40px;
+    color: var(--saaspricing-color-white);
+    background-color: var(--saaspricing-color-button);
 }
 
 .saaspricing-xl-btn {
     font-size: 20px;
     padding: 25px 50px;
+    color: var(--saaspricing-color-white);
+    background-color: var(--saaspricing-color-button);
 }
 
 .saaspricing-cards-all .saaspricing-vertical-primary {
@@ -474,6 +502,12 @@ p.saaspricing-features-title {
 
 .saaspricing-table .saaspricing-table-body svg {
     cursor: pointer;
+}
+
+.elementor-widget-saasp-comparison .elementor-widget-container,
+.elementor-widget-saasp-vertical .elementor-widget-container,
+.elementor-widget-saasp-horizontal .elementor-widget-container {
+ background-color: var(--saaspricing-background-color);
 }
 
 .tooltip-inner {

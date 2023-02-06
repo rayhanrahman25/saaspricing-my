@@ -14,13 +14,13 @@
 }
 
 /**
- * Class SaaspHorizontalTable
+ * Class Saasp_Horizontal
  */
 
-class SaaspHorizontalTable extends Widget_Base {
+class Saasp_Horizontal extends Widget_Base {
 
 public function get_name() {
-    return 'saaspHorizontal';
+    return 'saasp-horizontal';
 }
 
 public function get_title() {
@@ -313,32 +313,29 @@ protected function register_controls() {
 				'fields' => $saasp_horizontal_features->get_controls(),
 				'default' => [
 					[
-						'saasp_horizontal_features_text' => esc_html__( 'Feature One', 'saaspricing' ),
+						'saasp_horizontal_features_text' => esc_html__( '1', 'saaspricing' ),
 					],
 					[
-						'saasp_horizontal_features_text' => esc_html__( 'Feature Two', 'saaspricing' ),
+						'saasp_horizontal_features_text' => esc_html__( '2', 'saaspricing' ),
 					],
 					[
-						'saasp_horizontal_features_text' => esc_html__( 'Feature Three', 'saaspricing' ),
+						'saasp_horizontal_features_text' => esc_html__( '3', 'saaspricing' ),
 					],
 					[
-						'saasp_horizontal_features_text' => esc_html__( 'Feature Four', 'saaspricing' ),
+						'saasp_horizontal_features_text' => esc_html__( '4', 'saaspricing' ),
 					],
 					[
-						'saasp_horizontal_features_text' => esc_html__( 'Feature Five', 'saaspricing' ),
+						'saasp_horizontal_features_text' => esc_html__( '5', 'saaspricing' ),
 					],
 					[
-						'saasp_horizontal_features_text' => esc_html__( 'Feature Six', 'saaspricing' ),
+						'saasp_horizontal_features_text' => esc_html__( '6', 'saaspricing' ),
 					],
 					[
-						'saasp_horizontal_features_text' => esc_html__( 'Feature Seven', 'saaspricing' ),
+						'saasp_horizontal_features_text' => esc_html__( '7', 'saaspricing' ),
 					],
 					[
-						'saasp_horizontal_features_text' => esc_html__( 'Feature Eight', 'saaspricing' ),
-					],
-					[
-						'saasp_horizontal_features_text' => esc_html__( 'Feature Nine', 'saaspricing' ),
-					],
+						'saasp_horizontal_features_text' => esc_html__( '8', 'saaspricing' ),
+					]
 				],
 				'title_field' => '{{{ saasp_horizontal_features_text }}}',
 			]
@@ -541,7 +538,7 @@ protected function register_controls() {
                 'label' => esc_html__( 'Expire Date', 'saaspricing' ),
                 'type' =>  Controls_Manager::DATE_TIME,
                 'label_block' => false,
-                'default'=> esc_html__('2023-12-31 12:00', 'saaspricing'),
+                'default'=> esc_html__('2023-01-01 12:00', 'saaspricing'),
                 'condition' => [
                     'saasp_horizontal_show_countdown' => 'yes',
                 ],
@@ -614,7 +611,7 @@ protected function register_controls() {
             [
                 'label' => esc_html__( 'Text', 'saaspricing' ),
                 'type' =>  Controls_Manager::TEXT,
-                'default' => esc_html__( 'Buy Starter', 'saaspricing' ),
+                'default' => esc_html__( 'Get Started', 'saaspricing' ),
                 'condition' =>[
                     'saasp_horizontal_primary_cta_switch' => 'yes',
                 ]
@@ -1177,7 +1174,7 @@ protected function register_controls() {
             ],
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 16,
             ],
             'selectors' => [
                 '{{WRAPPER}} .saasp-horizontal-icon-wrapper svg' => 'font-size: {{SIZE}}{{UNIT}};',
@@ -1200,7 +1197,7 @@ protected function register_controls() {
             ],
             'default' => [
                 'unit' => 'px',
-                'size' => 15,
+                'size' => 0,
             ],
             'selectors' => [
                 '{{WRAPPER}} .saasp-horizontal-icon-wrapper svg' => 'margin-right: {{SIZE}}{{UNIT}};',
@@ -1320,7 +1317,7 @@ protected function register_controls() {
             ],
             'default' => [
                 'unit' => 'px',
-                'size' => 16,
+                'size' => 24,
             ],
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-horizontal-symbol' => 'font-size: {{SIZE}}{{UNIT}};',
@@ -2371,7 +2368,7 @@ protected function render() {
                             $this->add_link_attributes( 'saasp_horizontal_primary_cta_url', $settings['saasp_horizontal_primary_cta_url'] );
                         }
                     ?>
-                    <a class="btn saaspricing-horizontal-primary btn-dark <?php
+                    <a class="btn saaspricing-horizontal-primary <?php
                     if( 'extra-small' === $settings['saasp_horizontal_primary_cta_size'] ){
                     echo esc_attr('saaspricing-xsm-btn');
                     }elseif( 'small' === $settings['saasp_horizontal_primary_cta_size'] ){

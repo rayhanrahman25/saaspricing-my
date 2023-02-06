@@ -26,7 +26,7 @@ function saasp_load_plugin_data() {
 
 	require_once( SAAS_PRICING__DIR__ . '/includes/plugin.php' );
     
-	\SaasPricingTable\SaasPricing::instance();
+	\Saas_Pricing_Table\Saas_Pricing::instance();
 
 }
 add_action( 'plugins_loaded', 'saasp_load_plugin_data' );

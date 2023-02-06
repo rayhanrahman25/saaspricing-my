@@ -14,13 +14,13 @@
 }
 
 /**
- * Class SaaspVerticalTable
+ * Class Saasp_Vertical
  */
 
-class SaaspVerticalTable extends Widget_Base {
+class Saasp_Vertical extends Widget_Base {
 
 public function get_name() {
-    return 'saaspVertical';
+    return 'saasp-vertical';
 }
 
 public function get_title() {
@@ -351,7 +351,7 @@ protected function register_controls() {
             'label' => esc_html__( 'Expire Date', 'saaspricing' ),
             'type' =>  Controls_Manager::DATE_TIME,
             'label_block' => false,
-            'default'=> esc_html__('2023-12-31 12:00', 'saaspricing'),
+            'default'=> esc_html__('2023-01-01 12:00', 'saaspricing'),
             'condition' => [
                 'saasp_vertical_show_countdown' => 'yes',
             ],
@@ -1159,7 +1159,7 @@ protected function register_controls() {
             ],
             'default' => [
                 'unit' => 'px',
-                'size' => 16,
+                'size' => 24,
             ],
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-vertical-symbol' => 'font-size: {{SIZE}}{{UNIT}};',
@@ -1638,7 +1638,7 @@ protected function register_controls() {
             ],
             'default' => [
                 'unit' => 'px',
-                'size' => 14,
+                'size' => 16,
             ],
             'selectors' => [
                 '{{WRAPPER}} .vertical-pricing-card ol svg ' => 'font-size: {{SIZE}}{{UNIT}};',
@@ -2287,7 +2287,7 @@ $settings = $this->get_settings_for_display();
                                 $this->add_link_attributes( 'saasp_vertical_primary_cta_url', $settings['saasp_vertical_primary_cta_url'] );
                             }
                         ?>
-                            <a class="btn saaspricing-vertical-primary btn-dark <?php
+                            <a class="btn saaspricing-vertical-primary <?php
                             if( 'extra-small' === $settings['saasp_vertical_primary_cta_size'] ){
                             echo esc_attr('saaspricing-xsm-btn');
                             }elseif( 'small' === $settings['saasp_vertical_primary_cta_size'] ){
@@ -2395,7 +2395,7 @@ $settings = $this->get_settings_for_display();
                             }
                             if( 'yes' === $settings['saasp_vertical_primary_cta_switch'] ){
                         ?>
-                                <a class="btn saaspricing-vertical-primary btn-dark <?php
+                                <a class="btn saaspricing-vertical-primary <?php
                                 if( 'extra-small' === $settings['saasp_vertical_primary_cta_size'] ){
                                 echo esc_attr('saaspricing-xsm-btn');
                                 }elseif( 'small' === $settings['saasp_vertical_primary_cta_size'] ){
