@@ -24,7 +24,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .saaspricing-horizontal .saaspricing-horizontal-sidebar a,
 .saaspricing-cards-all .saaspricing-card a,
 .saaspricing-table .saaspricing-table-title-des-main a,
-.saaspricing-table .saaspricing-cta-main a{
+.saaspricing-table .saaspricing-cta-main a {
     text-decoration: none;
 }
  
@@ -69,7 +69,7 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
 }
 
-.saaspricing-table .saaspricing-ribbon-table-row .saaspricing-ribbon-wrapper{
+.saaspricing-table .saaspricing-ribbon-table-row .saaspricing-ribbon-wrapper {
     border: none;
     padding:0;
 }
@@ -163,7 +163,7 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 50px;
 }
 
- .saasprcing-vertical-pricing, .saasprcing-horizontal-pricing {
+.saasprcing-vertical-pricing, .saasprcing-horizontal-pricing {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -171,7 +171,7 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: .8;
     gap:5px;
 }
-.saaspricing-vertical-body-alignment{
+.saaspricing-vertical-body-alignment {
     color: var(--saaspricing-primary-color);
 }
 
@@ -270,7 +270,7 @@ p, h1, h2, h3, h4, h5, h6 {
     word-wrap: break-word;
 }
 
-.saaspricing-ribbon-title, .saaspricing-horizontal-ribbon{
+.saaspricing-ribbon-title, .saaspricing-horizontal-ribbon {
     font-size: 14px;
     font-weight: bold;
 }
@@ -305,7 +305,7 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-.saaspricing-horizontal-period{
+.saaspricing-horizontal-period {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
@@ -323,7 +323,7 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 15px 0;
 }
 
-.saaspricing-vertical-countdown .saaspricing-countdown{
+.saaspricing-vertical-countdown .saaspricing-countdown {
     white-space:nowrap;
     border-radius: 0.3rem;
     color: var( --saaspricing-color-black );
@@ -334,7 +334,7 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-.saaspricing-horizontal-countdown .saaspricing-countdown{
+.saaspricing-horizontal-countdown .saaspricing-countdown {
     white-space:nowrap;
     border-radius: 0.3rem;
     color: var( --saaspricing-white-color );
@@ -355,9 +355,13 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 15px 0;
 }
 
-.saaspricing-star-icon small{
+.saaspricing-star-icon small {
     color: var(--saaspricing-primary-color);
     font-weight: normal;
+}
+
+.saaspricing-horizontal .saaspricing-star-icon small {
+    color: var(--saaspricing-white-color);
 }
 
 /* Features */
@@ -463,8 +467,8 @@ p.saaspricing-features-title {
     margin: 10px 0;
 }
 
-.saaspricng-secondary-main {
-    margin:20px 0;
+.saaspricng-secondary-main a {
+    margin:10px 0;
 }
 
 .saaspricng-horizontal-secondary-main {

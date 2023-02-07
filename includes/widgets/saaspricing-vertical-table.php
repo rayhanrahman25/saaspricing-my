@@ -340,7 +340,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'saaspricing' ),
             'label_off' => esc_html__( 'Hide', 'saaspricing' ),
             'return_value' => 'yes',
-            'default' => 'yes',
+            'default' => 'no',
             'separator' => 'before',
         ]
     );
@@ -2322,7 +2322,7 @@ $settings = $this->get_settings_for_display();
                             }
                         ?>
                             <div class="saaspricng-secondary-main">
-                                <a class="saaspricing-vertical-secondary <?php
+                                <a class="btn saaspricing-vertical-secondary <?php
                                 if( 'extra-small' === $settings['saasp_vertical_secondary_cta_size'] ){
                                 echo esc_attr('saaspricing-xsm-btn');
                                 }elseif( 'small' === $settings['saasp_vertical_secondary_cta_size'] ){
@@ -2432,7 +2432,7 @@ $settings = $this->get_settings_for_display();
                             if( 'yes' === $settings['saasp_vertical_secondary_cta_switch'] ){
                         ?>
                                 <div class="saaspricng-secondary-main">
-                                    <a class="saaspricing-vertical-secondary <?php
+                                    <a class="btn saaspricing-vertical-secondary <?php
                                     if( 'extra-small' === $settings['saasp_vertical_secondary_cta_size'] ){
                                     echo esc_attr('saaspricing-xsm-btn');
                                     }elseif( 'small' === $settings['saasp_vertical_secondary_cta_size'] ){
