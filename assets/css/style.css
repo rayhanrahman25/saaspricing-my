@@ -1,12 +1,11 @@
 :root {
-    --saaspricing-color-primary:#555555;
+    --saaspricing-primary-color:#555555;
     --saaspricing-background-color:#F7F7F7;
-    --saaspricing-color-secondary: #000000 ;
-    --saaspricing-color-button: #818a91 ;
-    --saaspricing-color-white: #ffffff ;
-    --saaspricing-color-box-shadow: #00000015;
-    --saaspricing-color-steel-blue: #6c757d;
-    --saaspricing-color-yellow: #f4b400;
+    --saaspricing-secondary-color: #000000 ;
+    --saaspricing-btn-background-color: #818a91 ;
+    --saaspricing-white-color: #ffffff;
+    --saaspricing-box-shadow-color: #00000015;
+    --saaspricing-yellow-color: #f4b400;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -98,8 +97,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .saaspricing-table .saaspricing-table-head {
-    background-color: var(--saaspricing-color-primary);
-    color: var(--saaspricing-color-white);
+    background-color: var(--saaspricing-primary-color);
+    color: var(--saaspricing-white-color);
 }
 
 .saaspricing-table .saaspricing-price {
@@ -110,11 +109,11 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .saaspricing-table .saaspricing-ribbon-table-row .saaspricing-common-ribbon {
-    color: var(--saaspricing-color-white);
+    color: var(--saaspricing-white-color);
     text-transform: capitalize;
     font-size: 12px;
     font-weight: 700;
-    background-color: var( --saaspricing-color-secondary );
+    background-color: var( --saaspricing-secondary-color );
     padding:20px 20px;
 }
 
@@ -144,7 +143,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .saaspricing-card-footer {
     padding: .5rem 1rem;
-    background-color: var(--saaspricing-color-primary);
+    background-color: var(--saaspricing-primary-color);
 }
 
 .saaspricing-cta-card {
@@ -173,14 +172,14 @@ p, h1, h2, h3, h4, h5, h6 {
     gap:5px;
 }
 .saaspricing-vertical-body-alignment{
-    color: var(--saaspricing-color-primary);
+    color: var(--saaspricing-primary-color);
 }
 
 .saaspricing-card-header {
     padding: .5rem 1rem;
     margin-bottom: 0;
     background-color: rgba(0,0,0,.03);
-    background-color: var(--saaspricing-color-primary);
+    background-color: var(--saaspricing-secondary-color);
 }
 
 .saaspricing-horizontal {
@@ -202,7 +201,7 @@ p, h1, h2, h3, h4, h5, h6 {
     gap:5px;
     line-height: .7; 
     padding:20px 0 10px 0;
-    color:var(--saaspricing-color-primary);
+    color:var(--saaspricing-primary-color);
 }
 
 .saaspricing-original-slashed-price, .saaspricing-price-symbol, .saaspricing-fraction-price {
@@ -234,7 +233,7 @@ p, h1, h2, h3, h4, h5, h6 {
     height: 40px;
     width: 40px;
     border-radius: 50px;
-    color: var(--saaspricing-color-white);
+    color: var(--saaspricing-white-color);
     right: 10px;
     top: 15px;
     overflow: hidden;
@@ -244,7 +243,7 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 50px;
     font-weight: bold;
     font-size: 12px;
-    background-color: var(--saaspricing-color-secondary);
+    background-color: var(--saaspricing-secondary-color);
     color:var(--saaspricing-color-black);
     padding: 30px;
 }
@@ -310,7 +309,7 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    color: var(--saaspricing-color-white);
+    color: var(--saaspricing-white-color);
 }
 
 .saaspricing-vertical-original, .saaspricing-horizontal-original {
@@ -338,9 +337,9 @@ p, h1, h2, h3, h4, h5, h6 {
 .saaspricing-horizontal-countdown .saaspricing-countdown{
     white-space:nowrap;
     border-radius: 0.3rem;
-    color: var( --saaspricing-color-white );
+    color: var( --saaspricing-white-color );
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-    border-color: var( --saaspricing-color-white );
+    border-color: var( --saaspricing-white-color );
     border: 1px solid;
     font-size: 18px;
     font-weight: bold;
@@ -354,6 +353,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .saaspricing-star-icon {
     padding: 15px 0;
+}
+
+.saaspricing-star-icon small{
+    color: var(--saaspricing-primary-color);
+    font-weight: normal;
 }
 
 /* Features */
@@ -399,8 +403,8 @@ p.saaspricing-features-title {
 /* Sidebar */
 
 .saaspricing-horizontal-sidebar {
-    background: var( --saaspricing-color-primary );
-    color: var( --saaspricing-color-white );
+    background: var( --saaspricing-primary-color );
+    color: var( --saaspricing-white-color );
     padding: 48px;
     align-items: center;
     justify-content: center;
@@ -413,7 +417,7 @@ p.saaspricing-features-title {
 /* button css */
 
 .saaspricing-primary-btn, .wp-block-post-content a:where(:not(.wp-element-button)) {
-    color:var(--saaspricing-color-white );
+    color:var(--saaspricing-white-color );
 }
 
 .saaspricing-secondary-btn {
@@ -423,36 +427,36 @@ p.saaspricing-features-title {
 .saaspricing-xsm-btn {
     font-size: 14px;
     padding: 10px 20px;
-    color: var(--saaspricing-color-white);
-    background-color: var(--saaspricing-color-button);
+    color: var(--saaspricing-white-color);
+    background-color: var(--saaspricing-btn-background-color);
 }
 
 .saaspricing-sm-btn {
     font-size: 15px;
     padding: 12px 24px;
-    color: var(--saaspricing-color-white);
-    background-color: var(--saaspricing-color-button);
+    color: var(--saaspricing-white-color);
+    background-color: var(--saaspricing-btn-background-color);
 }
 
 .saaspricing-m-btn {
     font-size: 16px;
     padding: 15px 30px;
-    color: var(--saaspricing-color-white);
-    background-color: var(--saaspricing-color-button);
+    color: var(--saaspricing-white-color);
+    background-color: var(--saaspricing-btn-background-color);
 }
 
 .saaspricing-l-btn {
     font-size: 18px;
     padding: 20px 40px;
-    color: var(--saaspricing-color-white);
-    background-color: var(--saaspricing-color-button);
+    color: var(--saaspricing-white-color);
+    background-color: var(--saaspricing-btn-background-color);
 }
 
 .saaspricing-xl-btn {
     font-size: 20px;
     padding: 25px 50px;
-    color: var(--saaspricing-color-white);
-    background-color: var(--saaspricing-color-button);
+    color: var(--saaspricing-white-color);
+    background-color: var(--saaspricing-btn-background-color);
 }
 
 .saaspricing-cards-all .saaspricing-vertical-primary {
@@ -473,7 +477,7 @@ p.saaspricing-features-title {
 
 .saaspricing-btn-1:hover {
     background-color: var(--saaspricing-color-green );
-    color: var( --saaspricing-color-white );
+    color: var( --saaspricing-white-color );
 }
 
 .saaspricing-star-right {
@@ -484,7 +488,7 @@ p.saaspricing-features-title {
 }
 
 .saaspricing-yellow {
-    color: var( --saaspricing-color-yellow );
+    color: var( --saaspricing-yellow-color );
 }
 
 .saaspricing-fs-sm {
@@ -515,25 +519,25 @@ p.saaspricing-features-title {
     padding: 15px 20px;
     color: var(--saaspricing-color-black);
     text-align: center;
-    background-color: var( --saaspricing-color-white );
+    background-color: var( --saaspricing-white-color );
     border-radius: .25rem;
-    -webkit-box-shadow: 0px 0px 10px var( --saaspricing-color-box-shadow );
-    box-shadow: 0px 0px 10px var( --saaspricing-color-box-shadow );
+    -webkit-box-shadow: 0px 0px 10px var( --saaspricing-box-shadow-color );
+    box-shadow: 0px 0px 10px var( --saaspricing-box-shadow-color );
 }
 
 .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before,
 .bs-tooltip-bottom .tooltip-arrow::before {
-    border-bottom-color: var( --saaspricing-color-white );
+    border-bottom-color: var( --saaspricing-white-color );
 }
 
 .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before,
 .bs-tooltip-top .tooltip-arrow::before {
-    border-top-color: var( --saaspricing-color-white );
+    border-top-color: var( --saaspricing-white-color );
 }
 
 .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before,
 .bs-tooltip-end .tooltip-arrow::before {
-    border-right-color: var( --saaspricing-color-white );
+    border-right-color: var( --saaspricing-white-color );
 }
 
 .tooltip.show {
@@ -550,7 +554,7 @@ p.saaspricing-features-title {
     margin: 0 auto;
     width: 100% !important;
     max-width: 600px !important;
-    background-color: var( --saaspricing-color-white );
+    background-color: var( --saaspricing-white-color );
 }
 
 .mfp-image-holder .mfp-close,
@@ -559,7 +563,7 @@ p.saaspricing-features-title {
     right: -30px;
     top: -30px;
     text-align: right;
-    background: var( --saaspricing-color-white );
+    background: var( --saaspricing-white-color );
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
