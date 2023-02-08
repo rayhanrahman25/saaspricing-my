@@ -4392,8 +4392,8 @@ protected function render() {
                                 }
                             ?>
                                     <td class="saaspricing-ribbon-wrapper saaspricing-common-ribbon saaspricing-comparison-header-alignment
-                                        <?php echo esc_attr($saasp_visible); ?>" data-exp-date-one="<?php echo esc_attr($saasp_expire_date_one); ?>"
-                                        data-exp-date-two="<?php echo esc_attr($saasp_expire_date_two); ?>" data-exp-date-three="<?php echo esc_attr($saasp_expire_date_three); ?>" >
+                                        <?php echo esc_attr($saasp_visible); ?>" data-expire-date-one="<?php echo esc_attr($saasp_expire_date_one); ?>"
+                                        data-expire-date-two="<?php echo esc_attr($saasp_expire_date_two); ?>" data-expire-date-three="<?php echo esc_attr($saasp_expire_date_three); ?>" >
                                         <div class="saaspricing-ribbon-title">
                                             <?php
                                             if($settings['saasp_comparison_ribbon_title_'.$i]){

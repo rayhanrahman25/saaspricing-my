@@ -79,7 +79,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .saaspricing-table .fa-times {
-    color: var( --saaspricing-color-gray-100 );
+    color: var(--saaspricing-color-gray-100);
 }
 
 /* Highlighted column */
@@ -326,9 +326,9 @@ p, h1, h2, h3, h4, h5, h6 {
 .saaspricing-vertical-countdown .saaspricing-countdown {
     white-space:nowrap;
     border-radius: 0.3rem;
-    color: var( --saaspricing-color-black );
+    color: var(--saaspricing-color-black);
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-    border-color: var( --saaspricing-color-black );
+    border-color: var(--saaspricing-color-black);
     border: 1px solid;
     font-size: 18px;
     font-weight: bold;
@@ -337,9 +337,9 @@ p, h1, h2, h3, h4, h5, h6 {
 .saaspricing-horizontal-countdown .saaspricing-countdown {
     white-space:nowrap;
     border-radius: 0.3rem;
-    color: var( --saaspricing-white-color );
+    color: var(--saaspricing-white-color);
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-    border-color: var( --saaspricing-white-color );
+    border-color: var(--saaspricing-white-color);
     border: 1px solid;
     font-size: 18px;
     font-weight: bold;
@@ -407,8 +407,8 @@ p.saaspricing-features-title {
 /* Sidebar */
 
 .saaspricing-horizontal-sidebar {
-    background: var( --saaspricing-primary-color );
-    color: var( --saaspricing-white-color );
+    background: var(--saaspricing-primary-color);
+    color: var(--saaspricing-white-color);
     padding: 48px;
     align-items: center;
     justify-content: center;
@@ -421,7 +421,7 @@ p.saaspricing-features-title {
 /* button css */
 
 .saaspricing-primary-btn, .wp-block-post-content a:where(:not(.wp-element-button)) {
-    color:var(--saaspricing-white-color );
+    color:var(--saaspricing-white-color);
 }
 
 .saaspricing-secondary-btn {
@@ -480,8 +480,8 @@ p.saaspricing-features-title {
 }
 
 .saaspricing-btn-1:hover {
-    background-color: var(--saaspricing-color-green );
-    color: var( --saaspricing-white-color );
+    background-color: var(--saaspricing-color-green);
+    color: var( --saaspricing-white-color);
 }
 
 .saaspricing-star-right {
@@ -492,7 +492,7 @@ p.saaspricing-features-title {
 }
 
 .saaspricing-yellow {
-    color: var( --saaspricing-yellow-color );
+    color: var(--saaspricing-yellow-color);
 }
 
 .saaspricing-fs-sm {
@@ -523,25 +523,25 @@ p.saaspricing-features-title {
     padding: 15px 20px;
     color: var(--saaspricing-color-black);
     text-align: center;
-    background-color: var( --saaspricing-white-color );
+    background-color: var(--saaspricing-white-color);
     border-radius: .25rem;
-    -webkit-box-shadow: 0px 0px 10px var( --saaspricing-box-shadow-color );
-    box-shadow: 0px 0px 10px var( --saaspricing-box-shadow-color );
+    -webkit-box-shadow: 0px 0px 10px var(--saaspricing-box-shadow-color);
+    box-shadow: 0px 0px 10px var(--saaspricing-box-shadow-color);
 }
 
 .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before,
 .bs-tooltip-bottom .tooltip-arrow::before {
-    border-bottom-color: var( --saaspricing-white-color );
+    border-bottom-color: var(--saaspricing-white-color);
 }
 
 .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before,
 .bs-tooltip-top .tooltip-arrow::before {
-    border-top-color: var( --saaspricing-white-color );
+    border-top-color: var(--saaspricing-white-color);
 }
 
 .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before,
 .bs-tooltip-end .tooltip-arrow::before {
-    border-right-color: var( --saaspricing-white-color );
+    border-right-color: var(--saaspricing-white-color);
 }
 
 .tooltip.show {
@@ -558,7 +558,7 @@ p.saaspricing-features-title {
     margin: 0 auto;
     width: 100% !important;
     max-width: 600px !important;
-    background-color: var( --saaspricing-white-color );
+    background-color: var(--saaspricing-white-color);
 }
 
 .mfp-image-holder .mfp-close,
@@ -567,7 +567,7 @@ p.saaspricing-features-title {
     right: -30px;
     top: -30px;
     text-align: right;
-    background: var( --saaspricing-white-color );
+    background: var(--saaspricing-white-color);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
