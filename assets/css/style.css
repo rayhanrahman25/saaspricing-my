@@ -11,6 +11,10 @@
     --saaspricing-yellow:#f4b400;
 }
 
+body {
+    font-family: inherit;
+}
+
 p, h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
@@ -46,6 +50,11 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
+.saaspricing-table .saaspricing-table-title-des{
+    vertical-align: bottom;
+    padding-bottom: 30px;
+}
+
 .saaspricing-table-title-des-main, .saaspricing-feature-list {
     border-right: 1px solid var(--saaspricing-white);
 }
@@ -63,14 +72,20 @@ p, h1, h2, h3, h4, h5, h6 {
     border-left: 1px solid transparent;
 }
 
-.saaspricing-table .saaspricing-cell-icon svg,
+.saaspricing-cell span{
+    font-weight: 500;
+}
+.saaspricing-table .saaspricing-cell-icon svg{
+    margin-right: 2px;
+}
+
 .saaspricing-table .saaspricing-price-table-help svg {
-    margin-right: 10px;
+    margin-right: 5px;
     color: var(--saaspricing-primary);
 }
 
 .saaspricing-table tr td {
-    padding: 0px 30px 20px 30px;
+    padding: 0 30px 20px 30px;
     font-size: 14px;
 }
 
@@ -134,6 +149,7 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     color: var(--saaspricing-mako);
     margin: 0;
+    padding-bottom: 10px;
 }
 
 .saaspricing-vertical-header {
@@ -146,10 +162,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .vertical-pricing-card .saaspricing-vertical-title, 
 .saaspricing-horizontal .saaspricing-horizontal-title {
-    margin-bottom: 0;
     font-size: 22px;
     font-weight: 600;
     color: var(--saaspricing-mako);
+    margin-bottom: 0;
+    padding-bottom: 10px;
 }
 
 .saaspricing-cards-all .saaspricing-vertical-description,
@@ -233,8 +250,6 @@ p, h1, h2, h3, h4, h5, h6 {
     justify-content: left;
     align-items: center;
     flex-wrap: wrap;
-    gap: 5px;
-    line-height: .7; 
     color: var(--saaspricing-primary);
     padding-top: 20px;
 }
@@ -314,7 +329,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Pricing */
 
 .saasprcing-vertical-pricing, .saasprcing-horizontal-pricing {
-    padding: 20px 0 0 0;
+    padding: 32px 0 0 0;
 }
 
 .saaspricing-price-text{
@@ -329,6 +344,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .saaspricing-horizontal-period {
     font-size: 16px;
     font-weight: 400;
+    line-height: 1;
 }
 
 .saaspricing-vertical-price, 
@@ -357,23 +373,25 @@ p, h1, h2, h3, h4, h5, h6 {
 .saaspricing-vertical-countdown .saaspricing-countdown {
     white-space: nowrap;
     border-radius: 5px;
-    color: var(--saaspricing-primary);
-    padding: 4px 8px 4px 8px;
+    color: var(--saaspricing-mako);
+    padding: 15px 30px;
     border-color: var(--saaspricing-primary);
     border: 1px solid;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
 }
 
 .saaspricing-horizontal-countdown .saaspricing-countdown {
     white-space: nowrap;
     border-radius: 5px;
     color: var(--saaspricing-white);
-    padding: 4px 8px 4px 8px;
+    padding: 10px;
     border-color: var(--saaspricing-white);
     border: 1px solid;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
 }
 
 .saaspricing-align-super {
@@ -383,7 +401,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Review */
 
 .saaspricing-star-icon {
-    padding: 20px 0 0px 0;
+    padding: 20px 0 10px 0;
 }
 
 .saaspricing-horizontal .saaspricing-star-icon {
@@ -391,7 +409,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .saaspricing-cards-all .saaspricing-star-icon{
-    padding-top: 30px;
+    padding: 30px 0 0 0;
 }
 
 .saaspricing-star-icon small {
@@ -453,6 +471,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .saaspricing-vertical-feature li small , .saasp-horizontal-icon-wrapper small{
     font-size: 16px;
     color: var(--saaspricing-mako);
+    font-weight: 500;
 }
 
 .saaspricing-vertical-feature li svg,
@@ -465,7 +484,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .saaspricing-horizontal-sidebar {
     background: var(--saaspricing-primary);
     color: var(--saaspricing-white);
-    padding: 48px;
+    padding: 68px 48px;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -486,6 +505,7 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     text-decoration: underline;
     margin-top: 20px;
+    padding: 0;
 }
 
 .saaspricing-cards-all .saaspricng-secondary-main .saaspricing-vertical-secondary {
@@ -526,7 +546,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .saaspricing-sm-btn {
     font-size: 16px;
-    padding: 12px 24px;
+    padding: 13.5px 35px;
     color: var(--saaspricing-white);
     background-color: var(--saaspricing-secondary);
     font-weight: 600;
@@ -534,7 +554,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .saaspricing-m-btn {
     font-size: 18px;
-    padding: 15px 30px;
+    padding: 15px 35px;
     color: var(--saaspricing-white);
     background-color: var(--saaspricing-secondary);
     font-weight: 600;
@@ -564,10 +584,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .saaspricing-cards-all .saaspricing-vertical-primary {
     margin: 10px 0;
-}
-
-.saaspricng-horizontal-secondary-main {
-    margin: 20px 0;
 }
 
 .saaspricing-horizontal-primary {
@@ -618,8 +634,8 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     background-color: var(--saaspricing-white);
     border-radius: 5px;
-    -webkit-box-shadow: 0px 0px 10px var(--saaspricing-box-shadow);
-    box-shadow: 0px 0px 10px var(--saaspricing-box-shadow);
+    -webkit-box-shadow: 0 0 10px var(--saaspricing-box-shadow);
+    box-shadow: 0 0 10px var(--saaspricing-box-shadow);
 }
 
 .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before,
@@ -647,7 +663,7 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0px;
+    padding: 0;
     margin: 0 auto;
     width: 100% !important;
     max-width: 600px !important;
