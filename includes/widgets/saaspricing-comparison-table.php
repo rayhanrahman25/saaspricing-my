@@ -4783,7 +4783,7 @@ protected function render() {
                                     'before' === $saasp_features_one['saasp_comparison_features_tooltip_position'] ||
                                     empty($saasp_features_one['saasp_comparison_features_tooltip_position']) ){
                                     ?>
-                                        <span data-bs-toggle="tooltip" data-bs-placement="left"
+                                        <span data-bs-toggle="tooltip" data-bs-placement="top"
                                         title="<?php echo esc_attr($saasp_features_one['saasp_comparison_features_tooltip_description']); ?>"
                                         class="saaspricing-price-table-help">
                                             <i class="far fa-fw fa-question-circle"></i>
@@ -4797,7 +4797,7 @@ protected function render() {
                                     <?php
                                     if( 'yes' === $saasp_features_one['saasp_comparison_show_features_tooltip'] && 'after' === $saasp_features_one['saasp_comparison_features_tooltip_position'] ){
                                     ?>
-                                        <span data-bs-toggle="tooltip" data-bs-placement="left"
+                                        <span data-bs-toggle="tooltip" data-bs-placement="top"
                                         title="<?php echo esc_attr($saasp_features_one['saasp_comparison_features_tooltip_description']); ?>"
                                         class="saaspricing-price-table-help">
                                             <i class="far fa-fw fa-question-circle"></i>
@@ -4827,7 +4827,7 @@ protected function render() {
                                 'before' === $saasp_features_two['saasp_comparison_features_tooltip_position'] ||
                                 empty($saasp_features_two['saasp_comparison_features_tooltip_position']) ){
                                 ?>
-                                    <span data-bs-toggle="tooltip" data-bs-placement="left"
+                                    <span data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="<?php echo esc_attr($saasp_features_two['saasp_comparison_features_tooltip_description']); ?>"
                                     class="saaspricing-price-table-help">
                                         <i class="far fa-fw fa-question-circle"></i>
@@ -4841,7 +4841,7 @@ protected function render() {
                                 <?php
                                 if( 'yes' === $saasp_features_two['saasp_comparison_show_features_tooltip'] && 'after' === $saasp_features_two['saasp_comparison_features_tooltip_position'] ){
                                 ?>
-                                    <span data-bs-toggle="tooltip" data-bs-placement="left"
+                                    <span data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="<?php echo esc_attr($saasp_features_two['saasp_comparison_features_tooltip_description']); ?>"
                                     class="saaspricing-price-table-help">
                                         <i class="far fa-fw fa-question-circle"></i>
@@ -4879,7 +4879,7 @@ protected function render() {
                                     'before' === $saasp_features_three['saasp_comparison_features_tooltip_position'] ||
                                     empty($saasp_features_three['saasp_comparison_features_tooltip_position']) ){
                                     ?>
-                                        <span data-bs-toggle="tooltip" data-bs-placement="left"
+                                        <span data-bs-toggle="tooltip" data-bs-placement="top"
                                         title="<?php echo esc_attr($saasp_features_three['saasp_comparison_features_tooltip_description']); ?>"
                                         class="saaspricing-price-table-help">
                                             <i class="far fa-fw fa-question-circle"></i>
@@ -4893,7 +4893,7 @@ protected function render() {
                                     <?php
                                     if( 'yes' === $saasp_features_three['saasp_comparison_show_features_tooltip'] && 'after' === $saasp_features_three['saasp_comparison_features_tooltip_position'] ){
                                     ?>
-                                        <span data-bs-toggle="tooltip" data-bs-placement="left"
+                                        <span data-bs-toggle="tooltip" data-bs-placement="top"
                                         title="<?php echo esc_attr($saasp_features_three['saasp_comparison_features_tooltip_description']); ?>"
                                         class="saaspricing-price-table-help">
                                             <i class="far fa-fw fa-question-circle"></i>

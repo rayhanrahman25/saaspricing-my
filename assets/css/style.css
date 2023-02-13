@@ -11,10 +11,6 @@
     --saaspricing-yellow:#f4b400;
 }
 
-/* body {
-    font-family: inherit;
-} */
-
 p, h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
@@ -76,7 +72,7 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 .saaspricing-table .saaspricing-cell-icon svg{
-    margin-right: 2px;
+    margin-right: 5px;
 }
 
 .saaspricing-table .saaspricing-price-table-help svg {
@@ -150,14 +146,11 @@ p, h1, h2, h3, h4, h5, h6 {
     color: var(--saaspricing-mako);
     margin: 0;
     padding-bottom: 10px;
+    line-height: normal;
 }
 
-.saaspricing-vertical-header {
-    padding: 30px 0 0 0;
-}
-
-.saaspricing-p-vertical-header{
-    padding-top: 70px;
+.saaspricing-vertical-header, .saaspricing-p-vertical-header {
+    padding: 35px 0 0 0;
 }
 
 .vertical-pricing-card .saaspricing-vertical-title, 
@@ -167,6 +160,7 @@ p, h1, h2, h3, h4, h5, h6 {
     color: var(--saaspricing-mako);
     margin-bottom: 0;
     padding-bottom: 10px;
+    line-height: normal;
 }
 
 .saaspricing-cards-all .saaspricing-vertical-description,
@@ -296,7 +290,7 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     font-size: 20px;
     background-color: var(--saaspricing-black);
-    padding: 35px;
+    padding: 30px;
 }
 
 .saaspricing-horizontal-left-position {
@@ -305,6 +299,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .saaspricing-horizontal-right-position {
     right: 25px;
+    top:20px
 }
 
 .saaspricing-row-reverse {
@@ -371,7 +366,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .saaspricing-vertical-countdown{
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .saaspricing-vertical-countdown .saaspricing-countdown {
@@ -417,19 +412,22 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .saaspricing-star-icon small {
-    color: var(--saaspricing-primary);
-    font-weight: normal;
+    color: var( --saaspricing-boulder);
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .saaspricing-horizontal .saaspricing-star-icon small {
     color: var(--saaspricing-white);
+    font-weight: 600;
+    font-size: 16px;
 }
 
 /* Features */
 
 .saaspricing-horizontal .saaspricing-horizontal-feature-title {
     color: var(--saaspricing-mako);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 22px;
     margin: 0;
 }
@@ -439,7 +437,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .saasp-horizontal-icon-wrapper {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .saaspricing-horizontal-des {
@@ -462,7 +460,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .saaspricing-vertical-feature .saaspricing-features-title {
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 16px;
     color: var(--saaspricing-mako);
     font-size: 22px;
