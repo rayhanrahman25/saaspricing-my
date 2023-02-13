@@ -11,9 +11,9 @@
     --saaspricing-yellow:#f4b400;
 }
 
-body {
+/* body {
     font-family: inherit;
-}
+} */
 
 p, h1, h2, h3, h4, h5, h6 {
     padding: 0;
@@ -300,11 +300,11 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .saaspricing-horizontal-left-position {
-    left: 10px;
+    left: 25px;
 }
 
 .saaspricing-horizontal-right-position {
-    right: 10px;
+    right: 25px;
 }
 
 .saaspricing-row-reverse {
@@ -328,15 +328,19 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Pricing */
 
-.saasprcing-vertical-pricing, .saasprcing-horizontal-pricing {
+.saasprcing-vertical-pricing {
     padding: 32px 0 0 0;
+}
+
+.saasprcing-horizontal-pricing {
+    padding: 32px 0 15px 0;
 }
 
 .saaspricing-price-text{
     font-size: 42px;
     font-weight: bold;
 }
-.saaspricing-original-slashed-price{
+.saaspricing-original-slashed-price {
     font-size: 20px;
     font-weight: bold;
 }
@@ -363,7 +367,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Countdown */
 
 .saaspricing-horizontal-countdown{
-    padding: 30px 0 0 0;
+    padding: 15px 0 0 0;
 }
 
 .saaspricing-vertical-countdown{
@@ -386,7 +390,7 @@ p, h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
     border-radius: 5px;
     color: var(--saaspricing-white);
-    padding: 10px;
+    padding: 15px 30px;
     border-color: var(--saaspricing-white);
     border: 1px solid;
     font-size: 16px;
