@@ -4717,7 +4717,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_comparison_primary_cta_border_radius',
         [
             'label' => esc_html__( 'Border Radius', 'saaspricing' ),
@@ -4737,7 +4737,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_comparison_primary_cta_padding',
         [
             'label' => esc_html__( 'Padding', 'saaspricing' ),
@@ -4749,7 +4749,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_comparison_primary_cta_margin',
         [
             'label' => esc_html__( 'Margin', 'saaspricing' ),
@@ -5090,7 +5090,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_comparison_secondary_cta_border_radius',
         [
             'label' => esc_html__( 'Border Radius', 'saaspricing' ),
@@ -5110,7 +5110,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_comparison_secondary_cta_padding',
         [
             'label' => esc_html__( 'Padding', 'saaspricing' ),
@@ -5122,7 +5122,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_comparison_secondary_cta_margin',
         [
             'label' => esc_html__( 'Margin', 'saaspricing' ),
@@ -5134,7 +5134,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_comparison_cta_global_padding',
         [
             'label' => esc_html__( 'Padding', 'saaspricing' ),

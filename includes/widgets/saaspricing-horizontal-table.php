@@ -810,7 +810,7 @@ protected function register_controls() {
                 'label' => esc_html__( 'CTA Alignment', 'saaspricing' ),
                 'type' =>  Controls_Manager::CHOOSE,
                 'options' => [
-                    'start' => [
+                    'left' => [
                         'title' => esc_html__( 'Left', 'saaspricing' ),
                         'icon' => 'eicon-text-align-left',
                     ],
@@ -818,17 +818,18 @@ protected function register_controls() {
                         'title' => esc_html__( 'Center', 'saaspricing' ),
                         'icon' => 'eicon-text-align-center',
                     ],
-                    'end' => [
+                    'right' => [
                         'title' => esc_html__( 'Right', 'saaspricing' ),
                         'icon' => 'eicon-text-align-right',
+                    ],
+                    'justify' => [
+                        'title' => esc_html__( 'Justify', 'saaspricing' ),
+                        'icon' => 'eicon-text-align-justify',
                     ],
                 ],
                 'default' => 'center',
                 'toggle' => true,
                 'separator' => 'before',
-                'selectors' => [
-                    '{{WRAPPER}} .saaspricing-horizontal-sidebar' => 'align-items: {{VALUE}}; text-align: {{VALUE}}',
-                ],
             ]
         );
     
@@ -842,8 +843,8 @@ protected function register_controls() {
             'tab' =>  Controls_Manager::TAB_STYLE,
         ]
     );
-
-    $this->add_control(
+    
+    $this->add_responsive_control(
         'saasp_horizontal_header_padding',
         [
             'label' => esc_html__( 'Padding', 'saaspricing' ),
@@ -1059,7 +1060,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_horizontal_ribbon_padding',
         [
             'label' => esc_html__( 'Padding', 'saaspricing' ),
@@ -1138,7 +1139,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_horizontal_features_title_padding',
         [
             'label' => esc_html__( 'Padding', 'saaspricing' ),
@@ -1556,7 +1557,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_horizontal_countdown_padding',
         [
             'label' => esc_html__( 'Padding', 'saaspricing' ),
@@ -1568,7 +1569,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_horizontal_countdown_margin',
         [
             'label' => esc_html__( 'Margin', 'saaspricing' ),
@@ -1599,7 +1600,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_horizontal_countdown_border_radius',
         [
             'label' => esc_html__( 'Border Radius', 'saaspricing' ),
@@ -1733,7 +1734,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_horizontal_cta_padding',
         [
             'label' => esc_html__( 'Padding', 'saaspricing' ),
@@ -1745,7 +1746,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_horizontal_cta_margin',
         [
             'label' => esc_html__( 'Margin', 'saaspricing' ),
@@ -1902,7 +1903,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_horizontal_primary_cta_border_radius',
         [
             'label' => esc_html__( 'Border Radius', 'saaspricing' ),
@@ -1922,7 +1923,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_horizontal_primary_cta_padding',
         [
             'label' => esc_html__( 'Padding', 'saaspricing' ),
@@ -1934,7 +1935,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_horizontal_primary_cta_margin',
         [
             'label' => esc_html__( 'Margin', 'saaspricing' ),
@@ -2063,7 +2064,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_horizontal_secondary_cta_border_radius',
         [
             'label' => esc_html__( 'Border Radius', 'saaspricing' ),
@@ -2083,7 +2084,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_horizontal_secondary_cta_padding',
         [
             'label' => esc_html__( 'Padding', 'saaspricing' ),
@@ -2096,7 +2097,7 @@ protected function register_controls() {
         ]
     );
 
-    $this->add_control(
+    $this->add_responsive_control(
         'saasp_horizontal_secondary_cta_margin',
         [
             'label' => esc_html__( 'Margin', 'saaspricing' ),
@@ -2374,6 +2375,15 @@ protected function render() {
                         }
                     ?>
                     <a class="btn saaspricing-horizontal-primary <?php
+                    if('center' === $settings['saasp_horizontal_cta_alignment']){
+                        echo esc_attr('mx-auto ');
+                    }elseif('right' === $settings['saasp_horizontal_cta_alignment']){
+                        echo esc_attr('ms-auto ');
+                    }elseif('justify' === $settings['saasp_horizontal_cta_alignment']){
+                        echo esc_attr('w-100 ');
+                    }else{
+                        echo esc_attr('me-auto ');
+                    }
                     if( 'extra-small' === $settings['saasp_horizontal_primary_cta_size'] ){
                     echo esc_attr('saaspricing-xsm-btn');
                     }elseif( 'small' === $settings['saasp_horizontal_primary_cta_size'] ){
@@ -2406,8 +2416,17 @@ protected function render() {
                             $this->add_link_attributes( 'saasp_horizontal_secondary_cta_url', $settings['saasp_horizontal_secondary_cta_url'] );
                         }
                     ?>
-                    <div class="saaspricng-horizontal-secondary-main">
+                    <div class="saaspricng-horizontal-secondary-main <?php
+                    if('center' === $settings['saasp_horizontal_cta_alignment']){
+                        echo esc_attr('text-center');
+                    }elseif('right' === $settings['saasp_horizontal_cta_alignment']){
+                        echo esc_attr('text-end');
+                    }
+                    ?>">
                         <a class="btn saaspricing-horizontal-secondary <?php
+                        if('justify' === $settings['saasp_horizontal_cta_alignment']){
+                            echo esc_attr('w-100 ');
+                        }
                         if( 'extra-small' === $settings['saasp_horizontal_secondary_cta_size'] ){
                         echo esc_attr('saaspricing-xsm-btn');
                         }elseif( 'small' === $settings['saasp_horizontal_secondary_cta_size'] ){

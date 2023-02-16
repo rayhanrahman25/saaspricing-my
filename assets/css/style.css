@@ -22,6 +22,7 @@ p, h1, h2, h3, h4, h5, h6 {
     border: unset;
     margin-bottom: 0;
     overflow: hidden;
+    border-collapse: separate;
 }
 
 .saaspricing-horizontal .saaspricing-horizontal-sidebar a,
@@ -526,6 +527,10 @@ p, h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
 }
 
+.saaspricng-horizontal-secondary-main{
+    width: 100%;
+}
+
 .saaspricing-horizontal .saaspricng-horizontal-secondary-main .saaspricing-horizontal-secondary {
     background-color: transparent;
     color: var(--saaspricing-white);
@@ -668,17 +673,21 @@ p, h1, h2, h3, h4, h5, h6 {
     opacity: 1;
 }
 
-@media screen and (max-width: 350px) {
-    .saaspricing-ribbon {
-        position: unset;
-        margin-bottom: 15px;
-        ;
-
+@media screen and (max-width: 920px) {
+    .saaspricing-star-right {
+        margin-left: -21px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .saaspricing-w-sm-100 {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .saaspricing-ribbon {
+        position: unset;
+        margin-bottom: 15px;
     }
 }
