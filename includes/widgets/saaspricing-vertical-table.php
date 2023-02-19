@@ -176,7 +176,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'saaspricing' ),
             'label_off' => esc_html__( 'Hide', 'saaspricing' ),
             'return_value' => 'yes',
-            'default' => 'yes',
+            'default' => 'no',
         ]
     );
 

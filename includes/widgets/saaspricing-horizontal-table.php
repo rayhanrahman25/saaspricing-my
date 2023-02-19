@@ -180,7 +180,7 @@ protected function register_controls() {
             'label_on' => esc_html__( 'Show', 'saaspricing' ),
             'label_off' => esc_html__( 'Hide', 'saaspricing' ),
             'return_value' => 'yes',
-            'default' => 'yes',
+            'default' => 'no',
             'separator' => 'before',
         ]
     );
@@ -2090,7 +2090,6 @@ protected function register_controls() {
             'label' => esc_html__( 'Padding', 'saaspricing' ),
             'type' =>  Controls_Manager::DIMENSIONS,
             'size_units' => [ 'px', '%', 'em'],
-            'separator' => 'before',
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-horizontal-secondary' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
@@ -2209,11 +2208,31 @@ protected function render() {
                     }
                     ?>
                     <!-- Table slogan -->
-                    <p class="saaspricing-horizontal-slogan-title">
+                    <p class="saaspricing-horizontal-slogan-title <?php
+                    if('center' === $settings['saasp_horizontal_cta_alignment']){
+                        echo esc_attr('saaspricing-horizontal-pricing-center');
+                    }elseif('right' === $settings['saasp_horizontal_cta_alignment']){
+                        echo esc_attr('saaspricing-horizontal-pricing-right');
+                    }elseif('justify' === $settings['saasp_horizontal_cta_alignment']){
+                        echo esc_attr('saaspricing-horizontal-pricing-center');
+                    }else{
+                        echo esc_attr('saaspricing-horizontal-pricing-left');  
+                    }
+                    ?>">
                         <?php echo esc_html($settings['saasp_horizontal_cta_slogan_text']); ?>
                     </p>
                     <!-- Table pricing -->
-                    <div class="saasprcing-horizontal-pricing">
+                    <div class="saasprcing-horizontal-pricing <?php
+                    if('center' === $settings['saasp_horizontal_cta_alignment']){
+                        echo esc_attr('saaspricing-horizontal-pricing-center');
+                    }elseif('right' === $settings['saasp_horizontal_cta_alignment']){
+                        echo esc_attr('saaspricing-horizontal-pricing-right');
+                    }elseif('justify' === $settings['saasp_horizontal_cta_alignment']){
+                        echo esc_attr('saaspricing-horizontal-pricing-center');
+                    }else{
+                        echo esc_attr('saaspricing-horizontal-pricing-left');  
+                    }
+                    ?>">
                         <?php
                         if( 'none' !== $settings['saasp_horizontal_currency_symbol'] && 'yes' === $settings['saasp_horizontal_sale'] ){
                         ?>
@@ -2400,7 +2419,7 @@ protected function render() {
                     }
                     ?>" 
                     <?php 
-                    echo wp_kses($this->get_render_attribute_string( 'saasp_horizontal_primary_cta_url'), $this->saasp_allowed_tags());
+                    echo wp_kses($this->get_render_attribute_string( 'saasp_horizontal_primary_cta_url' ), $this->saasp_allowed_tags());
                     ?>>
                         <?php echo esc_html($settings['saasp_horizontal_primary_cta_text']); ?> 
                         <span class="saaspricing-primary-spacing"> 

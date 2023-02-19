@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: saaspricing\n"
-"POT-Creation-Date: 2023-02-15 17:55+0600\n"
+"POT-Creation-Date: 2023-02-19 10:47+0600\n"
 "PO-Revision-Date: 2023-02-01 11:39+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -49,14 +49,14 @@ msgstr ""
 
 #: includes/widgets/saaspricing-comparison-table.php:123
 #: includes/widgets/saaspricing-horizontal-table.php:122
-#: includes/widgets/saaspricing-horizontal-table.php:841
+#: includes/widgets/saaspricing-horizontal-table.php:842
 #: includes/widgets/saaspricing-vertical-table.php:122
-#: includes/widgets/saaspricing-vertical-table.php:846
+#: includes/widgets/saaspricing-vertical-table.php:847
 msgid "Header"
 msgstr ""
 
 #: includes/widgets/saaspricing-comparison-table.php:131
-#: includes/widgets/saaspricing-comparison-table.php:2911
+#: includes/widgets/saaspricing-comparison-table.php:2915
 msgid "Table Title"
 msgstr ""
 
@@ -65,7 +65,7 @@ msgid "Enter Table Title"
 msgstr ""
 
 #: includes/widgets/saaspricing-comparison-table.php:140
-#: includes/widgets/saaspricing-comparison-table.php:2939
+#: includes/widgets/saaspricing-comparison-table.php:2943
 msgid "Table Description"
 msgstr ""
 
@@ -155,7 +155,7 @@ msgid "Column Title Tag"
 msgstr ""
 
 #: includes/widgets/saaspricing-comparison-table.php:199
-#: includes/widgets/saaspricing-comparison-table.php:2989
+#: includes/widgets/saaspricing-comparison-table.php:2993
 #: includes/widgets/saaspricing-horizontal-table.php:226
 #: includes/widgets/saaspricing-horizontal-table.php:362
 #: includes/widgets/saaspricing-vertical-table.php:515
@@ -166,7 +166,7 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:1817
 #: includes/widgets/saaspricing-comparison-table.php:1844
 #: includes/widgets/saaspricing-comparison-table.php:2878
-#: includes/widgets/saaspricing-comparison-table.php:2993
+#: includes/widgets/saaspricing-comparison-table.php:2997
 #: includes/widgets/saaspricing-horizontal-table.php:207
 #: includes/widgets/saaspricing-horizontal-table.php:231
 #: includes/widgets/saaspricing-horizontal-table.php:367
@@ -182,7 +182,7 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:1821
 #: includes/widgets/saaspricing-comparison-table.php:1848
 #: includes/widgets/saaspricing-comparison-table.php:2882
-#: includes/widgets/saaspricing-comparison-table.php:2997
+#: includes/widgets/saaspricing-comparison-table.php:3001
 #: includes/widgets/saaspricing-horizontal-table.php:235
 #: includes/widgets/saaspricing-horizontal-table.php:371
 #: includes/widgets/saaspricing-horizontal-table.php:818
@@ -197,7 +197,7 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:1825
 #: includes/widgets/saaspricing-comparison-table.php:1852
 #: includes/widgets/saaspricing-comparison-table.php:2886
-#: includes/widgets/saaspricing-comparison-table.php:3001
+#: includes/widgets/saaspricing-comparison-table.php:3005
 #: includes/widgets/saaspricing-horizontal-table.php:211
 #: includes/widgets/saaspricing-horizontal-table.php:239
 #: includes/widgets/saaspricing-horizontal-table.php:375
@@ -214,13 +214,13 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:1472
 #: includes/widgets/saaspricing-comparison-table.php:1649
 #: includes/widgets/saaspricing-comparison-table.php:1877
-#: includes/widgets/saaspricing-comparison-table.php:3038
-#: includes/widgets/saaspricing-comparison-table.php:3247
-#: includes/widgets/saaspricing-comparison-table.php:3485
-#: includes/widgets/saaspricing-comparison-table.php:3890
-#: includes/widgets/saaspricing-comparison-table.php:4216
-#: includes/widgets/saaspricing-comparison-table.php:4403
-#: includes/widgets/saaspricing-comparison-table.php:4776
+#: includes/widgets/saaspricing-comparison-table.php:3042
+#: includes/widgets/saaspricing-comparison-table.php:3251
+#: includes/widgets/saaspricing-comparison-table.php:3489
+#: includes/widgets/saaspricing-comparison-table.php:3894
+#: includes/widgets/saaspricing-comparison-table.php:4193
+#: includes/widgets/saaspricing-comparison-table.php:4380
+#: includes/widgets/saaspricing-comparison-table.php:4753
 msgid "Column One"
 msgstr ""
 
@@ -230,17 +230,17 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:624
 #: includes/widgets/saaspricing-comparison-table.php:926
 #: includes/widgets/saaspricing-comparison-table.php:980
-#: includes/widgets/saaspricing-comparison-table.php:3170
-#: includes/widgets/saaspricing-comparison-table.php:3405
+#: includes/widgets/saaspricing-comparison-table.php:3174
+#: includes/widgets/saaspricing-comparison-table.php:3409
 #: includes/widgets/saaspricing-horizontal-table.php:130
 #: includes/widgets/saaspricing-horizontal-table.php:191
-#: includes/widgets/saaspricing-horizontal-table.php:861
-#: includes/widgets/saaspricing-horizontal-table.php:1116
+#: includes/widgets/saaspricing-horizontal-table.php:862
+#: includes/widgets/saaspricing-horizontal-table.php:1117
 #: includes/widgets/saaspricing-vertical-table.php:138
 #: includes/widgets/saaspricing-vertical-table.php:186
-#: includes/widgets/saaspricing-vertical-table.php:943
-#: includes/widgets/saaspricing-vertical-table.php:1009
-#: includes/widgets/saaspricing-vertical-table.php:1598
+#: includes/widgets/saaspricing-vertical-table.php:944
+#: includes/widgets/saaspricing-vertical-table.php:1010
+#: includes/widgets/saaspricing-vertical-table.php:1599
 msgid "Title"
 msgstr ""
 
@@ -254,11 +254,11 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:1318
 #: includes/widgets/saaspricing-comparison-table.php:1451
 #: includes/widgets/saaspricing-comparison-table.php:1628
-#: includes/widgets/saaspricing-comparison-table.php:3188
+#: includes/widgets/saaspricing-comparison-table.php:3192
 #: includes/widgets/saaspricing-horizontal-table.php:139
-#: includes/widgets/saaspricing-horizontal-table.php:913
+#: includes/widgets/saaspricing-horizontal-table.php:914
 #: includes/widgets/saaspricing-vertical-table.php:147
-#: includes/widgets/saaspricing-vertical-table.php:971
+#: includes/widgets/saaspricing-vertical-table.php:972
 msgid "Description"
 msgstr ""
 
@@ -274,11 +274,11 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:612
 #: includes/widgets/saaspricing-comparison-table.php:952
 #: includes/widgets/saaspricing-comparison-table.php:968
-#: includes/widgets/saaspricing-comparison-table.php:3207
+#: includes/widgets/saaspricing-comparison-table.php:3211
 #: includes/widgets/saaspricing-horizontal-table.php:178
-#: includes/widgets/saaspricing-horizontal-table.php:1027
+#: includes/widgets/saaspricing-horizontal-table.php:1028
 #: includes/widgets/saaspricing-vertical-table.php:174
-#: includes/widgets/saaspricing-vertical-table.php:1001
+#: includes/widgets/saaspricing-vertical-table.php:1002
 msgid "Ribbon"
 msgstr ""
 
@@ -422,11 +422,11 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:292
 #: includes/widgets/saaspricing-comparison-table.php:636
 #: includes/widgets/saaspricing-comparison-table.php:992
-#: includes/widgets/saaspricing-comparison-table.php:3434
+#: includes/widgets/saaspricing-comparison-table.php:3438
 #: includes/widgets/saaspricing-horizontal-table.php:525
-#: includes/widgets/saaspricing-horizontal-table.php:1535
+#: includes/widgets/saaspricing-horizontal-table.php:1536
 #: includes/widgets/saaspricing-vertical-table.php:338
-#: includes/widgets/saaspricing-vertical-table.php:1383
+#: includes/widgets/saaspricing-vertical-table.php:1384
 msgid "Countdown"
 msgstr ""
 
@@ -473,22 +473,22 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:384
 #: includes/widgets/saaspricing-comparison-table.php:787
 #: includes/widgets/saaspricing-comparison-table.php:1086
-#: includes/widgets/saaspricing-comparison-table.php:3465
+#: includes/widgets/saaspricing-comparison-table.php:3469
 #: includes/widgets/saaspricing-horizontal-table.php:421
-#: includes/widgets/saaspricing-horizontal-table.php:1241
+#: includes/widgets/saaspricing-horizontal-table.php:1242
 #: includes/widgets/saaspricing-vertical-table.php:235
-#: includes/widgets/saaspricing-vertical-table.php:1089
+#: includes/widgets/saaspricing-vertical-table.php:1090
 msgid "Pricing"
 msgstr ""
 
 #: includes/widgets/saaspricing-comparison-table.php:396
 #: includes/widgets/saaspricing-comparison-table.php:746
 #: includes/widgets/saaspricing-comparison-table.php:1102
-#: includes/widgets/saaspricing-comparison-table.php:3668
+#: includes/widgets/saaspricing-comparison-table.php:3672
 #: includes/widgets/saaspricing-horizontal-table.php:430
-#: includes/widgets/saaspricing-horizontal-table.php:1299
+#: includes/widgets/saaspricing-horizontal-table.php:1300
 #: includes/widgets/saaspricing-vertical-table.php:243
-#: includes/widgets/saaspricing-vertical-table.php:1147
+#: includes/widgets/saaspricing-vertical-table.php:1148
 msgid "Currency Symbol"
 msgstr ""
 
@@ -687,22 +687,22 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:470
 #: includes/widgets/saaspricing-comparison-table.php:820
 #: includes/widgets/saaspricing-comparison-table.php:1176
-#: includes/widgets/saaspricing-comparison-table.php:3806
+#: includes/widgets/saaspricing-comparison-table.php:3810
 #: includes/widgets/saaspricing-horizontal-table.php:504
-#: includes/widgets/saaspricing-horizontal-table.php:1437
+#: includes/widgets/saaspricing-horizontal-table.php:1438
 #: includes/widgets/saaspricing-vertical-table.php:317
-#: includes/widgets/saaspricing-vertical-table.php:1285
+#: includes/widgets/saaspricing-vertical-table.php:1286
 msgid "Original Price"
 msgstr ""
 
 #: includes/widgets/saaspricing-comparison-table.php:482
 #: includes/widgets/saaspricing-comparison-table.php:832
 #: includes/widgets/saaspricing-comparison-table.php:1189
-#: includes/widgets/saaspricing-comparison-table.php:3849
+#: includes/widgets/saaspricing-comparison-table.php:3853
 #: includes/widgets/saaspricing-horizontal-table.php:516
-#: includes/widgets/saaspricing-horizontal-table.php:1491
+#: includes/widgets/saaspricing-horizontal-table.php:1492
 #: includes/widgets/saaspricing-vertical-table.php:329
-#: includes/widgets/saaspricing-vertical-table.php:1339
+#: includes/widgets/saaspricing-vertical-table.php:1340
 msgid "Period"
 msgstr ""
 
@@ -717,9 +717,9 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:493
 #: includes/widgets/saaspricing-comparison-table.php:843
 #: includes/widgets/saaspricing-comparison-table.php:1203
-#: includes/widgets/saaspricing-comparison-table.php:3882
-#: includes/widgets/saaspricing-horizontal-table.php:1628
-#: includes/widgets/saaspricing-vertical-table.php:1475
+#: includes/widgets/saaspricing-comparison-table.php:3886
+#: includes/widgets/saaspricing-horizontal-table.php:1629
+#: includes/widgets/saaspricing-vertical-table.php:1476
 msgid "Review"
 msgstr ""
 
@@ -765,13 +765,13 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:1512
 #: includes/widgets/saaspricing-comparison-table.php:1688
 #: includes/widgets/saaspricing-comparison-table.php:2203
-#: includes/widgets/saaspricing-comparison-table.php:3080
-#: includes/widgets/saaspricing-comparison-table.php:3299
-#: includes/widgets/saaspricing-comparison-table.php:3541
-#: includes/widgets/saaspricing-comparison-table.php:3941
-#: includes/widgets/saaspricing-comparison-table.php:4247
-#: includes/widgets/saaspricing-comparison-table.php:4503
-#: includes/widgets/saaspricing-comparison-table.php:4876
+#: includes/widgets/saaspricing-comparison-table.php:3084
+#: includes/widgets/saaspricing-comparison-table.php:3303
+#: includes/widgets/saaspricing-comparison-table.php:3545
+#: includes/widgets/saaspricing-comparison-table.php:3936
+#: includes/widgets/saaspricing-comparison-table.php:4224
+#: includes/widgets/saaspricing-comparison-table.php:4480
+#: includes/widgets/saaspricing-comparison-table.php:4853
 msgid "Column Two"
 msgstr ""
 
@@ -782,13 +782,13 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:914
 #: includes/widgets/saaspricing-comparison-table.php:1727
 #: includes/widgets/saaspricing-comparison-table.php:2538
-#: includes/widgets/saaspricing-comparison-table.php:3125
-#: includes/widgets/saaspricing-comparison-table.php:3352
-#: includes/widgets/saaspricing-comparison-table.php:3600
-#: includes/widgets/saaspricing-comparison-table.php:3992
-#: includes/widgets/saaspricing-comparison-table.php:4278
-#: includes/widgets/saaspricing-comparison-table.php:4604
-#: includes/widgets/saaspricing-comparison-table.php:4977
+#: includes/widgets/saaspricing-comparison-table.php:3129
+#: includes/widgets/saaspricing-comparison-table.php:3356
+#: includes/widgets/saaspricing-comparison-table.php:3604
+#: includes/widgets/saaspricing-comparison-table.php:3978
+#: includes/widgets/saaspricing-comparison-table.php:4255
+#: includes/widgets/saaspricing-comparison-table.php:4581
+#: includes/widgets/saaspricing-comparison-table.php:4954
 msgid "Column Three"
 msgstr ""
 
@@ -797,20 +797,20 @@ msgid "Third Head"
 msgstr ""
 
 #: includes/widgets/saaspricing-comparison-table.php:1276
-#: includes/widgets/saaspricing-comparison-table.php:4094
+#: includes/widgets/saaspricing-comparison-table.php:4071
 #: includes/widgets/saaspricing-horizontal-table.php:257
 #: includes/widgets/saaspricing-horizontal-table.php:311
-#: includes/widgets/saaspricing-horizontal-table.php:1108
+#: includes/widgets/saaspricing-horizontal-table.php:1109
 #: includes/widgets/saaspricing-vertical-table.php:434
 #: includes/widgets/saaspricing-vertical-table.php:488
-#: includes/widgets/saaspricing-vertical-table.php:1567
+#: includes/widgets/saaspricing-vertical-table.php:1568
 msgid "Features"
 msgstr ""
 
 #: includes/widgets/saaspricing-comparison-table.php:1286
 #: includes/widgets/saaspricing-comparison-table.php:1419
 #: includes/widgets/saaspricing-comparison-table.php:1596
-#: includes/widgets/saaspricing-comparison-table.php:4102
+#: includes/widgets/saaspricing-comparison-table.php:4079
 msgid "Tooltip"
 msgstr ""
 
@@ -823,18 +823,18 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:1302
 #: includes/widgets/saaspricing-comparison-table.php:1435
 #: includes/widgets/saaspricing-comparison-table.php:1612
-#: includes/widgets/saaspricing-comparison-table.php:3704
-#: includes/widgets/saaspricing-horizontal-table.php:1335
-#: includes/widgets/saaspricing-vertical-table.php:1183
+#: includes/widgets/saaspricing-comparison-table.php:3708
+#: includes/widgets/saaspricing-horizontal-table.php:1336
+#: includes/widgets/saaspricing-vertical-table.php:1184
 msgid "Before"
 msgstr ""
 
 #: includes/widgets/saaspricing-comparison-table.php:1306
 #: includes/widgets/saaspricing-comparison-table.php:1439
 #: includes/widgets/saaspricing-comparison-table.php:1616
-#: includes/widgets/saaspricing-comparison-table.php:3708
-#: includes/widgets/saaspricing-horizontal-table.php:1339
-#: includes/widgets/saaspricing-vertical-table.php:1187
+#: includes/widgets/saaspricing-comparison-table.php:3712
+#: includes/widgets/saaspricing-horizontal-table.php:1340
+#: includes/widgets/saaspricing-vertical-table.php:1188
 msgid "After"
 msgstr ""
 
@@ -859,7 +859,7 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:1330
 #: includes/widgets/saaspricing-comparison-table.php:1463
 #: includes/widgets/saaspricing-comparison-table.php:1640
-#: includes/widgets/saaspricing-comparison-table.php:4145
+#: includes/widgets/saaspricing-comparison-table.php:4122
 #: includes/widgets/saaspricing-horizontal-table.php:265
 #: includes/widgets/saaspricing-vertical-table.php:442
 msgid "Feature Title"
@@ -887,17 +887,17 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:2476
 #: includes/widgets/saaspricing-comparison-table.php:2653
 #: includes/widgets/saaspricing-comparison-table.php:2811
-#: includes/widgets/saaspricing-comparison-table.php:4184
+#: includes/widgets/saaspricing-comparison-table.php:4161
 #: includes/widgets/saaspricing-horizontal-table.php:276
 #: includes/widgets/saaspricing-horizontal-table.php:663
 #: includes/widgets/saaspricing-horizontal-table.php:770
-#: includes/widgets/saaspricing-horizontal-table.php:1156
+#: includes/widgets/saaspricing-horizontal-table.php:1157
 #: includes/widgets/saaspricing-vertical-table.php:130
 #: includes/widgets/saaspricing-vertical-table.php:453
 #: includes/widgets/saaspricing-vertical-table.php:638
 #: includes/widgets/saaspricing-vertical-table.php:778
-#: includes/widgets/saaspricing-vertical-table.php:854
-#: includes/widgets/saaspricing-vertical-table.php:1626
+#: includes/widgets/saaspricing-vertical-table.php:855
+#: includes/widgets/saaspricing-vertical-table.php:1627
 msgid "Icon"
 msgstr ""
 
@@ -989,11 +989,11 @@ msgid "Column Alignment"
 msgstr ""
 
 #: includes/widgets/saaspricing-comparison-table.php:1869
-#: includes/widgets/saaspricing-comparison-table.php:4386
+#: includes/widgets/saaspricing-comparison-table.php:4363
 #: includes/widgets/saaspricing-horizontal-table.php:392
-#: includes/widgets/saaspricing-horizontal-table.php:1720
+#: includes/widgets/saaspricing-horizontal-table.php:1721
 #: includes/widgets/saaspricing-vertical-table.php:544
-#: includes/widgets/saaspricing-vertical-table.php:1711
+#: includes/widgets/saaspricing-vertical-table.php:1712
 msgid "CTA"
 msgstr ""
 
@@ -1014,13 +1014,13 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:2402
 #: includes/widgets/saaspricing-comparison-table.php:2579
 #: includes/widgets/saaspricing-comparison-table.php:2737
-#: includes/widgets/saaspricing-comparison-table.php:3700
-#: includes/widgets/saaspricing-comparison-table.php:3866
+#: includes/widgets/saaspricing-comparison-table.php:3704
+#: includes/widgets/saaspricing-comparison-table.php:3870
 #: includes/widgets/saaspricing-horizontal-table.php:203
-#: includes/widgets/saaspricing-horizontal-table.php:1519
+#: includes/widgets/saaspricing-horizontal-table.php:1520
 #: includes/widgets/saaspricing-vertical-table.php:564
 #: includes/widgets/saaspricing-vertical-table.php:704
-#: includes/widgets/saaspricing-vertical-table.php:1367
+#: includes/widgets/saaspricing-vertical-table.php:1368
 msgid "Position"
 msgstr ""
 
@@ -1030,17 +1030,17 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:2406
 #: includes/widgets/saaspricing-comparison-table.php:2583
 #: includes/widgets/saaspricing-comparison-table.php:2741
-#: includes/widgets/saaspricing-comparison-table.php:3724
-#: includes/widgets/saaspricing-comparison-table.php:3783
-#: includes/widgets/saaspricing-comparison-table.php:3827
-#: includes/widgets/saaspricing-horizontal-table.php:1355
-#: includes/widgets/saaspricing-horizontal-table.php:1414
-#: includes/widgets/saaspricing-horizontal-table.php:1469
+#: includes/widgets/saaspricing-comparison-table.php:3728
+#: includes/widgets/saaspricing-comparison-table.php:3787
+#: includes/widgets/saaspricing-comparison-table.php:3831
+#: includes/widgets/saaspricing-horizontal-table.php:1356
+#: includes/widgets/saaspricing-horizontal-table.php:1415
+#: includes/widgets/saaspricing-horizontal-table.php:1470
 #: includes/widgets/saaspricing-vertical-table.php:568
 #: includes/widgets/saaspricing-vertical-table.php:708
-#: includes/widgets/saaspricing-vertical-table.php:1203
-#: includes/widgets/saaspricing-vertical-table.php:1262
-#: includes/widgets/saaspricing-vertical-table.php:1317
+#: includes/widgets/saaspricing-vertical-table.php:1204
+#: includes/widgets/saaspricing-vertical-table.php:1263
+#: includes/widgets/saaspricing-vertical-table.php:1318
 msgid "Top"
 msgstr ""
 
@@ -1050,17 +1050,17 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:2410
 #: includes/widgets/saaspricing-comparison-table.php:2587
 #: includes/widgets/saaspricing-comparison-table.php:2745
-#: includes/widgets/saaspricing-comparison-table.php:3732
-#: includes/widgets/saaspricing-comparison-table.php:3791
-#: includes/widgets/saaspricing-comparison-table.php:3835
-#: includes/widgets/saaspricing-horizontal-table.php:1363
-#: includes/widgets/saaspricing-horizontal-table.php:1422
-#: includes/widgets/saaspricing-horizontal-table.php:1477
+#: includes/widgets/saaspricing-comparison-table.php:3736
+#: includes/widgets/saaspricing-comparison-table.php:3795
+#: includes/widgets/saaspricing-comparison-table.php:3839
+#: includes/widgets/saaspricing-horizontal-table.php:1364
+#: includes/widgets/saaspricing-horizontal-table.php:1423
+#: includes/widgets/saaspricing-horizontal-table.php:1478
 #: includes/widgets/saaspricing-vertical-table.php:572
 #: includes/widgets/saaspricing-vertical-table.php:712
-#: includes/widgets/saaspricing-vertical-table.php:1211
-#: includes/widgets/saaspricing-vertical-table.php:1270
-#: includes/widgets/saaspricing-vertical-table.php:1325
+#: includes/widgets/saaspricing-vertical-table.php:1212
+#: includes/widgets/saaspricing-vertical-table.php:1271
+#: includes/widgets/saaspricing-vertical-table.php:1326
 msgid "Bottom"
 msgstr ""
 
@@ -1070,17 +1070,17 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:2425
 #: includes/widgets/saaspricing-comparison-table.php:2602
 #: includes/widgets/saaspricing-comparison-table.php:2760
-#: includes/widgets/saaspricing-comparison-table.php:4075
+#: includes/widgets/saaspricing-comparison-table.php:4052
 #: includes/widgets/saaspricing-horizontal-table.php:290
 #: includes/widgets/saaspricing-horizontal-table.php:612
 #: includes/widgets/saaspricing-horizontal-table.php:719
-#: includes/widgets/saaspricing-horizontal-table.php:1211
-#: includes/widgets/saaspricing-horizontal-table.php:1690
+#: includes/widgets/saaspricing-horizontal-table.php:1212
+#: includes/widgets/saaspricing-horizontal-table.php:1691
 #: includes/widgets/saaspricing-vertical-table.php:467
 #: includes/widgets/saaspricing-vertical-table.php:587
 #: includes/widgets/saaspricing-vertical-table.php:727
-#: includes/widgets/saaspricing-vertical-table.php:1537
-#: includes/widgets/saaspricing-vertical-table.php:1681
+#: includes/widgets/saaspricing-vertical-table.php:1538
+#: includes/widgets/saaspricing-vertical-table.php:1682
 msgid "Text"
 msgstr ""
 
@@ -1123,20 +1123,20 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:2457
 #: includes/widgets/saaspricing-comparison-table.php:2634
 #: includes/widgets/saaspricing-comparison-table.php:2792
-#: includes/widgets/saaspricing-comparison-table.php:3677
-#: includes/widgets/saaspricing-comparison-table.php:3756
-#: includes/widgets/saaspricing-comparison-table.php:4122
-#: includes/widgets/saaspricing-comparison-table.php:4193
+#: includes/widgets/saaspricing-comparison-table.php:3681
+#: includes/widgets/saaspricing-comparison-table.php:3760
+#: includes/widgets/saaspricing-comparison-table.php:4099
+#: includes/widgets/saaspricing-comparison-table.php:4170
 #: includes/widgets/saaspricing-horizontal-table.php:644
 #: includes/widgets/saaspricing-horizontal-table.php:751
-#: includes/widgets/saaspricing-horizontal-table.php:1165
-#: includes/widgets/saaspricing-horizontal-table.php:1308
-#: includes/widgets/saaspricing-horizontal-table.php:1387
+#: includes/widgets/saaspricing-horizontal-table.php:1166
+#: includes/widgets/saaspricing-horizontal-table.php:1309
+#: includes/widgets/saaspricing-horizontal-table.php:1388
 #: includes/widgets/saaspricing-vertical-table.php:619
 #: includes/widgets/saaspricing-vertical-table.php:759
-#: includes/widgets/saaspricing-vertical-table.php:1156
-#: includes/widgets/saaspricing-vertical-table.php:1235
-#: includes/widgets/saaspricing-vertical-table.php:1635
+#: includes/widgets/saaspricing-vertical-table.php:1157
+#: includes/widgets/saaspricing-vertical-table.php:1236
+#: includes/widgets/saaspricing-vertical-table.php:1636
 msgid "Size"
 msgstr ""
 
@@ -1213,11 +1213,11 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:2834
 #: includes/widgets/saaspricing-horizontal-table.php:680
 #: includes/widgets/saaspricing-horizontal-table.php:784
-#: includes/widgets/saaspricing-horizontal-table.php:1188
+#: includes/widgets/saaspricing-horizontal-table.php:1189
 #: includes/widgets/saaspricing-vertical-table.php:665
 #: includes/widgets/saaspricing-vertical-table.php:790
-#: includes/widgets/saaspricing-vertical-table.php:896
-#: includes/widgets/saaspricing-vertical-table.php:1658
+#: includes/widgets/saaspricing-vertical-table.php:897
+#: includes/widgets/saaspricing-vertical-table.php:1659
 msgid "Icon Spacing"
 msgstr ""
 
@@ -1243,46 +1243,46 @@ msgstr ""
 #: includes/widgets/saaspricing-comparison-table.php:2192
 #: includes/widgets/saaspricing-comparison-table.php:2527
 #: includes/widgets/saaspricing-comparison-table.php:2862
-#: includes/widgets/saaspricing-comparison-table.php:2978
-#: includes/widgets/saaspricing-comparison-table.php:3285
-#: includes/widgets/saaspricing-comparison-table.php:3337
-#: includes/widgets/saaspricing-comparison-table.php:3390
-#: includes/widgets/saaspricing-comparison-table.php:3530
-#: includes/widgets/saaspricing-comparison-table.php:3586
-#: includes/widgets/saaspricing-comparison-table.php:3645
-#: includes/widgets/saaspricing-comparison-table.php:4173
-#: includes/widgets/saaspricing-comparison-table.php:4348
-#: includes/widgets/saaspricing-comparison-table.php:4369
-#: includes/widgets/saaspricing-comparison-table.php:4422
-#: includes/widgets/saaspricing-comparison-table.php:4442
-#: includes/widgets/saaspricing-comparison-table.php:4523
-#: includes/widgets/saaspricing-comparison-table.php:4543
-#: includes/widgets/saaspricing-comparison-table.php:4624
-#: includes/widgets/saaspricing-comparison-table.php:4644
-#: includes/widgets/saaspricing-comparison-table.php:4795
-#: includes/widgets/saaspricing-comparison-table.php:4815
-#: includes/widgets/saaspricing-comparison-table.php:4896
-#: includes/widgets/saaspricing-comparison-table.php:4916
-#: includes/widgets/saaspricing-comparison-table.php:4997
-#: includes/widgets/saaspricing-comparison-table.php:5017
-#: includes/widgets/saaspricing-horizontal-table.php:1054
-#: includes/widgets/saaspricing-horizontal-table.php:1249
-#: includes/widgets/saaspricing-horizontal-table.php:1586
-#: includes/widgets/saaspricing-horizontal-table.php:1728
-#: includes/widgets/saaspricing-horizontal-table.php:1865
-#: includes/widgets/saaspricing-horizontal-table.php:1885
-#: includes/widgets/saaspricing-horizontal-table.php:2026
-#: includes/widgets/saaspricing-horizontal-table.php:2046
-#: includes/widgets/saaspricing-vertical-table.php:919
-#: includes/widgets/saaspricing-vertical-table.php:1036
-#: includes/widgets/saaspricing-vertical-table.php:1097
-#: includes/widgets/saaspricing-vertical-table.php:1434
-#: includes/widgets/saaspricing-vertical-table.php:1575
-#: includes/widgets/saaspricing-vertical-table.php:1793
-#: includes/widgets/saaspricing-vertical-table.php:1813
-#: includes/widgets/saaspricing-vertical-table.php:1954
-#: includes/widgets/saaspricing-vertical-table.php:1974
-#: includes/widgets/saaspricing-vertical-table.php:2041
+#: includes/widgets/saaspricing-comparison-table.php:2982
+#: includes/widgets/saaspricing-comparison-table.php:3289
+#: includes/widgets/saaspricing-comparison-table.php:3341
+#: includes/widgets/saaspricing-comparison-table.php:3394
+#: includes/widgets/saaspricing-comparison-table.php:3534
+#: includes/widgets/saaspricing-comparison-table.php:3590
+#: includes/widgets/saaspricing-comparison-table.php:3649
+#: includes/widgets/saaspricing-comparison-table.php:4150
+#: includes/widgets/saaspricing-comparison-table.php:4325
+#: includes/widgets/saaspricing-comparison-table.php:4346
+#: includes/widgets/saaspricing-comparison-table.php:4399
+#: includes/widgets/saaspricing-comparison-table.php:4419
+#: includes/widgets/saaspricing-comparison-table.php:4500
+#: includes/widgets/saaspricing-comparison-table.php:4520
+#: includes/widgets/saaspricing-comparison-table.php:4601
+#: includes/widgets/saaspricing-comparison-table.php:4621
+#: includes/widgets/saaspricing-comparison-table.php:4772
+#: includes/widgets/saaspricing-comparison-table.php:4792
+#: includes/widgets/saaspricing-comparison-table.php:4873
+#: includes/widgets/saaspricing-comparison-table.php:4893
+#: includes/widgets/saaspricing-comparison-table.php:4974
+#: includes/widgets/saaspricing-comparison-table.php:4994
+#: includes/widgets/saaspricing-horizontal-table.php:1055
+#: includes/widgets/saaspricing-horizontal-table.php:1250
+#: includes/widgets/saaspricing-horizontal-table.php:1587
+#: includes/widgets/saaspricing-horizontal-table.php:1729
+#: includes/widgets/saaspricing-horizontal-table.php:1866
+#: includes/widgets/saaspricing-horizontal-table.php:1886
+#: includes/widgets/saaspricing-horizontal-table.php:2027
+#: includes/widgets/saaspricing-horizontal-table.php:2047
+#: includes/widgets/saaspricing-vertical-table.php:920
+#: includes/widgets/saaspricing-vertical-table.php:1037
+#: includes/widgets/saaspricing-vertical-table.php:1098
+#: includes/widgets/saaspricing-vertical-table.php:1435
+#: includes/widgets/saaspricing-vertical-table.php:1576
+#: includes/widgets/saaspricing-vertical-table.php:1794
+#: includes/widgets/saaspricing-vertical-table.php:1814
+#: includes/widgets/saaspricing-vertical-table.php:1955
+#: includes/widgets/saaspricing-vertical-table.php:1975
+#: includes/widgets/saaspricing-vertical-table.php:2042
 msgid "Background Color"
 msgstr ""
 
@@ -1292,337 +1292,343 @@ msgstr ""
 msgid "CTA Alignment"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:2903
+#: includes/widgets/saaspricing-comparison-table.php:2890
+#: includes/widgets/saaspricing-horizontal-table.php:826
+#: includes/widgets/saaspricing-vertical-table.php:832
+msgid "Justify"
+msgstr ""
+
+#: includes/widgets/saaspricing-comparison-table.php:2907
 msgid "Table"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:2920
-#: includes/widgets/saaspricing-comparison-table.php:2947
-#: includes/widgets/saaspricing-comparison-table.php:4111
-#: includes/widgets/saaspricing-comparison-table.php:4154
-#: includes/widgets/saaspricing-comparison-table.php:4468
-#: includes/widgets/saaspricing-comparison-table.php:4488
-#: includes/widgets/saaspricing-comparison-table.php:4569
-#: includes/widgets/saaspricing-comparison-table.php:4589
-#: includes/widgets/saaspricing-comparison-table.php:4670
-#: includes/widgets/saaspricing-comparison-table.php:4691
-#: includes/widgets/saaspricing-comparison-table.php:4841
-#: includes/widgets/saaspricing-comparison-table.php:4861
-#: includes/widgets/saaspricing-comparison-table.php:4942
-#: includes/widgets/saaspricing-comparison-table.php:4962
-#: includes/widgets/saaspricing-comparison-table.php:5043
-#: includes/widgets/saaspricing-comparison-table.php:5064
-#: includes/widgets/saaspricing-horizontal-table.php:894
-#: includes/widgets/saaspricing-horizontal-table.php:945
-#: includes/widgets/saaspricing-horizontal-table.php:996
-#: includes/widgets/saaspricing-horizontal-table.php:1035
-#: includes/widgets/saaspricing-horizontal-table.php:1125
-#: includes/widgets/saaspricing-horizontal-table.php:1220
-#: includes/widgets/saaspricing-horizontal-table.php:1280
-#: includes/widgets/saaspricing-horizontal-table.php:1446
-#: includes/widgets/saaspricing-horizontal-table.php:1500
-#: includes/widgets/saaspricing-horizontal-table.php:1543
-#: includes/widgets/saaspricing-horizontal-table.php:1668
-#: includes/widgets/saaspricing-horizontal-table.php:1699
-#: includes/widgets/saaspricing-horizontal-table.php:1772
-#: includes/widgets/saaspricing-horizontal-table.php:1811
-#: includes/widgets/saaspricing-horizontal-table.php:1831
-#: includes/widgets/saaspricing-horizontal-table.php:1972
-#: includes/widgets/saaspricing-horizontal-table.php:1992
-#: includes/widgets/saaspricing-vertical-table.php:862
-#: includes/widgets/saaspricing-vertical-table.php:952
-#: includes/widgets/saaspricing-vertical-table.php:980
-#: includes/widgets/saaspricing-vertical-table.php:1017
-#: includes/widgets/saaspricing-vertical-table.php:1128
-#: includes/widgets/saaspricing-vertical-table.php:1294
-#: includes/widgets/saaspricing-vertical-table.php:1348
-#: includes/widgets/saaspricing-vertical-table.php:1391
-#: includes/widgets/saaspricing-vertical-table.php:1515
-#: includes/widgets/saaspricing-vertical-table.php:1546
-#: includes/widgets/saaspricing-vertical-table.php:1607
-#: includes/widgets/saaspricing-vertical-table.php:1690
-#: includes/widgets/saaspricing-vertical-table.php:1739
-#: includes/widgets/saaspricing-vertical-table.php:1759
-#: includes/widgets/saaspricing-vertical-table.php:1900
-#: includes/widgets/saaspricing-vertical-table.php:1920
+#: includes/widgets/saaspricing-comparison-table.php:2924
+#: includes/widgets/saaspricing-comparison-table.php:2951
+#: includes/widgets/saaspricing-comparison-table.php:4088
+#: includes/widgets/saaspricing-comparison-table.php:4131
+#: includes/widgets/saaspricing-comparison-table.php:4445
+#: includes/widgets/saaspricing-comparison-table.php:4465
+#: includes/widgets/saaspricing-comparison-table.php:4546
+#: includes/widgets/saaspricing-comparison-table.php:4566
+#: includes/widgets/saaspricing-comparison-table.php:4647
+#: includes/widgets/saaspricing-comparison-table.php:4668
+#: includes/widgets/saaspricing-comparison-table.php:4818
+#: includes/widgets/saaspricing-comparison-table.php:4838
+#: includes/widgets/saaspricing-comparison-table.php:4919
+#: includes/widgets/saaspricing-comparison-table.php:4939
+#: includes/widgets/saaspricing-comparison-table.php:5020
+#: includes/widgets/saaspricing-comparison-table.php:5041
+#: includes/widgets/saaspricing-horizontal-table.php:895
+#: includes/widgets/saaspricing-horizontal-table.php:946
+#: includes/widgets/saaspricing-horizontal-table.php:997
+#: includes/widgets/saaspricing-horizontal-table.php:1036
+#: includes/widgets/saaspricing-horizontal-table.php:1126
+#: includes/widgets/saaspricing-horizontal-table.php:1221
+#: includes/widgets/saaspricing-horizontal-table.php:1281
+#: includes/widgets/saaspricing-horizontal-table.php:1447
+#: includes/widgets/saaspricing-horizontal-table.php:1501
+#: includes/widgets/saaspricing-horizontal-table.php:1544
+#: includes/widgets/saaspricing-horizontal-table.php:1669
+#: includes/widgets/saaspricing-horizontal-table.php:1700
+#: includes/widgets/saaspricing-horizontal-table.php:1773
+#: includes/widgets/saaspricing-horizontal-table.php:1812
+#: includes/widgets/saaspricing-horizontal-table.php:1832
+#: includes/widgets/saaspricing-horizontal-table.php:1973
+#: includes/widgets/saaspricing-horizontal-table.php:1993
+#: includes/widgets/saaspricing-vertical-table.php:863
+#: includes/widgets/saaspricing-vertical-table.php:953
+#: includes/widgets/saaspricing-vertical-table.php:981
+#: includes/widgets/saaspricing-vertical-table.php:1018
+#: includes/widgets/saaspricing-vertical-table.php:1129
+#: includes/widgets/saaspricing-vertical-table.php:1295
+#: includes/widgets/saaspricing-vertical-table.php:1349
+#: includes/widgets/saaspricing-vertical-table.php:1392
+#: includes/widgets/saaspricing-vertical-table.php:1516
+#: includes/widgets/saaspricing-vertical-table.php:1547
+#: includes/widgets/saaspricing-vertical-table.php:1608
+#: includes/widgets/saaspricing-vertical-table.php:1691
+#: includes/widgets/saaspricing-vertical-table.php:1740
+#: includes/widgets/saaspricing-vertical-table.php:1760
+#: includes/widgets/saaspricing-vertical-table.php:1901
+#: includes/widgets/saaspricing-vertical-table.php:1921
 msgid "Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:2966
-#: includes/widgets/saaspricing-comparison-table.php:3026
-#: includes/widgets/saaspricing-comparison-table.php:3235
-#: includes/widgets/saaspricing-comparison-table.php:3422
-#: includes/widgets/saaspricing-comparison-table.php:3451
-#: includes/widgets/saaspricing-comparison-table.php:4326
-#: includes/widgets/saaspricing-comparison-table.php:4743
-#: includes/widgets/saaspricing-comparison-table.php:5116
-#: includes/widgets/saaspricing-comparison-table.php:5140
-#: includes/widgets/saaspricing-horizontal-table.php:849
-#: includes/widgets/saaspricing-horizontal-table.php:1065
-#: includes/widgets/saaspricing-horizontal-table.php:1144
-#: includes/widgets/saaspricing-horizontal-table.php:1562
-#: includes/widgets/saaspricing-horizontal-table.php:1739
-#: includes/widgets/saaspricing-horizontal-table.php:1928
-#: includes/widgets/saaspricing-horizontal-table.php:2089
-#: includes/widgets/saaspricing-vertical-table.php:931
-#: includes/widgets/saaspricing-vertical-table.php:1075
-#: includes/widgets/saaspricing-vertical-table.php:1410
-#: includes/widgets/saaspricing-vertical-table.php:1586
-#: includes/widgets/saaspricing-vertical-table.php:1856
-#: includes/widgets/saaspricing-vertical-table.php:2017
-#: includes/widgets/saaspricing-vertical-table.php:2053
+#: includes/widgets/saaspricing-comparison-table.php:2970
+#: includes/widgets/saaspricing-comparison-table.php:3030
+#: includes/widgets/saaspricing-comparison-table.php:3239
+#: includes/widgets/saaspricing-comparison-table.php:3426
+#: includes/widgets/saaspricing-comparison-table.php:3455
+#: includes/widgets/saaspricing-comparison-table.php:4303
+#: includes/widgets/saaspricing-comparison-table.php:4720
+#: includes/widgets/saaspricing-comparison-table.php:5093
+#: includes/widgets/saaspricing-comparison-table.php:5117
+#: includes/widgets/saaspricing-horizontal-table.php:850
+#: includes/widgets/saaspricing-horizontal-table.php:1066
+#: includes/widgets/saaspricing-horizontal-table.php:1145
+#: includes/widgets/saaspricing-horizontal-table.php:1563
+#: includes/widgets/saaspricing-horizontal-table.php:1740
+#: includes/widgets/saaspricing-horizontal-table.php:1929
+#: includes/widgets/saaspricing-horizontal-table.php:2090
+#: includes/widgets/saaspricing-vertical-table.php:932
+#: includes/widgets/saaspricing-vertical-table.php:1076
+#: includes/widgets/saaspricing-vertical-table.php:1411
+#: includes/widgets/saaspricing-vertical-table.php:1587
+#: includes/widgets/saaspricing-vertical-table.php:1857
+#: includes/widgets/saaspricing-vertical-table.php:2018
+#: includes/widgets/saaspricing-vertical-table.php:2054
 msgid "Padding"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3018
+#: includes/widgets/saaspricing-comparison-table.php:3022
 msgid "Heading"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3047
-#: includes/widgets/saaspricing-comparison-table.php:3089
-#: includes/widgets/saaspricing-comparison-table.php:3134
+#: includes/widgets/saaspricing-comparison-table.php:3051
+#: includes/widgets/saaspricing-comparison-table.php:3093
+#: includes/widgets/saaspricing-comparison-table.php:3138
 msgid "Head Title Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3058
-#: includes/widgets/saaspricing-comparison-table.php:3100
-#: includes/widgets/saaspricing-comparison-table.php:3145
+#: includes/widgets/saaspricing-comparison-table.php:3062
+#: includes/widgets/saaspricing-comparison-table.php:3104
+#: includes/widgets/saaspricing-comparison-table.php:3149
 msgid "Head Description Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3069
-#: includes/widgets/saaspricing-comparison-table.php:3111
-#: includes/widgets/saaspricing-comparison-table.php:3156
+#: includes/widgets/saaspricing-comparison-table.php:3073
+#: includes/widgets/saaspricing-comparison-table.php:3115
+#: includes/widgets/saaspricing-comparison-table.php:3160
 msgid "Head Background Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3215
-#: includes/widgets/saaspricing-comparison-table.php:4723
-#: includes/widgets/saaspricing-comparison-table.php:5096
-#: includes/widgets/saaspricing-horizontal-table.php:1085
-#: includes/widgets/saaspricing-horizontal-table.php:1605
-#: includes/widgets/saaspricing-horizontal-table.php:1908
-#: includes/widgets/saaspricing-horizontal-table.php:2069
-#: includes/widgets/saaspricing-vertical-table.php:1055
-#: includes/widgets/saaspricing-vertical-table.php:1453
-#: includes/widgets/saaspricing-vertical-table.php:1836
-#: includes/widgets/saaspricing-vertical-table.php:1997
+#: includes/widgets/saaspricing-comparison-table.php:3219
+#: includes/widgets/saaspricing-comparison-table.php:4700
+#: includes/widgets/saaspricing-comparison-table.php:5073
+#: includes/widgets/saaspricing-horizontal-table.php:1086
+#: includes/widgets/saaspricing-horizontal-table.php:1606
+#: includes/widgets/saaspricing-horizontal-table.php:1909
+#: includes/widgets/saaspricing-horizontal-table.php:2070
+#: includes/widgets/saaspricing-vertical-table.php:1056
+#: includes/widgets/saaspricing-vertical-table.php:1454
+#: includes/widgets/saaspricing-vertical-table.php:1837
+#: includes/widgets/saaspricing-vertical-table.php:1998
 msgid "Border Radius"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3256
-#: includes/widgets/saaspricing-comparison-table.php:3308
-#: includes/widgets/saaspricing-comparison-table.php:3361
+#: includes/widgets/saaspricing-comparison-table.php:3260
+#: includes/widgets/saaspricing-comparison-table.php:3312
+#: includes/widgets/saaspricing-comparison-table.php:3365
 msgid "Title Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3270
-#: includes/widgets/saaspricing-comparison-table.php:3322
-#: includes/widgets/saaspricing-comparison-table.php:3375
+#: includes/widgets/saaspricing-comparison-table.php:3274
+#: includes/widgets/saaspricing-comparison-table.php:3326
+#: includes/widgets/saaspricing-comparison-table.php:3379
 msgid "Countdown Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3473
-#: includes/widgets/saaspricing-horizontal-table.php:1260
-#: includes/widgets/saaspricing-vertical-table.php:1108
+#: includes/widgets/saaspricing-comparison-table.php:3477
+#: includes/widgets/saaspricing-horizontal-table.php:1261
+#: includes/widgets/saaspricing-vertical-table.php:1109
 msgid "Paddding"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3494
-#: includes/widgets/saaspricing-comparison-table.php:3550
-#: includes/widgets/saaspricing-comparison-table.php:3609
+#: includes/widgets/saaspricing-comparison-table.php:3498
+#: includes/widgets/saaspricing-comparison-table.php:3554
+#: includes/widgets/saaspricing-comparison-table.php:3613
 msgid "Price Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3505
-#: includes/widgets/saaspricing-comparison-table.php:3561
-#: includes/widgets/saaspricing-comparison-table.php:3620
+#: includes/widgets/saaspricing-comparison-table.php:3509
+#: includes/widgets/saaspricing-comparison-table.php:3565
+#: includes/widgets/saaspricing-comparison-table.php:3624
 msgid "Original Price Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3519
-#: includes/widgets/saaspricing-comparison-table.php:3575
-#: includes/widgets/saaspricing-comparison-table.php:3634
+#: includes/widgets/saaspricing-comparison-table.php:3523
+#: includes/widgets/saaspricing-comparison-table.php:3579
+#: includes/widgets/saaspricing-comparison-table.php:3638
 msgid "Period Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3720
-#: includes/widgets/saaspricing-comparison-table.php:3779
-#: includes/widgets/saaspricing-horizontal-table.php:1351
-#: includes/widgets/saaspricing-horizontal-table.php:1410
+#: includes/widgets/saaspricing-comparison-table.php:3724
+#: includes/widgets/saaspricing-comparison-table.php:3783
+#: includes/widgets/saaspricing-horizontal-table.php:1352
+#: includes/widgets/saaspricing-horizontal-table.php:1411
 msgid "Verticle Position"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3728
-#: includes/widgets/saaspricing-comparison-table.php:3787
-#: includes/widgets/saaspricing-comparison-table.php:3831
-#: includes/widgets/saaspricing-horizontal-table.php:1359
-#: includes/widgets/saaspricing-horizontal-table.php:1418
-#: includes/widgets/saaspricing-horizontal-table.php:1473
-#: includes/widgets/saaspricing-vertical-table.php:1207
-#: includes/widgets/saaspricing-vertical-table.php:1266
-#: includes/widgets/saaspricing-vertical-table.php:1321
+#: includes/widgets/saaspricing-comparison-table.php:3732
+#: includes/widgets/saaspricing-comparison-table.php:3791
+#: includes/widgets/saaspricing-comparison-table.php:3835
+#: includes/widgets/saaspricing-horizontal-table.php:1360
+#: includes/widgets/saaspricing-horizontal-table.php:1419
+#: includes/widgets/saaspricing-horizontal-table.php:1474
+#: includes/widgets/saaspricing-vertical-table.php:1208
+#: includes/widgets/saaspricing-vertical-table.php:1267
+#: includes/widgets/saaspricing-vertical-table.php:1322
 msgid "Middle"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3747
-#: includes/widgets/saaspricing-horizontal-table.php:1378
-#: includes/widgets/saaspricing-vertical-table.php:1226
+#: includes/widgets/saaspricing-comparison-table.php:3751
+#: includes/widgets/saaspricing-horizontal-table.php:1379
+#: includes/widgets/saaspricing-vertical-table.php:1227
 msgid "Fractional Part"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3823
-#: includes/widgets/saaspricing-horizontal-table.php:1465
-#: includes/widgets/saaspricing-vertical-table.php:1199
-#: includes/widgets/saaspricing-vertical-table.php:1258
-#: includes/widgets/saaspricing-vertical-table.php:1313
+#: includes/widgets/saaspricing-comparison-table.php:3827
+#: includes/widgets/saaspricing-horizontal-table.php:1466
+#: includes/widgets/saaspricing-vertical-table.php:1200
+#: includes/widgets/saaspricing-vertical-table.php:1259
+#: includes/widgets/saaspricing-vertical-table.php:1314
 msgid "Vertical Position"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3870
-#: includes/widgets/saaspricing-horizontal-table.php:1523
-#: includes/widgets/saaspricing-vertical-table.php:1371
+#: includes/widgets/saaspricing-comparison-table.php:3874
+#: includes/widgets/saaspricing-horizontal-table.php:1524
+#: includes/widgets/saaspricing-vertical-table.php:1372
 msgid "Below"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3871
-#: includes/widgets/saaspricing-horizontal-table.php:1524
-#: includes/widgets/saaspricing-vertical-table.php:1372
+#: includes/widgets/saaspricing-comparison-table.php:3875
+#: includes/widgets/saaspricing-horizontal-table.php:1525
+#: includes/widgets/saaspricing-vertical-table.php:1373
 msgid "Beside"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3899
-#: includes/widgets/saaspricing-comparison-table.php:3950
-#: includes/widgets/saaspricing-comparison-table.php:4001
+#: includes/widgets/saaspricing-comparison-table.php:3903
+#: includes/widgets/saaspricing-comparison-table.php:3945
+#: includes/widgets/saaspricing-comparison-table.php:3987
 msgid "Review Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3913
-#: includes/widgets/saaspricing-comparison-table.php:3964
-#: includes/widgets/saaspricing-comparison-table.php:4015
-#: includes/widgets/saaspricing-horizontal-table.php:1679
-#: includes/widgets/saaspricing-vertical-table.php:1526
+#: includes/widgets/saaspricing-comparison-table.php:3914
+#: includes/widgets/saaspricing-comparison-table.php:3956
+#: includes/widgets/saaspricing-comparison-table.php:3998
+#: includes/widgets/saaspricing-horizontal-table.php:1680
+#: includes/widgets/saaspricing-vertical-table.php:1527
 msgid "Unmark Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:3927
-#: includes/widgets/saaspricing-comparison-table.php:3978
-#: includes/widgets/saaspricing-comparison-table.php:4029
+#: includes/widgets/saaspricing-comparison-table.php:3925
+#: includes/widgets/saaspricing-comparison-table.php:3967
+#: includes/widgets/saaspricing-comparison-table.php:4009
 msgid "Review Text Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:4043
-#: includes/widgets/saaspricing-horizontal-table.php:1636
-#: includes/widgets/saaspricing-vertical-table.php:1483
+#: includes/widgets/saaspricing-comparison-table.php:4020
+#: includes/widgets/saaspricing-horizontal-table.php:1637
+#: includes/widgets/saaspricing-vertical-table.php:1484
 msgid "Stars"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:4052
-#: includes/widgets/saaspricing-horizontal-table.php:1645
-#: includes/widgets/saaspricing-vertical-table.php:1492
+#: includes/widgets/saaspricing-comparison-table.php:4029
+#: includes/widgets/saaspricing-horizontal-table.php:1646
+#: includes/widgets/saaspricing-vertical-table.php:1493
 msgid "Spacing"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:4225
-#: includes/widgets/saaspricing-comparison-table.php:4256
-#: includes/widgets/saaspricing-comparison-table.php:4287
+#: includes/widgets/saaspricing-comparison-table.php:4202
+#: includes/widgets/saaspricing-comparison-table.php:4233
+#: includes/widgets/saaspricing-comparison-table.php:4264
 msgid "Text Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:4236
-#: includes/widgets/saaspricing-comparison-table.php:4267
-#: includes/widgets/saaspricing-comparison-table.php:4298
+#: includes/widgets/saaspricing-comparison-table.php:4213
+#: includes/widgets/saaspricing-comparison-table.php:4244
+#: includes/widgets/saaspricing-comparison-table.php:4275
 #: includes/widgets/saaspricing-horizontal-table.php:300
 #: includes/widgets/saaspricing-vertical-table.php:477
 msgid "Icon Color"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:4309
+#: includes/widgets/saaspricing-comparison-table.php:4286
 msgid "Column Text"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:4340
-#: includes/widgets/saaspricing-comparison-table.php:4415
-#: includes/widgets/saaspricing-comparison-table.php:4461
-#: includes/widgets/saaspricing-comparison-table.php:4516
-#: includes/widgets/saaspricing-comparison-table.php:4562
-#: includes/widgets/saaspricing-comparison-table.php:4617
-#: includes/widgets/saaspricing-comparison-table.php:4663
-#: includes/widgets/saaspricing-comparison-table.php:4788
-#: includes/widgets/saaspricing-comparison-table.php:4834
-#: includes/widgets/saaspricing-comparison-table.php:4889
-#: includes/widgets/saaspricing-comparison-table.php:4935
-#: includes/widgets/saaspricing-comparison-table.php:4990
-#: includes/widgets/saaspricing-comparison-table.php:5036
-#: includes/widgets/saaspricing-horizontal-table.php:1804
-#: includes/widgets/saaspricing-horizontal-table.php:1858
-#: includes/widgets/saaspricing-horizontal-table.php:1965
-#: includes/widgets/saaspricing-horizontal-table.php:2019
-#: includes/widgets/saaspricing-vertical-table.php:1732
-#: includes/widgets/saaspricing-vertical-table.php:1786
-#: includes/widgets/saaspricing-vertical-table.php:1893
-#: includes/widgets/saaspricing-vertical-table.php:1947
+#: includes/widgets/saaspricing-comparison-table.php:4317
+#: includes/widgets/saaspricing-comparison-table.php:4392
+#: includes/widgets/saaspricing-comparison-table.php:4438
+#: includes/widgets/saaspricing-comparison-table.php:4493
+#: includes/widgets/saaspricing-comparison-table.php:4539
+#: includes/widgets/saaspricing-comparison-table.php:4594
+#: includes/widgets/saaspricing-comparison-table.php:4640
+#: includes/widgets/saaspricing-comparison-table.php:4765
+#: includes/widgets/saaspricing-comparison-table.php:4811
+#: includes/widgets/saaspricing-comparison-table.php:4866
+#: includes/widgets/saaspricing-comparison-table.php:4912
+#: includes/widgets/saaspricing-comparison-table.php:4967
+#: includes/widgets/saaspricing-comparison-table.php:5013
+#: includes/widgets/saaspricing-horizontal-table.php:1805
+#: includes/widgets/saaspricing-horizontal-table.php:1859
+#: includes/widgets/saaspricing-horizontal-table.php:1966
+#: includes/widgets/saaspricing-horizontal-table.php:2020
+#: includes/widgets/saaspricing-vertical-table.php:1733
+#: includes/widgets/saaspricing-vertical-table.php:1787
+#: includes/widgets/saaspricing-vertical-table.php:1894
+#: includes/widgets/saaspricing-vertical-table.php:1948
 msgid "Normal"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:4361
-#: includes/widgets/saaspricing-comparison-table.php:4435
-#: includes/widgets/saaspricing-comparison-table.php:4481
-#: includes/widgets/saaspricing-comparison-table.php:4536
-#: includes/widgets/saaspricing-comparison-table.php:4582
-#: includes/widgets/saaspricing-comparison-table.php:4637
-#: includes/widgets/saaspricing-comparison-table.php:4684
-#: includes/widgets/saaspricing-comparison-table.php:4808
-#: includes/widgets/saaspricing-comparison-table.php:4854
-#: includes/widgets/saaspricing-comparison-table.php:4909
-#: includes/widgets/saaspricing-comparison-table.php:4955
-#: includes/widgets/saaspricing-comparison-table.php:5010
-#: includes/widgets/saaspricing-comparison-table.php:5057
-#: includes/widgets/saaspricing-horizontal-table.php:1824
-#: includes/widgets/saaspricing-horizontal-table.php:1878
-#: includes/widgets/saaspricing-horizontal-table.php:1985
-#: includes/widgets/saaspricing-horizontal-table.php:2039
-#: includes/widgets/saaspricing-vertical-table.php:1752
-#: includes/widgets/saaspricing-vertical-table.php:1806
-#: includes/widgets/saaspricing-vertical-table.php:1913
-#: includes/widgets/saaspricing-vertical-table.php:1967
+#: includes/widgets/saaspricing-comparison-table.php:4338
+#: includes/widgets/saaspricing-comparison-table.php:4412
+#: includes/widgets/saaspricing-comparison-table.php:4458
+#: includes/widgets/saaspricing-comparison-table.php:4513
+#: includes/widgets/saaspricing-comparison-table.php:4559
+#: includes/widgets/saaspricing-comparison-table.php:4614
+#: includes/widgets/saaspricing-comparison-table.php:4661
+#: includes/widgets/saaspricing-comparison-table.php:4785
+#: includes/widgets/saaspricing-comparison-table.php:4831
+#: includes/widgets/saaspricing-comparison-table.php:4886
+#: includes/widgets/saaspricing-comparison-table.php:4932
+#: includes/widgets/saaspricing-comparison-table.php:4987
+#: includes/widgets/saaspricing-comparison-table.php:5034
+#: includes/widgets/saaspricing-horizontal-table.php:1825
+#: includes/widgets/saaspricing-horizontal-table.php:1879
+#: includes/widgets/saaspricing-horizontal-table.php:1986
+#: includes/widgets/saaspricing-horizontal-table.php:2040
+#: includes/widgets/saaspricing-vertical-table.php:1753
+#: includes/widgets/saaspricing-vertical-table.php:1807
+#: includes/widgets/saaspricing-vertical-table.php:1914
+#: includes/widgets/saaspricing-vertical-table.php:1968
 msgid "Hover"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:4394
-#: includes/widgets/saaspricing-horizontal-table.php:1791
-#: includes/widgets/saaspricing-vertical-table.php:1719
+#: includes/widgets/saaspricing-comparison-table.php:4371
+#: includes/widgets/saaspricing-horizontal-table.php:1792
+#: includes/widgets/saaspricing-vertical-table.php:1720
 msgid "Primary CTA"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:4755
-#: includes/widgets/saaspricing-comparison-table.php:5128
-#: includes/widgets/saaspricing-horizontal-table.php:1574
-#: includes/widgets/saaspricing-horizontal-table.php:1751
-#: includes/widgets/saaspricing-horizontal-table.php:1940
+#: includes/widgets/saaspricing-comparison-table.php:4732
+#: includes/widgets/saaspricing-comparison-table.php:5105
+#: includes/widgets/saaspricing-horizontal-table.php:1575
+#: includes/widgets/saaspricing-horizontal-table.php:1752
+#: includes/widgets/saaspricing-horizontal-table.php:1941
 #: includes/widgets/saaspricing-horizontal-table.php:2102
-#: includes/widgets/saaspricing-vertical-table.php:1422
-#: includes/widgets/saaspricing-vertical-table.php:1868
-#: includes/widgets/saaspricing-vertical-table.php:2029
-#: includes/widgets/saaspricing-vertical-table.php:2065
+#: includes/widgets/saaspricing-vertical-table.php:1423
+#: includes/widgets/saaspricing-vertical-table.php:1869
+#: includes/widgets/saaspricing-vertical-table.php:2030
+#: includes/widgets/saaspricing-vertical-table.php:2066
 msgid "Margin"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:4767
-#: includes/widgets/saaspricing-horizontal-table.php:1952
-#: includes/widgets/saaspricing-vertical-table.php:1880
+#: includes/widgets/saaspricing-comparison-table.php:4744
+#: includes/widgets/saaspricing-horizontal-table.php:1953
+#: includes/widgets/saaspricing-vertical-table.php:1881
 msgid "Secondary CTA"
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:5485
-#: includes/widgets/saaspricing-horizontal-table.php:2359
-#: includes/widgets/saaspricing-vertical-table.php:2292
+#: includes/widgets/saaspricing-comparison-table.php:5462
+#: includes/widgets/saaspricing-horizontal-table.php:2379
+#: includes/widgets/saaspricing-vertical-table.php:2293
 msgid "("
 msgstr ""
 
-#: includes/widgets/saaspricing-comparison-table.php:5485
-#: includes/widgets/saaspricing-horizontal-table.php:2359
-#: includes/widgets/saaspricing-vertical-table.php:2292
+#: includes/widgets/saaspricing-comparison-table.php:5462
+#: includes/widgets/saaspricing-horizontal-table.php:2379
+#: includes/widgets/saaspricing-vertical-table.php:2293
 msgid ")"
 msgstr ""
 
@@ -1641,7 +1647,7 @@ msgid "Title HTML Tag"
 msgstr ""
 
 #: includes/widgets/saaspricing-horizontal-table.php:166
-#: includes/widgets/saaspricing-horizontal-table.php:964
+#: includes/widgets/saaspricing-horizontal-table.php:965
 msgid "Divider"
 msgstr ""
 
@@ -1699,41 +1705,41 @@ msgstr ""
 msgid "CTA Buttons"
 msgstr ""
 
-#: includes/widgets/saaspricing-horizontal-table.php:870
-#: includes/widgets/saaspricing-horizontal-table.php:922
+#: includes/widgets/saaspricing-horizontal-table.php:871
+#: includes/widgets/saaspricing-horizontal-table.php:923
 msgid "Distance"
 msgstr ""
 
-#: includes/widgets/saaspricing-horizontal-table.php:973
+#: includes/widgets/saaspricing-horizontal-table.php:974
 msgid "Weight"
 msgstr ""
 
-#: includes/widgets/saaspricing-horizontal-table.php:1007
+#: includes/widgets/saaspricing-horizontal-table.php:1008
 msgid "Border Style"
 msgstr ""
 
-#: includes/widgets/saaspricing-horizontal-table.php:1011
+#: includes/widgets/saaspricing-horizontal-table.php:1012
 msgid "Solid"
 msgstr ""
 
-#: includes/widgets/saaspricing-horizontal-table.php:1012
+#: includes/widgets/saaspricing-horizontal-table.php:1013
 msgid "Dashed"
 msgstr ""
 
-#: includes/widgets/saaspricing-horizontal-table.php:1013
+#: includes/widgets/saaspricing-horizontal-table.php:1014
 msgid "Dotted"
 msgstr ""
 
-#: includes/widgets/saaspricing-horizontal-table.php:1014
+#: includes/widgets/saaspricing-horizontal-table.php:1015
 msgid "Double"
 msgstr ""
 
-#: includes/widgets/saaspricing-horizontal-table.php:1331
-#: includes/widgets/saaspricing-vertical-table.php:1179
+#: includes/widgets/saaspricing-horizontal-table.php:1332
+#: includes/widgets/saaspricing-vertical-table.php:1180
 msgid "Postion"
 msgstr ""
 
-#: includes/widgets/saaspricing-horizontal-table.php:1763
+#: includes/widgets/saaspricing-horizontal-table.php:1764
 msgid "Slogan"
 msgstr ""
 
@@ -1765,6 +1771,6 @@ msgstr ""
 msgid "Buy Starter"
 msgstr ""
 
-#: includes/widgets/saaspricing-vertical-table.php:873
+#: includes/widgets/saaspricing-vertical-table.php:874
 msgid "Icon Size"
 msgstr ""
