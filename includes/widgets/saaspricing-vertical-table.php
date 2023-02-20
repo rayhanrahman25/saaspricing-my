@@ -1560,6 +1560,18 @@ protected function register_controls() {
         ]
     );
 
+    $this->add_responsive_control(
+        'saasp_vertical_review_global_padding',
+        [
+            'label' => esc_html__( 'Padding', 'saaspricing' ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-cards-all .saaspricing-star-icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
     $this->end_controls_section();
 
     $this->start_controls_section(
@@ -1589,6 +1601,29 @@ protected function register_controls() {
             'size_units' => [ 'px', '%', 'em'],
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-vertical-feature' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_responsive_control(
+        'saasp_vertical_features_gap',
+        [
+            'label' => esc_html__( 'Gap', 'saaspricing' ),
+            'type' =>  Controls_Manager::SLIDER,
+            'size_units' => ['px'],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ]
+            ],
+            'default' => [
+                'unit' => 'px',
+                'size' => 20,
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-vertical-padding:not(:last-child)' => 'padding-bottom: {{SIZE}}{{UNIT}};',
             ],
         ]
     );
@@ -2416,7 +2451,7 @@ $settings = $this->get_settings_for_display();
                             if($settings['saasp_vertical_features']){
                              foreach($settings['saasp_vertical_features'] as $saasp_vertical_features){
                             ?>
-                                <li class="saaspricing-vertical-margin elementor-repeater-item-<?php echo esc_attr($saasp_vertical_features['_id']); ?>">
+                                <li class="saaspricing-vertical-padding elementor-repeater-item-<?php echo esc_attr($saasp_vertical_features['_id']); ?>">
                                     <?php Icons_Manager::render_icon( $saasp_vertical_features['saasp_vertical_features_icon'], [ 'aria-hidden' => 'true' ] ); ?>
                                     <small>
                                         <?php echo esc_html($saasp_vertical_features['saasp_vertical_features_text']); ?>

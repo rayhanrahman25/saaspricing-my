@@ -1111,6 +1111,41 @@ protected function register_controls() {
         ]
     );
 
+    $this->add_responsive_control(
+        'saasp_horizontal_features_global_padding',
+        [
+            'label' => esc_html__( 'Padding', 'saaspricing' ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal-feature-list' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
+    $this->add_responsive_control(
+        'saasp_horizontal_features_gap',
+        [
+            'label' => esc_html__( 'Gap', 'saaspricing' ),
+            'type' =>  Controls_Manager::SLIDER,
+            'size_units' => ['px'],
+            'range' => [
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                    'step' => 1,
+                ]
+            ],
+            'default' => [
+                'unit' => 'px',
+                'size' => 20,
+            ],
+            'selectors' => [
+                '{{WRAPPER}} .row' => 'row-gap: {{SIZE}}{{UNIT}};',
+            ],
+        ]
+    );
+
     $this->add_control(
         'saasp_horizontal_features_title_heading',
         [
@@ -1713,6 +1748,19 @@ protected function register_controls() {
         ]
     );
 
+    $this->add_responsive_control(
+        'saasp_horizontal_review_global_padding',
+        [
+            'label' => esc_html__( 'Padding', 'saaspricing' ),
+            'type' =>  Controls_Manager::DIMENSIONS,
+            'size_units' => [ 'px', '%', 'em'],
+            'separator' => 'before',
+            'selectors' => [
+                '{{WRAPPER}} .saaspricing-horizontal .saaspricing-star-icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
+        ]
+    );
+
     $this->end_controls_section();
 
     $this->start_controls_section(
@@ -2138,7 +2186,7 @@ protected function render() {
  $settings = $this->get_settings_for_display();
 ?>
     <div class="saaspricing-horizontal">
-        <div class="row <?php if( 'yes' === $settings['saasp_horizontal_cta_row_reverse'] ){ echo esc_attr( 'saaspricing-row-reverse' ); } ?>">
+        <div class="row gx-0 <?php if( 'yes' === $settings['saasp_horizontal_cta_row_reverse'] ){ echo esc_attr( 'saaspricing-row-reverse' ); } ?>">
             <div class="col-lg-8">
                 <div class="sasspricing-horizontal-left d-flex flex-column justify-content-center position-relative h-100">
                     <!-- Table header -->
