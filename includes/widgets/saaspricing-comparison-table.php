@@ -307,7 +307,7 @@ protected function register_controls() {
             'label' => esc_html__( 'Expire Date', 'saaspricing' ),
             'type' =>  Controls_Manager::DATE_TIME,
             'label_block' => false,
-            'default'=> esc_html__('2023-01-01 12:00', 'saaspricing'),
+            'default'=> gmdate( 'Y-m-d H:i', strtotime("+1 month") ),
             'condition' => [
                 'saasp_comparison_show_countdown_1' => 'yes',
                 'saasp_comparison_show_ribbon_1' => 'yes',
@@ -673,7 +673,7 @@ protected function register_controls() {
             'label' => esc_html__( 'Expire Date', 'saaspricing' ),
             'type' =>  Controls_Manager::DATE_TIME,
             'label_block' => false,
-            'default'=> esc_html__('2023-01-01 12:00', 'saaspricing'),
+            'default'=> gmdate( 'Y-m-d H:i', strtotime("+1 month") ),
             'condition' => [
                 'saasp_comparison_show_countdown_2' => 'yes',
                 'saasp_comparison_show_ribbon_2' => 'yes',
@@ -1051,7 +1051,7 @@ protected function register_controls() {
             'label' => esc_html__( 'Expire Date', 'saaspricing' ),
             'type' =>  Controls_Manager::DATE_TIME,
             'label_block' => false,
-            'default'=> esc_html__('2023-01-01 12:00', 'saaspricing'),
+            'default'=> gmdate( 'Y-m-d H:i', strtotime("+1 month") ),
             'condition' => [
                 'saasp_comparison_show_countdown_3' => 'yes',
                 'saasp_comparison_show_ribbon_3' => 'yes',
@@ -3014,7 +3014,7 @@ protected function register_controls() {
             ],
             'default' => [
                 'unit' => 'px',
-                'size' => 0,
+                'size' => 10,
             ],
             'selectors' => [
                 '{{WRAPPER}} .saaspricing-table .saaspricing-table-title' => 'padding-bottom: {{SIZE}}{{UNIT}};',

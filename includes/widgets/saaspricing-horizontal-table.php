@@ -538,7 +538,7 @@ protected function register_controls() {
                 'label' => esc_html__( 'Expire Date', 'saaspricing' ),
                 'type' =>  Controls_Manager::DATE_TIME,
                 'label_block' => false,
-                'default'=> esc_html__('2023-01-01 12:00', 'saaspricing'),
+                'default'=> gmdate( 'Y-m-d H:i', strtotime("+1 month") ),
                 'condition' => [
                     'saasp_horizontal_show_countdown' => 'yes',
                 ],
