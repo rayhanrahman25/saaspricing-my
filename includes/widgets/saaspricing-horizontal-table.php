@@ -2376,6 +2376,7 @@ protected function render() {
                             <span class="saaspricing-countdown"
                             data-countdown-index="0"
                             data-expire-date="<?php echo esc_attr($settings['saasp_horizontal_expire_date']); ?>">
+                            <?php echo esc_html__('00d: 00h: 00m: 00s','saaspricing'); ?>
                             </span>
                         </div>
                     <?php

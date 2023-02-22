@@ -5353,6 +5353,7 @@ protected function render() {
                                             ?>
                                                 <div class="saaspricing-show-expire-date" data-countdown-index="<?php echo esc_attr($j); ?>" 
                                                 data-expire-date-<?php echo esc_attr($i); ?>="<?php echo esc_attr($settings['saasp_comparison_expire_date_'.$i]); ?>">
+                                                <?php echo esc_html__('00d: 00h: 00m: 00s','saaspricing'); ?>
                                                 </div>
                                             <?php
                                             }
